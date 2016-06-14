@@ -22,5 +22,11 @@
     }
     return self;
 }
+
+- (nonnull NSString*)toHTMLArticle
+{
+    NSString *HTMLTitle = [NSString stringWithFormat:@"<h1><strong>%@</strong></h1>", self.title];
+    return [NSString stringWithFormat:@"<html><body>%@%@</body></html>",HTMLTitle, self.HTMLBody];
+}
 @end
 

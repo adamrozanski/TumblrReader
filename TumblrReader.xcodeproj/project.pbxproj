@@ -30,7 +30,6 @@
 		66E6DA551D0F79AD00B8DF5D /* TBLPostTypeMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E6DA431D0F79AD00B8DF5D /* TBLPostTypeMap.m */; };
 		66E6DA561D0F79AD00B8DF5D /* TBLQuoteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E6DA451D0F79AD00B8DF5D /* TBLQuoteCell.m */; };
 		66E6DA571D0F79AD00B8DF5D /* TBLRegularCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E6DA471D0F79AD00B8DF5D /* TBLRegularCell.m */; };
-		66E6DA581D0F79AD00B8DF5D /* TBLTableViewCellFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E6DA491D0F79AD00B8DF5D /* TBLTableViewCellFactory.m */; };
 		F10BD553EDFF4475618982CC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 237C8D10E07791FEA3967FAD /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -80,8 +79,6 @@
 		66E6DA451D0F79AD00B8DF5D /* TBLQuoteCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBLQuoteCell.m; sourceTree = "<group>"; };
 		66E6DA461D0F79AD00B8DF5D /* TBLRegularCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBLRegularCell.h; sourceTree = "<group>"; };
 		66E6DA471D0F79AD00B8DF5D /* TBLRegularCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBLRegularCell.m; sourceTree = "<group>"; };
-		66E6DA481D0F79AD00B8DF5D /* TBLTableViewCellFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBLTableViewCellFactory.h; sourceTree = "<group>"; };
-		66E6DA491D0F79AD00B8DF5D /* TBLTableViewCellFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBLTableViewCellFactory.m; sourceTree = "<group>"; };
 		A991CE3A62852FD75EA0C730 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -162,8 +159,8 @@
 		66E6DA221D0F78D900B8DF5D /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				66E6DA101D0F785100B8DF5D /* TBLTableViewController.m */,
 				66E6DA0F1D0F785100B8DF5D /* TBLTableViewController.h */,
+				66E6DA101D0F785100B8DF5D /* TBLTableViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -171,26 +168,26 @@
 		66E6DA231D0F78EB00B8DF5D /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
-				66E6DA411D0F79AD00B8DF5D /* TBLPostRegular.m */,
-				66E6DA3C1D0F79AD00B8DF5D /* TBLPostPhoto.h */,
-				66E6DA3A1D0F79AD00B8DF5D /* TBLPostLink.h */,
-				66E6DA311D0F79AD00B8DF5D /* TBLPost.m */,
-				66E6DA301D0F79AD00B8DF5D /* TBLPost.h */,
-				66E6DA381D0F79AD00B8DF5D /* TBLPostFactory.h */,
-				66E6DA3B1D0F79AD00B8DF5D /* TBLPostLink.m */,
-				66E6DA2D1D0F79AD00B8DF5D /* TBLBlogMeta.m */,
 				66E6DA2C1D0F79AD00B8DF5D /* TBLBlogMeta.h */,
-				66E6DA361D0F79AD00B8DF5D /* TBLPostConversation.h */,
+				66E6DA2D1D0F79AD00B8DF5D /* TBLBlogMeta.m */,
+				66E6DA381D0F79AD00B8DF5D /* TBLPostFactory.h */,
 				66E6DA391D0F79AD00B8DF5D /* TBLPostFactory.m */,
-				66E6DA321D0F79AD00B8DF5D /* TBLPostAudio.h */,
-				66E6DA371D0F79AD00B8DF5D /* TBLPostConversation.m */,
-				66E6DA401D0F79AD00B8DF5D /* TBLPostRegular.h */,
-				66E6DA3D1D0F79AD00B8DF5D /* TBLPostPhoto.m */,
-				66E6DA3E1D0F79AD00B8DF5D /* TBLPostQuote.h */,
-				66E6DA331D0F79AD00B8DF5D /* TBLPostAudio.m */,
-				66E6DA3F1D0F79AD00B8DF5D /* TBLPostQuote.m */,
 				66E6DA421D0F79AD00B8DF5D /* TBLPostTypeMap.h */,
 				66E6DA431D0F79AD00B8DF5D /* TBLPostTypeMap.m */,
+				66E6DA301D0F79AD00B8DF5D /* TBLPost.h */,
+				66E6DA311D0F79AD00B8DF5D /* TBLPost.m */,
+				66E6DA3C1D0F79AD00B8DF5D /* TBLPostPhoto.h */,
+				66E6DA3D1D0F79AD00B8DF5D /* TBLPostPhoto.m */,
+				66E6DA3A1D0F79AD00B8DF5D /* TBLPostLink.h */,
+				66E6DA3B1D0F79AD00B8DF5D /* TBLPostLink.m */,
+				66E6DA361D0F79AD00B8DF5D /* TBLPostConversation.h */,
+				66E6DA371D0F79AD00B8DF5D /* TBLPostConversation.m */,
+				66E6DA401D0F79AD00B8DF5D /* TBLPostRegular.h */,
+				66E6DA411D0F79AD00B8DF5D /* TBLPostRegular.m */,
+				66E6DA3E1D0F79AD00B8DF5D /* TBLPostQuote.h */,
+				66E6DA3F1D0F79AD00B8DF5D /* TBLPostQuote.m */,
+				66E6DA321D0F79AD00B8DF5D /* TBLPostAudio.h */,
+				66E6DA331D0F79AD00B8DF5D /* TBLPostAudio.m */,
 			);
 			name = "Data Model";
 			sourceTree = "<group>";
@@ -200,14 +197,12 @@
 			children = (
 				66E6DA341D0F79AD00B8DF5D /* TBLPostCell.h */,
 				66E6DA351D0F79AD00B8DF5D /* TBLPostCell.m */,
-				66E6DA2E1D0F79AD00B8DF5D /* TBLPhotoCell.h */,
-				66E6DA2F1D0F79AD00B8DF5D /* TBLPhotoCell.m */,
 				66E6DA441D0F79AD00B8DF5D /* TBLQuoteCell.h */,
 				66E6DA451D0F79AD00B8DF5D /* TBLQuoteCell.m */,
+				66E6DA2E1D0F79AD00B8DF5D /* TBLPhotoCell.h */,
+				66E6DA2F1D0F79AD00B8DF5D /* TBLPhotoCell.m */,
 				66E6DA461D0F79AD00B8DF5D /* TBLRegularCell.h */,
 				66E6DA471D0F79AD00B8DF5D /* TBLRegularCell.m */,
-				66E6DA481D0F79AD00B8DF5D /* TBLTableViewCellFactory.h */,
-				66E6DA491D0F79AD00B8DF5D /* TBLTableViewCellFactory.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -354,7 +349,6 @@
 				66E6DA521D0F79AD00B8DF5D /* TBLPostPhoto.m in Sources */,
 				66E6DA2B1D0F795000B8DF5D /* TBLDataSource.m in Sources */,
 				66E6DA4C1D0F79AD00B8DF5D /* TBLPost.m in Sources */,
-				66E6DA581D0F79AD00B8DF5D /* TBLTableViewCellFactory.m in Sources */,
 				66E6DA0E1D0F785100B8DF5D /* AppDelegate.m in Sources */,
 				66E6DA0B1D0F785100B8DF5D /* main.m in Sources */,
 				66E6DA4F1D0F79AD00B8DF5D /* TBLPostConversation.m in Sources */,

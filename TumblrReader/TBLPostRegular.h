@@ -14,6 +14,7 @@
 @property (nonnull) NSString *HTMLBody;
 
 - (nullable instancetype)initWithJSONPost:(NSDictionary * _Nonnull)JSONPost;
+- (nonnull NSString*)toHTMLArticle;
 
 @end
 

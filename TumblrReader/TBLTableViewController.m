@@ -38,6 +38,7 @@
     
     [self.tableView registerClass:[TBLQuoteCell class] forCellReuseIdentifier:@"quote"];
     [self.tableView registerClass:[TBLPhotoCell class] forCellReuseIdentifier:@"photo"];
+    [self.tableView registerClass:[TBLRegularCell class] forCellReuseIdentifier:@"regular"];
     
     //self.tableView.delegate = self;
     //self.tableView.dataSource = self;
@@ -47,7 +48,7 @@
 
 - (void) setupData
 {
-    self.blogMeta = [[TBLBlogMeta alloc] initWithUsername:@"demo"];
+    self.blogMeta = [[TBLBlogMeta alloc] initWithUsername:@"ekipa"];
     self.blogPosts = [NSMutableArray array];
     self.dataSource = [[TBLDataSource alloc] initWithBlog:self.blogMeta blogPosts:self.blogPosts];
     
@@ -80,31 +81,22 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return  200;
+    return  250;
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+    return NO;
 }
 
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-       } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-    }
-}
+
 
 #pragma mark - Fetch Data
 
 - (void) loadPosts
 {
     [_dataSource fetchPostsWithCompletionSuccess:^(NSURLSessionTask * _Nonnull task, TBLBlogMeta * _Nullable blog, NSArray<TBLPost *> * _Nullable posts, NSError * _Nullable error) {
-        
-        NSLog(@"~~ START INDEX: %i",blog.startPostIndex);
         self.blogMeta.startPostIndex = blog.startPostIndex;
         self.blogMeta.totalPostsCount = blog.totalPostsCount;
-
         [self.blogPosts addObjectsFromArray:posts];
         [self.tableView reloadData];
         NSLog(@"FETCH: FINAL SUCCESS");

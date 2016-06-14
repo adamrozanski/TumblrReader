@@ -6,8 +6,13 @@
 //  Copyright © 2016 Adam. All rights reserved.
 //
 
+#import <WebKit/WebKit.h>
 #import "TBLPostCell.h"
+#import "TBLPostRegular.h"
+#import "TBLBlogMeta.h"
 
 @interface TBLRegularCell : TBLPostCell
+
+@property WKWebView * _Nullable articleWebView;
 
 @end

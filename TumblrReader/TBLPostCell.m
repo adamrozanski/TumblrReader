@@ -21,7 +21,7 @@
         self.dateLabel = [[UILabel alloc] init];
         [self.dateLabel setTextColor:[UIColor colorWithRed:0.24f green:0.39f blue:0.62f alpha:1.0f]];
         [self.dateLabel setBackgroundColor:[UIColor whiteColor]];
-        [self.dateLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:18.0f]];
+        [self.dateLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:12.0f]];
         [self.dateLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
         self.titleBox = [[UIView alloc] init];
         [self.titleBox setBackgroundColor:[UIColor whiteColor]];
@@ -32,12 +32,12 @@
         // Constraints: (must be here in case of UITableViewCell subclass, not in layoutSubviews)
         
         //dateLabel
-        NSLayoutConstraint *titleLabelLeading = [self.dateLabel.leadingAnchor constraintEqualToAnchor: [self.titleBox leadingAnchor] constant:20];
-        NSLayoutConstraint *titleLabelTailing = [self.dateLabel.trailingAnchor constraintEqualToAnchor: [self.titleBox trailingAnchor]];
-        NSLayoutConstraint *titleLabelTop = [self.dateLabel.topAnchor constraintEqualToAnchor: [self.titleBox topAnchor]];
-        NSLayoutConstraint *titleLabeleight = [self.dateLabel.heightAnchor constraintEqualToAnchor: [self.titleBox heightAnchor]];
-        NSArray *titleLabelConstraints = @[titleLabelLeading, titleLabelTailing, titleLabelTop, titleLabeleight];
-        [NSLayoutConstraint activateConstraints:titleLabelConstraints];
+        NSLayoutConstraint *dateLabelLeading = [self.dateLabel.leadingAnchor constraintEqualToAnchor: [self.titleBox leadingAnchor] constant:16];
+        NSLayoutConstraint *dateLabelTailing = [self.dateLabel.trailingAnchor constraintEqualToAnchor: [self.titleBox trailingAnchor]];
+        NSLayoutConstraint *dateLabelLTop = [self.dateLabel.topAnchor constraintEqualToAnchor: [self.titleBox topAnchor]];
+        NSLayoutConstraint *dateLabelHleight = [self.dateLabel.heightAnchor constraintEqualToAnchor: [self.titleBox heightAnchor]];
+        NSArray *dateLabelConstraints = @[dateLabelLeading, dateLabelTailing, dateLabelLTop, dateLabelHleight];
+        [NSLayoutConstraint activateConstraints:dateLabelConstraints];
         
         //titleBox
         NSLayoutConstraint *titleBoxLeading = [self.titleBox.leadingAnchor constraintEqualToAnchor: [self.contentView leadingAnchor]];
@@ -59,9 +59,7 @@
                                                   options:NSStringDrawingUsesLineFragmentOrigin
                                                attributes:@{NSFontAttributeName:label.font}
                                                   context:context].size;
-    
     size = CGSizeMake(ceil(boundingBox.width), ceil(boundingBox.height));
-    
     return size.height;
 }
 

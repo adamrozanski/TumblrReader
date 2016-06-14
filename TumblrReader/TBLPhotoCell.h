@@ -6,9 +6,9 @@
 //  Copyright © 2016 Adam. All rights reserved.
 //
 #import <UIKit/UIKit.h>
-#import "TBLTableViewCellFactory.h"
 #import "TBLPostCell.h"
 #import "TBLPost.h"
+#import "TBLPostPhoto.h"
 
 @interface TBLPhotoCell : TBLPostCell
 

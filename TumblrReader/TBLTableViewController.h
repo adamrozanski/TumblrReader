@@ -15,6 +15,7 @@
 #import "TBLPostTypeMap.h"
 #import "TBLQuoteCell.h"
 #import "TBLPhotoCell.h"
+#import "TBLRegularCell.h"
 
 @interface TBLTableViewController : UITableViewController
 

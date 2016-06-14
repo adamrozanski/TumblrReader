@@ -56,7 +56,7 @@
 
 - (NSString *) queryStringForUsername:(NSString*)username startPostIndex:(int)startIndex postsCount:(int)postsCount
 {
-    return [NSString stringWithFormat:@"http://%@.tumblr.com/api/read/json?start=%i&num=%i&type=photo", username, startIndex, postsCount];
+    return [NSString stringWithFormat:@"http://%@.tumblr.com/api/read/json?start=%i&num=%i&type=regular", username, startIndex, postsCount];
 }
 
 

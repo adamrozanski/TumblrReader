@@ -26,6 +26,8 @@
     [self configureTableView];
     [self setupData];
     [self loadPosts];
+    [self configureNavContolller];
+    
 }
 
 -(void) configureTableView
@@ -44,6 +46,11 @@
     
 }
 
+- (void) configureNavContolller
+{
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(loadPosts)];
+    self.navigationItem.rightBarButtonItem = addButton;
+}
 - (void) setupData
 {
     self.blogMeta = [[TBLBlogMeta alloc] initWithUsername:@"ekipa"];
@@ -77,6 +84,8 @@
         
         TBLPostPhoto * photoPost = (TBLPostPhoto *)post;
         TBLPhotoCell *photoCell = (TBLPhotoCell *)cell;
+        photoCell.photoView.image = nil;
+
         //photoCell
         if (photoPost.photo1280URL != nil)
         {
@@ -84,7 +93,8 @@
              {
                  if (photoCell != nil && image != nil) {
                      photoCell.photoView.image = image;
-                     [photoCell setNeedsLayout];
+                     //[photoCell setNeedsLayout];
+                     
                  }
              }
                                         failure:^(NSError * _Nonnull error)

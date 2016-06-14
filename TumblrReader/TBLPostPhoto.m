@@ -24,8 +24,6 @@
         self.photo500URL = photo500URL;
         self.width = [[JSONPost objectForKey:@"width"] intValue];
         self.height = [[JSONPost objectForKey:@"height"] intValue];
-        
-        NSLog(@"Photo size: %i", self.width);
     }
     return self;
 }
@@ -41,5 +39,16 @@
 {
     return [NSString stringWithFormat:@"<html><body>%@</body></html>",self.caption];
 }
+
+- (nonnull NSString*)iPhoneOptimizedPhotoURL
+{
+    return (self.width > 1250) ? self.photo500URL : self.photo1280URL;
+}
+
+- (BOOL) photoURLsAreNotNil
+{
+    return (self.photo1280URL != nil && self.photo500URL != nil);
+}
+
 
 @end

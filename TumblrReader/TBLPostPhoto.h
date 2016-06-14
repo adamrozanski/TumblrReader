@@ -19,6 +19,7 @@
 - (nullable instancetype)initWithJSONPost:(NSDictionary * _Nonnull)JSONPost;
 - (nonnull NSString*)toHTML;
 - (nonnull NSString*)captionToHTML;
-
+- (nonnull NSString*)iPhoneOptimizedPhotoURL;
+- (BOOL) photoURLsAreNotNil;
 @end
 

@@ -15,6 +15,8 @@
 {
     if ((self = [super init]))
     {
+        if (username == nil)
+            return nil;
         self.name = username;
         self.startPostIndex = 0;
     }

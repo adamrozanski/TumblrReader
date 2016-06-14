@@ -15,10 +15,12 @@ int const postsCountPerRequest = 10;
 
 @implementation TBLDataSource
 
-- (nullable instancetype)initWithBlog:(TBLBlogMeta * _Nonnull)blogMeta blogPosts:(NSMutableArray<TBLPost * > * _Nullable)blogPosts
+- (nullable instancetype)initWithBlog:(TBLBlogMeta * _Nullable)blogMeta blogPosts:(NSMutableArray<TBLPost * > * _Nullable)blogPosts
 {
     if ((self = [super init]))
     {
+        if (blogMeta == nil)
+            return nil;
         self.blogMeta = blogMeta;
         self.blogPosts = blogPosts;
     }

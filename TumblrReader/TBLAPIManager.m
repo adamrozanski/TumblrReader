@@ -9,6 +9,13 @@
 #import "TBLAPIManager.h"
 #import "AFNetworking.h"
 
+
+@interface TBLAPIManager ()
+
+@property AFHTTPSessionManager *sessionManager;
+
+@end
+
 @implementation TBLAPIManager
 
 
@@ -30,26 +37,29 @@
                        failure:(void (^ _Nonnull)(NSURLSessionTask * _Nullable task, NSError * _Nonnull error))failure
 {
     NSString *queryString = [self queryStringForUsername:username startPostIndex:startPostIndex postsCount:postsCount];
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    [manager GET:queryString
-      parameters:nil
-        progress:nil
-         success:^(NSURLSessionTask *operation, id responseObject) {
-             NSError *error = nil;
-             NSData *JSONData = [self extractJSONDataFromTumblrAPIV1Response:responseObject];
-             NSDictionary *JSON = [NSJSONSerialization JSONObjectWithData:JSONData options:NSJSONReadingAllowFragments error:&error];
-             if (error != nil) {
-                 success(operation, nil, nil, error);
-             } else {
-                 TBLBlogMeta *blog = [[TBLBlogMeta alloc] initWithJSONResponse:JSON];
-                 NSArray<TBLPost*> *posts = [TBLPostFactory postsArrayFromJSONResponse:JSON];
-                 success(operation, blog, posts, error);
-             }
-         }
-         failure:^(NSURLSessionTask *operation, NSError *error) {
-             failure(operation, error);
-         }
+    
+    if (self.sessionManager == nil)
+        self.sessionManager = [[AFHTTPSessionManager alloc] init];
+    
+    self.sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    [self.sessionManager GET:queryString
+                  parameters:nil
+                    progress:nil
+                     success:^(NSURLSessionTask *operation, id responseObject) {
+                         NSError *error = nil;
+                         NSData *JSONData = [self extractJSONDataFromTumblrAPIV1Response:responseObject];
+                         NSDictionary *JSON = [NSJSONSerialization JSONObjectWithData:JSONData options:NSJSONReadingAllowFragments error:&error];
+                         if (error != nil) {
+                             success(operation, nil, nil, error);
+                         } else {
+                             TBLBlogMeta *blog = [[TBLBlogMeta alloc] initWithJSONResponse:JSON];
+                             NSArray<TBLPost*> *posts = [TBLPostFactory postsArrayFromJSONResponse:JSON];
+                             success(operation, blog, posts, error);
+                         }
+                     }
+                     failure:^(NSURLSessionTask *operation, NSError *error) {
+                         failure(operation, error);
+                     }
      ];
 }
 
@@ -71,18 +81,20 @@
                     success:(void (^ _Nonnull)(UIImage * _Nullable image))success
                     failure:(void (^ _Nonnull)(NSError * _Nonnull error))failure
 {
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    [manager GET:URLString
-      parameters:nil
-        progress:nil
-         success:^(NSURLSessionTask *task, id responseObject) {
-             UIImage *image = [UIImage imageWithData:responseObject];
-             success(image);
-         }
-         failure:^(NSURLSessionTask *operation, NSError *error) {
-             failure(error);
-         }
+    if (self.sessionManager == nil)
+        self.sessionManager = [[AFHTTPSessionManager alloc] init];
+    
+    self.sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    [self.sessionManager GET:URLString
+                  parameters:nil
+                    progress:nil
+                     success:^(NSURLSessionTask *task, id responseObject) {
+                         UIImage *image = [UIImage imageWithData:responseObject];
+                         success(image);
+                     }
+                     failure:^(NSURLSessionTask *operation, NSError *error) {
+                         failure(error);
+                     }
      ];
 }
 

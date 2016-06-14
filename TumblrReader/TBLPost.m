@@ -42,4 +42,9 @@
     return @"<html><body></body></html>";
 }
 
+- (nonnull NSString*)tagsAsString
+{
+    return [self.tags componentsJoinedByString:@" "];
+}
+
 @end

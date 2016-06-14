@@ -16,17 +16,18 @@
     if (self) {
         
         UILayoutGuide *spacer1 = [[UILayoutGuide alloc] init];
-        [self.imageView setBackgroundColor:[UIColor yellowColor]];
-        [self.imageView setTranslatesAutoresizingMaskIntoConstraints:NO];
-        UILayoutGuide *spacer2 = [[UILayoutGuide alloc] init];
-        [self.textLabel setTextColor:[UIColor colorWithRed:0.24f green:0.39f blue:0.62f alpha:1.0f]];
-        [self.textLabel setBackgroundColor:[UIColor whiteColor]];
-        [self.textLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:12.0f]];
-        [self.textLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
+        self.photoView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"placeholder"]];
+        self.photoView.contentMode = UIViewContentModeScaleAspectFill;
+        self.photoView.clipsToBounds = YES;
+        [self.photoView setBackgroundColor:[UIColor yellowColor]];
+        [self.photoView setTranslatesAutoresizingMaskIntoConstraints:NO];
+        self.captionView = [[WKWebView alloc] init];
+        self.captionView.userInteractionEnabled = NO;
+        [self.captionView setBackgroundColor:[UIColor whiteColor]];
+        [self.captionView setTranslatesAutoresizingMaskIntoConstraints:NO];
         [self.contentView addLayoutGuide:spacer1];
-        [self.contentView addSubview:self.imageView];
-        [self.contentView addLayoutGuide:spacer2];
-        [self.contentView addSubview:self.textLabel];
+        [self.contentView addSubview:self.photoView];
+        [self.contentView addSubview:self.captionView];
         
         // Constraints: (must be here in case of UITableViewCell subclass, not in layoutSubviews)
         
@@ -34,36 +35,27 @@
         NSLayoutConstraint *spacer1Leading = [spacer1.leadingAnchor constraintEqualToAnchor: [self.contentView leadingAnchor]];
         NSLayoutConstraint *spacer1Trailing = [spacer1.trailingAnchor constraintEqualToAnchor: [self.contentView trailingAnchor]];
         NSLayoutConstraint *spacer1Top = [spacer1.topAnchor constraintEqualToAnchor: [self.titleBox bottomAnchor]];
-        NSLayoutConstraint *spacer1Height = [spacer1.heightAnchor constraintEqualToConstant:10];
+        NSLayoutConstraint *spacer1Height = [spacer1.heightAnchor constraintEqualToConstant:1];
         NSArray *spacer1LabelConstraints = @[spacer1Leading, spacer1Trailing, spacer1Top, spacer1Height];
         [NSLayoutConstraint activateConstraints:spacer1LabelConstraints];
         
         
-        //imageView
-        NSLayoutConstraint *imageViewLeading = [self.imageView.leadingAnchor constraintEqualToAnchor: [self.contentView leadingAnchor]];
-        NSLayoutConstraint *imageViewTrailing = [self.imageView.trailingAnchor constraintEqualToAnchor: [self.contentView trailingAnchor]];
-        NSLayoutConstraint *imageViewTop = [self.imageView.topAnchor constraintEqualToAnchor: [spacer1 bottomAnchor]];
-        NSLayoutConstraint *imageViewHeight = [self.imageView.heightAnchor constraintEqualToConstant:40];
-        NSArray *imageViewConstraints = @[imageViewLeading, imageViewTrailing, imageViewTop, imageViewHeight];
-        [NSLayoutConstraint activateConstraints:imageViewConstraints];
+        //photoView
+        NSLayoutConstraint *photoViewLeading = [self.photoView.leadingAnchor constraintEqualToAnchor: [self.contentView leadingAnchor]];
+        NSLayoutConstraint *photoViewTrailing = [self.photoView.trailingAnchor constraintEqualToAnchor: [self.contentView trailingAnchor]];
+        NSLayoutConstraint *photoViewTop = [self.photoView.topAnchor constraintEqualToAnchor: [spacer1 bottomAnchor]];
+        NSLayoutConstraint *photoViewHeight = [self.photoView.heightAnchor constraintEqualToConstant:180];
+        NSArray *photoViewConstraints = @[photoViewLeading, photoViewTrailing, photoViewTop, photoViewHeight];
+        [NSLayoutConstraint activateConstraints:photoViewConstraints];
         
-        //spacer2
-        NSLayoutConstraint *spacer2BoxLeading = [spacer2.leadingAnchor constraintEqualToAnchor: [self.contentView leadingAnchor]];
-        NSLayoutConstraint *spacer2BoxTrailing = [spacer2.trailingAnchor constraintEqualToAnchor: [self.contentView trailingAnchor]];
-        NSLayoutConstraint *spacer2BoxTop = [spacer2.topAnchor constraintEqualToAnchor:[self.imageView bottomAnchor]];
-        NSLayoutConstraint *spacer2BoxHeight = [spacer2.heightAnchor constraintEqualToConstant:10];
-        NSArray *spacer2BoxConstraints = @[spacer2BoxLeading, spacer2BoxTrailing, spacer2BoxTop, spacer2BoxHeight];
-        [NSLayoutConstraint activateConstraints:spacer2BoxConstraints];
-        
-        //textLabel
-        NSLayoutConstraint *textLabelLeading = [self.textLabel.leadingAnchor constraintEqualToAnchor: [self.contentView leadingAnchor]];
-        NSLayoutConstraint *textLabelTrailing = [self.textLabel.trailingAnchor constraintEqualToAnchor: [self.contentView trailingAnchor]];
-        NSLayoutConstraint *textLabelTop = [self.textLabel.topAnchor constraintEqualToAnchor: [spacer2 bottomAnchor]];
-        NSLayoutConstraint *textLabelHight = [self.textLabel.heightAnchor constraintEqualToConstant:13];
-        NSArray *textLabelConstraints = @[textLabelLeading, textLabelTrailing, textLabelTop, textLabelHight];
-        [NSLayoutConstraint activateConstraints:textLabelConstraints];
-        
-        
+
+        //captionView
+        NSLayoutConstraint *captionViewLeading = [self.captionView.leadingAnchor constraintEqualToAnchor: [self.contentView leadingAnchor]];
+        NSLayoutConstraint *captionViewTrailing = [self.captionView.trailingAnchor constraintEqualToAnchor: [self.contentView trailingAnchor]];
+        NSLayoutConstraint *captionViewTop = [self.captionView.topAnchor constraintEqualToAnchor: [self.photoView bottomAnchor]];
+        NSLayoutConstraint *captionViewHight = [self.captionView.heightAnchor constraintEqualToConstant:30];
+        NSArray *captionViewConstraints = @[captionViewLeading, captionViewTrailing, captionViewTop, captionViewHight];
+        [NSLayoutConstraint activateConstraints:captionViewConstraints];
     }
     return self;
 }
@@ -73,11 +65,8 @@
 - (void) propagateContentFromPost:(TBLPostPhoto * _Nonnull)post andBlogMeta:(TBLBlogMeta * _Nonnull)blogMeta
 {
     [super propagateContentFromPost:post andBlogMeta:blogMeta];
-    
-    self.textLabel.text = post.caption;
-    
-    //self.imageView = post.quoteSource;
-    NSLog(@"Konfiguruję quote.");
+    [self.captionView loadHTMLString:[post captionToHTML] baseURL:nil];
+    NSLog(@"Konfiguruję foto.");
 }
 
 @end

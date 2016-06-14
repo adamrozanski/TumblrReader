@@ -18,7 +18,6 @@
         UILayoutGuide *spacer = [[UILayoutGuide alloc] init];
         self.webView = [[WKWebView alloc] init];
         self.webView.userInteractionEnabled = NO;
-        [self.webView setBackgroundColor:[UIColor whiteColor]];
         [self.webView setTranslatesAutoresizingMaskIntoConstraints:NO];
         [self.contentView addLayoutGuide:spacer];
         [self.contentView addSubview:self.webView];
@@ -26,19 +25,20 @@
         // Constraints: (must be here in case of UITableViewCell subclass, not in layoutSubviews)
         
         //spacer
-        NSLayoutConstraint *spacerLeading = [spacer.leadingAnchor constraintEqualToAnchor: [self.contentView leadingAnchor]];
-        NSLayoutConstraint *spacerTrailing = [spacer.trailingAnchor constraintEqualToAnchor: [self.contentView trailingAnchor]];
-        NSLayoutConstraint *spacerTop = [spacer.topAnchor constraintEqualToAnchor: [self.titleBox bottomAnchor]];
-        NSLayoutConstraint *spacerHeight = [spacer.heightAnchor constraintEqualToConstant:10];
-        NSArray *spacerLabelConstraints = @[spacerLeading, spacerTrailing, spacerTop, spacerHeight];
+        NSLayoutConstraint *spacerLeadingAnchor = [spacer.leadingAnchor constraintEqualToAnchor: [self.contentView leadingAnchor]];
+        NSLayoutConstraint *spacerTrailingAnchor = [spacer.trailingAnchor constraintEqualToAnchor: [self.contentView trailingAnchor]];
+        NSLayoutConstraint *spacerTopAnchor = [spacer.topAnchor constraintEqualToAnchor: [self.titleBox bottomAnchor]];
+        self.spacerHeightAnchor = [spacer.heightAnchor constraintEqualToConstant:1];
+        NSArray *spacerLabelConstraints = @[spacerLeadingAnchor, spacerTrailingAnchor, spacerTopAnchor, self.spacerHeightAnchor];
         [NSLayoutConstraint activateConstraints:spacerLabelConstraints];
         
-        //sourceLabel
-        NSLayoutConstraint *webViewLeading = [self.webView.leadingAnchor constraintEqualToAnchor: [self.contentView  leadingAnchor]];
-        NSLayoutConstraint *webViewTrailing = [self.webView.trailingAnchor constraintEqualToAnchor: [self.contentView  trailingAnchor]];
-        NSLayoutConstraint *webViewTop = [self.webView.topAnchor constraintEqualToAnchor: [spacer bottomAnchor]];
-        NSLayoutConstraint *webViewHeight = [self.webView.heightAnchor constraintEqualToConstant:180];
-        NSArray *webViewConstraints = @[webViewLeading, webViewTrailing, webViewTop, webViewHeight];
+        //webView
+        NSLayoutConstraint *webViewLeadingAnchor = [self.webView.leadingAnchor constraintEqualToAnchor: [self.contentView  leadingAnchor]];
+        NSLayoutConstraint *webViewTrailingAnchor = [self.webView.trailingAnchor constraintEqualToAnchor: [self.contentView  trailingAnchor]];
+        NSLayoutConstraint *webViewTopAnchor = [self.webView.topAnchor constraintEqualToAnchor: [spacer bottomAnchor]];
+        self.webViewHeightAnchor = [self.webView.heightAnchor constraintEqualToConstant:180];
+        NSArray *webViewConstraints = @[webViewLeadingAnchor, webViewTrailingAnchor, webViewTopAnchor, self.webViewHeightAnchor];
+        
         [NSLayoutConstraint activateConstraints:webViewConstraints];
     }
     return self;

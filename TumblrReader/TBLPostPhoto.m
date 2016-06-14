@@ -15,18 +15,29 @@
     if ((self = [super initWithJSONPost:JSONPost]))
     {
         NSString *caption = [JSONPost objectForKey:@"photo-caption"];
-        NSString *photoURL = [JSONPost objectForKey:@"photo-url-1280"];
-        if (caption == nil || photoURL == nil)
+        NSString *photo1280URL = [JSONPost objectForKey:@"photo-url-1280"];
+        NSString *photo500URL = [JSONPost objectForKey:@"photo-url-500"];
+        if (caption == nil || photo1280URL == nil || photo500URL == nil)
             return nil;
         self.caption = caption;
-        self.photoURL = photoURL;
+        self.photo1280URL = photo1280URL;
+        self.photo500URL = photo500URL;
         self.width = [[JSONPost objectForKey:@"width"] intValue];
         self.height = [[JSONPost objectForKey:@"height"] intValue];
+        
+        NSLog(@"Photo size: %i", self.width);
     }
     return self;
 }
 
 - (nonnull NSString*)toHTML
+{
+    NSString *photoURLString = self.width > 1242 ? self.photo500URL : self.photo1280URL;
+    NSString *HTMLImage = [NSString stringWithFormat:@"<img alt=\"\" data-caption=\"\" data-entity-type=\"file\" data-entity-uuid=\"\" src=\"%@\"/>",photoURLString];
+    return [NSString stringWithFormat:@"<html><body>%@%@</body></html>",HTMLImage,self.caption];
+}
+
+- (nonnull NSString*)captionToHTML
 {
     return [NSString stringWithFormat:@"<html><body>%@</body></html>",self.caption];
 }

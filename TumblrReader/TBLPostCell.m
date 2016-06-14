@@ -21,7 +21,7 @@
         self.dateLabel = [[UILabel alloc] init];
         [self.dateLabel setTextColor:[UIColor colorWithRed:0.24f green:0.39f blue:0.62f alpha:1.0f]];
         [self.dateLabel setBackgroundColor:[UIColor whiteColor]];
-        [self.dateLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:12.0f]];
+        [self.dateLabel setFont:[UIFont fontWithName:@"HelveticaNeue" size:10.0f]];
         [self.dateLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
         self.titleBox = [[UIView alloc] init];
         [self.titleBox setBackgroundColor:[UIColor whiteColor]];
@@ -43,7 +43,7 @@
         NSLayoutConstraint *titleBoxLeading = [self.titleBox.leadingAnchor constraintEqualToAnchor: [self.contentView leadingAnchor]];
         NSLayoutConstraint *ttitleBoxTailing = [self.titleBox.trailingAnchor constraintEqualToAnchor: [self.contentView trailingAnchor]];
         NSLayoutConstraint *titleBoxTop = [self.titleBox.topAnchor constraintEqualToAnchor: [self.contentView topAnchor]];
-        NSLayoutConstraint *titleBoxHeight = [self.titleBox.heightAnchor constraintEqualToConstant:40];
+        NSLayoutConstraint *titleBoxHeight = [self.titleBox.heightAnchor constraintEqualToConstant:20];
         NSArray *titleBoxConstraints = @[titleBoxLeading, ttitleBoxTailing, titleBoxTop, titleBoxHeight];
         [NSLayoutConstraint activateConstraints:titleBoxConstraints];
     }

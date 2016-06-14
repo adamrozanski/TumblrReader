@@ -46,7 +46,7 @@
 
 - (void) setupData
 {
-    self.blogMeta = [[TBLBlogMeta alloc] initWithUsername:@"demo"];
+    self.blogMeta = [[TBLBlogMeta alloc] initWithUsername:@"ekipa"];
     self.blogPosts = [NSMutableArray array];
     self.dataSource = [[TBLDataSource alloc] initWithBlog:self.blogMeta blogPosts:self.blogPosts];
     
@@ -72,6 +72,27 @@
     TBLPost *post = _blogPosts[indexPath.row];
     NSString *identifier = [TBLPostTypeMap stringForPostType:post.type];
     TBLPostCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
+    if ([cell isMemberOfClass: [TBLPhotoCell class]])
+    {
+        
+        TBLPostPhoto * photoPost = (TBLPostPhoto *)post;
+        TBLPhotoCell *photoCell = (TBLPhotoCell *)cell;
+        //photoCell
+        if (photoPost.photo1280URL != nil)
+        {
+            [self.dataSource imageFromURLString:photoPost.photo1280URL success:^(UIImage * _Nullable image)
+             {
+                 if (photoCell != nil && image != nil) {
+                     photoCell.photoView.image = image;
+                     [photoCell setNeedsLayout];
+                 }
+             }
+                                        failure:^(NSError * _Nonnull error)
+             {
+                 NSLog(@"ERROR DOWNLOADING PHOTO");
+             }];
+        }
+    }
     [cell propagateContentFromPost:post andBlogMeta:self.blogMeta];
     return cell;
 }
@@ -92,7 +113,7 @@
 
 - (void) loadPosts
 {
-    [_dataSource fetchPostsWithCompletionSuccess:^(NSURLSessionTask * _Nonnull task, TBLBlogMeta * _Nullable blog, NSArray<TBLPost *> * _Nullable posts, NSError * _Nullable error) {
+    [self.dataSource fetchPostsWithCompletionSuccess:^(NSURLSessionTask * _Nonnull task, TBLBlogMeta * _Nullable blog, NSArray<TBLPost *> * _Nullable posts, NSError * _Nullable error) {
         self.blogMeta.startPostIndex = blog.startPostIndex;
         self.blogMeta.totalPostsCount = blog.totalPostsCount;
         [self.blogPosts addObjectsFromArray:posts];

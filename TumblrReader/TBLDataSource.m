@@ -27,7 +27,7 @@ int const postsCountPerRequest = 10;
 
 
 - (void) fetchPostsWithCompletionSuccess:(void (^)(NSURLSessionTask * _Nonnull task, TBLBlogMeta * _Nullable blogMeta, NSArray<TBLPost *> * _Nullable posts, NSError * _Nullable error))success
-                            failure:(void (^)(NSURLSessionTask * _Nullable task, NSError * _Nonnull error))failure
+                                 failure:(void (^)(NSURLSessionTask * _Nullable task, NSError * _Nonnull error))failure
 {
     int startPostIndex = [self postsArrayisEmpty] ? self.blogMeta.startPostIndex : [self nextPostIndex];
     TBLAPIManager *manager = [TBLAPIManager sharedManager];
@@ -47,6 +47,17 @@ int const postsCountPerRequest = 10;
 {
     return [self.blogPosts count] == 0;
 }
+
+-(void) imageFromURLString:(NSString * _Nonnull)URLString
+                   success:(void (^ _Nonnull)(UIImage * _Nullable image))success
+                   failure:(void (^ _Nonnull)(NSError * _Nonnull error))failure
+{
+    TBLAPIManager *manager = [TBLAPIManager sharedManager];
+    [manager imageFromURLString:URLString success:success failure:failure];
+}
+
+
+
 
 /*
  

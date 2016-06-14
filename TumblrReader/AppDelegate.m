@@ -15,8 +15,15 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    
+    CGRect viewRect = [[UIScreen mainScreen]bounds];
+    self.window = [[UIWindow alloc]initWithFrame:viewRect];
+    TBLTableViewController *tableViewController = [[TBLTableViewController alloc]init];
+    self.window.rootViewController = tableViewController;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

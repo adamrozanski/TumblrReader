@@ -10,6 +10,7 @@
 
 @interface AppDelegate ()
 
+
 @end
 
 @implementation AppDelegate
@@ -17,11 +18,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    
-    CGRect viewRect = [[UIScreen mainScreen]bounds];
-    self.window = [[UIWindow alloc]initWithFrame:viewRect];
+    self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     TBLTableViewController *tableViewController = [[TBLTableViewController alloc]init];
-    self.window.rootViewController = tableViewController;
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:tableViewController];
+    self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
     
     return YES;

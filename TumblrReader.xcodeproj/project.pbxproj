@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		668241F81D0F82B000BD5980 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66E6DA121D0F785100B8DF5D /* Main.storyboard */; };
 		66E6DA0B1D0F785100B8DF5D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E6DA0A1D0F785100B8DF5D /* main.m */; };
 		66E6DA0E1D0F785100B8DF5D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E6DA0D1D0F785100B8DF5D /* AppDelegate.m */; };
 		66E6DA111D0F785100B8DF5D /* TBLTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E6DA101D0F785100B8DF5D /* TBLTableViewController.m */; };
-		66E6DA141D0F785100B8DF5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66E6DA121D0F785100B8DF5D /* Main.storyboard */; };
 		66E6DA161D0F785100B8DF5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66E6DA151D0F785100B8DF5D /* Assets.xcassets */; };
 		66E6DA191D0F785100B8DF5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66E6DA171D0F785100B8DF5D /* LaunchScreen.storyboard */; };
 		66E6DA211D0F787800B8DF5D /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 66E6DA201D0F787800B8DF5D /* Podfile */; };
@@ -286,7 +286,7 @@
 				66E6DA191D0F785100B8DF5D /* LaunchScreen.storyboard in Resources */,
 				66E6DA161D0F785100B8DF5D /* Assets.xcassets in Resources */,
 				66E6DA211D0F787800B8DF5D /* Podfile in Resources */,
-				66E6DA141D0F785100B8DF5D /* Main.storyboard in Resources */,
+				668241F81D0F82B000BD5980 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

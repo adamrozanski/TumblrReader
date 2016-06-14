@@ -18,15 +18,22 @@
         NSString *artist = [JSONPost objectForKey:@"id3-artist"];
         NSString *title = [JSONPost objectForKey:@"id3-title"];
         NSString *caption = [JSONPost objectForKey:@"audio-caption"];
-        NSString *HTMLEmbed = [JSONPost objectForKey:@"audio-embed"];
+        NSString *playerEmbed = [JSONPost objectForKey:@"audio-embed"];
         
-        if (artist == nil || title == nil || HTMLEmbed == nil || caption == nil)
+        if (artist == nil || title == nil || playerEmbed == nil || caption == nil)
             return nil;
         self.artist = artist;
         self.title = title;
         self.caption = caption;
-        self.HTMLEmbed = HTMLEmbed;
+        self.playerEmbed = playerEmbed;
     }
     return self;
 }
+
+- (nonnull NSString*)toHTML
+{
+    return [NSString stringWithFormat:@"<html><body><h1><strong>%@</strong></h1><h2>%@</h2>%@<p>%@</p></body></html>",self.title, self.artist, self.caption, self.playerEmbed];
+}
+
+
 @end

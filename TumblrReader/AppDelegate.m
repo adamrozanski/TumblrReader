@@ -23,7 +23,6 @@
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:tableViewController];
     self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
-    
     return YES;
 }
 

@@ -15,5 +15,5 @@
 @property (nonnull) NSString *quoteSource;
 
 - (nullable instancetype)initWithJSONPost:(NSDictionary * _Nonnull)JSONPost;
-
+- (nonnull NSString*)toHTML;
 @end

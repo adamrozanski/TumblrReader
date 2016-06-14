@@ -68,7 +68,7 @@
     return 20.0f;//[self labelHeight:self.textLabel];
 }
 
-- (void) propageteContentFromPost:(TBLPost * _Nonnull)post andBlogMeta:(TBLBlogMeta * _Nonnull)blogMeta
+- (void) propagateContentFromPost:(TBLPost * _Nonnull)post andBlogMeta:(TBLBlogMeta * _Nonnull)blogMeta
 {
     self.dateLabel.text = post.date;
     self.tagsLabel.text = [post.tags componentsJoinedByString:@" "];

@@ -30,7 +30,6 @@
 
 -(void) configureTableView
 {
-    //self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     self.tableView.estimatedRowHeight = 400.0;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.allowsSelection = NO;
@@ -39,16 +38,15 @@
     [self.tableView registerClass:[TBLQuoteCell class] forCellReuseIdentifier:@"quote"];
     [self.tableView registerClass:[TBLPhotoCell class] forCellReuseIdentifier:@"photo"];
     [self.tableView registerClass:[TBLRegularCell class] forCellReuseIdentifier:@"regular"];
+    [self.tableView registerClass:[TBLAudioCell class] forCellReuseIdentifier:@"audio"];
+    [self.tableView registerClass:[TBLConversationCell class] forCellReuseIdentifier:@"conversation"];
+    [self.tableView registerClass:[TBLLinkCell class] forCellReuseIdentifier:@"link"];
     
-    //self.tableView.delegate = self;
-    //self.tableView.dataSource = self;
-    
-    //[self.view addSubview:self.tableView];
 }
 
 - (void) setupData
 {
-    self.blogMeta = [[TBLBlogMeta alloc] initWithUsername:@"ekipa"];
+    self.blogMeta = [[TBLBlogMeta alloc] initWithUsername:@"demo"];
     self.blogPosts = [NSMutableArray array];
     self.dataSource = [[TBLDataSource alloc] initWithBlog:self.blogMeta blogPosts:self.blogPosts];
     
@@ -74,7 +72,7 @@
     TBLPost *post = _blogPosts[indexPath.row];
     NSString *identifier = [TBLPostTypeMap stringForPostType:post.type];
     TBLPostCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
-    [cell propageteContentFromPost:post andBlogMeta:self.blogMeta];
+    [cell propagateContentFromPost:post andBlogMeta:self.blogMeta];
     return cell;
 }
 

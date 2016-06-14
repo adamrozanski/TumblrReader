@@ -70,9 +70,9 @@
 
 
 
-- (void) propageteContentFromPost:(TBLPostPhoto * _Nonnull)post andBlogMeta:(TBLBlogMeta * _Nonnull)blogMeta
+- (void) propagateContentFromPost:(TBLPostPhoto * _Nonnull)post andBlogMeta:(TBLBlogMeta * _Nonnull)blogMeta
 {
-    [super propageteContentFromPost:post andBlogMeta:blogMeta];
+    [super propagateContentFromPost:post andBlogMeta:blogMeta];
     
     self.textLabel.text = post.caption;
     

@@ -14,5 +14,6 @@
 @property (nonnull) NSString *conversationText;
 
 - (nullable instancetype)initWithJSONPost:(NSDictionary * _Nonnull)JSONPost;
+- (nonnull NSString*)toHTML;
 
 @end

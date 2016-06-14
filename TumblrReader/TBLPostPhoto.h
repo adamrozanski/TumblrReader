@@ -16,6 +16,6 @@
 @property int height;
 
 - (nullable instancetype)initWithJSONPost:(NSDictionary * _Nonnull)JSONPost;
-
+- (nonnull NSString*)toHTML;
 @end
 

@@ -37,4 +37,9 @@
     return self;
 }
 
+- (nonnull NSString*)toHTML
+{
+    return @"<html><body></body></html>";
+}
+
 @end

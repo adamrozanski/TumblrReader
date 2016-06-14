@@ -17,7 +17,8 @@
 @property (nonnull) NSString *date;
 @property (nullable) NSArray<NSString *> *tags;
 
-- (nullable instancetype)initWithJSONPost:(NSDictionary * _Nonnull)JSONPost;
 + (TBLPostType)postTypeForJSONPost:(NSDictionary * _Nonnull)JSONPost;
+- (nullable instancetype)initWithJSONPost:(NSDictionary * _Nonnull)JSONPost;
+- (nonnull NSString*)toHTML;
 
 @end

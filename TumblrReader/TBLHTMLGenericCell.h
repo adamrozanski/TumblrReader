@@ -1,20 +1,21 @@
 //
-//  TBLPostCell.h
-//  TUMBL
+//  TBLHTMLGenericCell.h
+//  TumblrReader
 //
-//  Created by Adam on 13.06.2016.
+//  Created by Adam on 14.06.2016.
 //  Copyright © 2016 Adam. All rights reserved.
-#import <UIKit/UIKit.h>
-#import "TBLBlogMeta.h"
+//
+
+#import <WebKit/WebKit.h>
+#import "TBLPostCell.h"
 #import "TBLPost.h"
+#import "TBLBlogMeta.h"
 
-@interface TBLPostCell: UITableViewCell
+@interface TBLHTMLGenericCell : TBLPostCell
 
-@property UILabel * _Nullable tagsLabel;
-@property UILabel * _Nullable dateLabel;
-@property UIView * _Nullable titleBox;
+@property WKWebView * _Nullable webView;
 
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier;
 - (void) propagateContentFromPost:(TBLPost * _Nonnull)post andBlogMeta:(TBLBlogMeta * _Nonnull)blogMeta;
-- (CGFloat)cellHeight;
+
 @end

@@ -24,5 +24,9 @@
     return self;
 }
 
+- (nonnull NSString*)toHTML
+{
+    return [NSString stringWithFormat:@"<html><body><h1><strong>%@</strong></h1>%@</body></html>",self.quoteText, self.quoteSource];
+}
 
 @end

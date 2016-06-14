@@ -16,6 +16,9 @@
 #import "TBLQuoteCell.h"
 #import "TBLPhotoCell.h"
 #import "TBLRegularCell.h"
+#import "TBLAudioCell.h"
+#import "TBLConversationCell.h"
+#import "TBLLinkCell.h"
 
 @interface TBLTableViewController : UITableViewController
 

@@ -10,9 +10,8 @@
 #import "TBLPostCell.h"
 #import "TBLPostRegular.h"
 #import "TBLBlogMeta.h"
+#import "TBLHTMLGenericCell.h"
 
-@interface TBLRegularCell : TBLPostCell
-
-@property WKWebView * _Nullable articleWebView;
+@interface TBLRegularCell : TBLHTMLGenericCell
 
 @end

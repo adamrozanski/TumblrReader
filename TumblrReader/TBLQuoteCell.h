@@ -10,13 +10,8 @@
 #import "TBLPostCell.h"
 #import "TBLPostQuote.h"
 #import "TBLBlogMeta.h"
+#import "TBLHTMLGenericCell.h"
 
-@interface TBLQuoteCell : TBLPostCell
-
-@property UILabel * _Nullable quoteLabel;
-@property WKWebView * _Nullable sourceWebView;
-
-- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier;
-- (void) propageteContentFromPost:(TBLPostQuote * _Nonnull)post andBlogMeta:(TBLBlogMeta * _Nonnull)blogMeta;
+@interface TBLQuoteCell : TBLHTMLGenericCell
 
 @end

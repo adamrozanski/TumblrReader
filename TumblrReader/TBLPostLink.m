@@ -27,4 +27,9 @@
     }
     return self;
 }
+
+- (nonnull NSString*)toHTML
+{
+    return [NSString stringWithFormat:@"<html><body><h1><a href=\"%@\">%@</a></h1><h2>%@</h2></body></html>",self.linkText, self.linkURL, self.linkDescription];
+}
 @end

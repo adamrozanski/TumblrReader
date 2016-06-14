@@ -23,4 +23,11 @@
     }
     return self;
 }
+
+- (nonnull NSString*)toHTML
+{
+    return [NSString stringWithFormat:@"<html><body><h1>%@</h1><h2>%@</h2></body></html>",self.conversationTitle, self.conversationText];
+}
+
+
 @end

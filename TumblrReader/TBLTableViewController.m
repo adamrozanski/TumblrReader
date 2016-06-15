@@ -65,7 +65,7 @@
     self.blogMeta = [[TBLBlogMeta alloc] initWithUsername:blogName];  //epicbeta
     self.blogPosts = [NSMutableArray array];
     self.dataSource = [[TBLDataSource alloc] initWithBlog:self.blogMeta blogPosts:self.blogPosts];
-    
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -191,7 +191,7 @@
 {
     long rowsLoaded = (long)[self.blogPosts count];
     long rowsRemaining = rowsLoaded - (long)indexPath.row;
-    long rowsToLoadFromBottom = 5;
+    long rowsToLoadFromBottom = 10;
     return (rowsRemaining <= rowsToLoadFromBottom);
 }
 

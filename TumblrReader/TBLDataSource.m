@@ -10,7 +10,7 @@
 #import "TBLPostPhoto.h"
 
 
-int const postsCountPerRequest = 10;
+int const postsCountPerRequest = 20;
 
 
 @implementation TBLDataSource

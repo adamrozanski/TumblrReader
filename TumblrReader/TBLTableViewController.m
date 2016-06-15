@@ -12,6 +12,7 @@
 #import <PINRemoteImage/PINImageView+PINRemoteImage.h>
 #import <PINCache/PINCache.h>
 #import <FLAnimatedImage/FLAnimatedImageView.h>
+#import "TBLPostViewController.h"
 
 @interface TBLTableViewController () <UITableViewDelegate,UITableViewDataSource>
 
@@ -38,7 +39,6 @@
 
 -(void) setupTableView
 {
-    self.tableView.allowsSelection = NO;
     self.tableView.backgroundColor = [UIColor colorWithRed:0.21f green:0.24f blue:0.28f alpha:1.0f];
     [self.tableView registerClass:[TBLQuoteCell class] forCellReuseIdentifier:@"quote"];
     [self.tableView registerClass:[TBLPhotoCell class] forCellReuseIdentifier:@"photo"];
@@ -73,6 +73,16 @@
     [super didReceiveMemoryWarning];
 }
 
+#pragma mark - Table View
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    TBLPost *post = [self.blogPosts objectAtIndex:indexPath.row];
+    TBLPostViewController *postViewController = [[TBLPostViewController alloc] initWithBlogMeta:self.blogMeta post:post];
+    [self.navigationController pushViewController:postViewController animated:YES];    
+}
+
 #pragma mark - Table View Data Source & Delegate Methods
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -82,7 +92,6 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return _blogPosts.count;
 }
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TBLPost *post = _blogPosts[indexPath.row];
     NSString *identifier = [TBLPostTypeMap stringForPostType:post.type];
@@ -91,10 +100,21 @@
     {
         __weak TBLPostPhoto * photoPost = (TBLPostPhoto *)post;
         __weak TBLPhotoCell * photoCell = (TBLPhotoCell *)cell;
+        photoCell.photoView.alpha = 0.0f;
         if (photoPost.photoURLsAreNotNil)
         {
             NSURL *URL = [NSURL URLWithString:photoPost.iPhoneOptimizedPhotoURL];
-            [photoCell.photoView pin_setImageFromURL:URL placeholderImage:[UIImage imageNamed:@"placeholder"]];
+            [photoCell.photoView pin_setImageFromURL:URL completion:^(PINRemoteImageManagerResult * _Nonnull result) {
+                if (result.requestDuration > 0.25) {
+                    [UIView animateWithDuration:0.3 animations:^{
+                        photoCell.photoView.alpha = 1.0f;
+                    }];
+                } else {
+                    [UIView animateWithDuration:0.5 animations:^{
+                        photoCell.photoView.alpha = 1.0f;
+                    }];
+                }
+            }];
         }
     }
     [cell propagateContentFromPost:post andBlogMeta:self.blogMeta];
@@ -102,7 +122,6 @@
         [self loadPosts];
     return cell;
 }
-
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -134,7 +153,7 @@
     [self loadPosts];
 }
 
-- (void) updateLastTimeResreshed
+- (void) updateLastTimeRefreshed
 {
     NSDate *lastTime = [[NSDate alloc] init];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
@@ -173,7 +192,7 @@
         [self.blogPosts addObjectsFromArray:posts];
         [self.tableView reloadData];
         [self updateBlogTitle];
-        [self updateLastTimeResreshed];
+        [self updateLastTimeRefreshed];
     }
                                              failure:^(NSURLSessionTask * _Nullable task, NSError * _Nonnull error) {
                                                  self.isFetchingPosts = NO;

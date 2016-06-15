@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "TBLTableViewController.h"
 
 @interface AppDelegate ()
 

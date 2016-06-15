@@ -17,7 +17,8 @@
     if (self) {
 
         self.contentView.backgroundColor = [UIColor colorWithRed:0.21f green:0.24f blue:0.28f alpha:1.0f];
-       
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
+
         self.titleLabel = [[UILabel alloc] init];
         [self.titleLabel setTextColor:[UIColor colorWithRed:0.21f green:0.24f blue:0.28f alpha:1.0f]];
         [self.titleLabel setBackgroundColor:[UIColor whiteColor]];
@@ -96,6 +97,12 @@
 {
     self.titleLabel.text = post.date;
     self.footerLabel.text = [NSString stringWithFormat:@"Tagi: %@",[post tagsAsString]];
+}
+
+- (void)setSelected:(BOOL)selected
+           animated:(BOOL)animated
+{
+    [super setSelected:NO animated:animated];
 }
 
 @end

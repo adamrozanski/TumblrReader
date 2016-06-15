@@ -14,7 +14,7 @@
     if ((self = [super initWithJSONPost:JSONPost]))
     {
         NSString *HTMLBody = [JSONPost objectForKey:@"regular-body"];
-        if (HTMLBody == nil)
+        if (!HTMLBody)
             return nil;
         self.HTMLBody = HTMLBody;
         self.title = [JSONPost objectForKey:@"regular-title"];

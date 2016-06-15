@@ -20,8 +20,9 @@
         NSString *caption = [JSONPost objectForKey:@"audio-caption"];
         NSString *playerEmbed = [JSONPost objectForKey:@"audio-embed"];
         
-        if (artist == nil || title == nil || playerEmbed == nil || caption == nil)
+        if (!artist || !title || !playerEmbed || !caption)
             return nil;
+        
         self.artist = artist;
         self.title = title;
         self.caption = caption;

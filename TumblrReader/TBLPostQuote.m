@@ -16,7 +16,7 @@
     {
         NSString *quoteText = [JSONPost objectForKey:@"quote-text"];
         NSString *quoteSource = [JSONPost objectForKey:@"quote-source"];
-        if (quoteText == nil || quoteSource == nil)
+        if (!quoteText || !quoteSource)
             return nil;
         self.quoteText = quoteText;
         self.quoteSource = quoteSource;

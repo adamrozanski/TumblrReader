@@ -16,7 +16,7 @@
     {
 
         NSString *conversationText = [JSONPost objectForKey:@"conversation-text"];
-        if (conversationText == nil)
+        if (!conversationText)
             return nil;
         self.conversationText = conversationText;
         self.conversationTitle = [JSONPost objectForKey:@"conversation-title"];

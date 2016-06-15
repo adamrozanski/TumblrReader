@@ -18,7 +18,7 @@
         NSString *linkURL = [JSONPost objectForKey:@"link-url"];
         NSString *linkDescription = [JSONPost objectForKey:@"link-description"];
         
-        if (linkText == nil || linkURL == nil || linkDescription == nil)
+        if (!linkText || !linkURL || !linkDescription)
             return nil;
         
         self.linkText = linkText;

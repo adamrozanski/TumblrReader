@@ -19,8 +19,8 @@
         self.webView = [[WKWebView alloc] init];
         self.webView.userInteractionEnabled = NO;
         [self.webView setTranslatesAutoresizingMaskIntoConstraints:NO];
-        [self.contentView addLayoutGuide:spacer];
         [self.contentView addSubview:self.webView];
+        [self.contentView addLayoutGuide:spacer];
         
         // Constraints: (must be here in case of UITableViewCell subclass, not in layoutSubviews)
         
@@ -38,8 +38,9 @@
         NSLayoutConstraint *webViewTopAnchor = [self.webView.topAnchor constraintEqualToAnchor: [spacer bottomAnchor]];
         self.webViewHeightAnchor = [self.webView.heightAnchor constraintEqualToConstant:180];
         NSArray *webViewConstraints = @[webViewLeadingAnchor, webViewTrailingAnchor, webViewTopAnchor, self.webViewHeightAnchor];
-        
         [NSLayoutConstraint activateConstraints:webViewConstraints];
+        
+        [self attachFooterToBottomAnchor:self.webView.bottomAnchor];
     }
     return self;
 }

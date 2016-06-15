@@ -22,13 +22,12 @@
         [self.photoView setBackgroundColor:[UIColor whiteColor]];
         [self.photoView setTranslatesAutoresizingMaskIntoConstraints:NO];
         
-        /*
         self.captionView = [[WKWebView alloc] init];
         self.captionView.userInteractionEnabled = NO;
         [self.captionView setBackgroundColor:[UIColor whiteColor]];
         [self.captionView setTranslatesAutoresizingMaskIntoConstraints:NO];
         [self.contentView addSubview:self.captionView];
-        */
+
         
         [self.contentView addLayoutGuide:spacer1];
         [self.contentView addSubview:self.photoView];
@@ -52,15 +51,16 @@
         NSArray *photoViewConstraints = @[photoViewLeading, photoViewTrailing, photoViewTop, photoViewHeight];
         [NSLayoutConstraint activateConstraints:photoViewConstraints];
         
-/*
         //captionView
         NSLayoutConstraint *captionViewLeading = [self.captionView.leadingAnchor constraintEqualToAnchor: [self.contentView leadingAnchor]];
         NSLayoutConstraint *captionViewTrailing = [self.captionView.trailingAnchor constraintEqualToAnchor: [self.contentView trailingAnchor]];
         NSLayoutConstraint *captionViewTop = [self.captionView.topAnchor constraintEqualToAnchor: [self.photoView bottomAnchor]];
-        NSLayoutConstraint *captionViewHight = [self.captionView.heightAnchor constraintEqualToConstant:30];
+        NSLayoutConstraint *captionViewHight = [self.captionView.heightAnchor constraintEqualToConstant:18];
         NSArray *captionViewConstraints = @[captionViewLeading, captionViewTrailing, captionViewTop, captionViewHight];
         [NSLayoutConstraint activateConstraints:captionViewConstraints];
- */
+        
+        [self attachFooterToBottomAnchor:self.captionView.bottomAnchor];
+
     }
     return self;
 }
@@ -72,5 +72,6 @@
     [super propagateContentFromPost:post andBlogMeta:blogMeta];
     [self.captionView loadHTMLString:[post captionToHTML] baseURL:nil];
 }
+
 
 @end

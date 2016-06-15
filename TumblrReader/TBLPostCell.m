@@ -16,28 +16,28 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
 
-        self.contentView.backgroundColor = [UIColor colorWithRed:0.24f green:0.39f blue:0.62f alpha:1.0f];
+        self.contentView.backgroundColor = [UIColor colorWithRed:0.21f green:0.24f blue:0.28f alpha:1.0f];
        
-        self.dateLabel = [[UILabel alloc] init];
-        [self.dateLabel setTextColor:[UIColor colorWithRed:0.24f green:0.39f blue:0.62f alpha:1.0f]];
-        [self.dateLabel setBackgroundColor:[UIColor whiteColor]];
-        [self.dateLabel setFont:[UIFont fontWithName:@"HelveticaNeue" size:10.0f]];
-        [self.dateLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
+        self.titleLabel = [[UILabel alloc] init];
+        [self.titleLabel setTextColor:[UIColor colorWithRed:0.21f green:0.24f blue:0.28f alpha:1.0f]];
+        [self.titleLabel setBackgroundColor:[UIColor whiteColor]];
+        [self.titleLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:10.0f]];
+        [self.titleLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
         self.titleBox = [[UIView alloc] init];
         [self.titleBox setBackgroundColor:[UIColor whiteColor]];
         [self.titleBox setTranslatesAutoresizingMaskIntoConstraints:NO];
-        [self.titleBox addSubview:self.dateLabel];
+        [self.titleBox addSubview:self.titleLabel];
         [self.contentView addSubview:self.titleBox];
         
         // Constraints: (must be here in case of UITableViewCell subclass, not in layoutSubviews)
         
-        //dateLabel
-        NSLayoutConstraint *dateLabelLeading = [self.dateLabel.leadingAnchor constraintEqualToAnchor: [self.titleBox leadingAnchor] constant:16];
-        NSLayoutConstraint *dateLabelTailing = [self.dateLabel.trailingAnchor constraintEqualToAnchor: [self.titleBox trailingAnchor]];
-        NSLayoutConstraint *dateLabelLTop = [self.dateLabel.topAnchor constraintEqualToAnchor: [self.titleBox topAnchor]];
-        NSLayoutConstraint *dateLabelHleight = [self.dateLabel.heightAnchor constraintEqualToAnchor: [self.titleBox heightAnchor]];
-        NSArray *dateLabelConstraints = @[dateLabelLeading, dateLabelTailing, dateLabelLTop, dateLabelHleight];
-        [NSLayoutConstraint activateConstraints:dateLabelConstraints];
+        //titleLabel
+        NSLayoutConstraint *titleLabelLeading = [self.titleLabel.leadingAnchor constraintEqualToAnchor: [self.titleBox leadingAnchor] constant:16];
+        NSLayoutConstraint *titleLabelTailing = [self.titleLabel.trailingAnchor constraintEqualToAnchor: [self.titleBox trailingAnchor]];
+        NSLayoutConstraint *titleLabelLTop = [self.titleLabel.topAnchor constraintEqualToAnchor: [self.titleBox topAnchor]];
+        NSLayoutConstraint *titleLabelHleight = [self.titleLabel.heightAnchor constraintEqualToAnchor: [self.titleBox heightAnchor]];
+        NSArray *titleLabelConstraints = @[titleLabelLeading, titleLabelTailing, titleLabelLTop, titleLabelHleight];
+        [NSLayoutConstraint activateConstraints:titleLabelConstraints];
         
         //titleBox
         NSLayoutConstraint *titleBoxLeading = [self.titleBox.leadingAnchor constraintEqualToAnchor: [self.contentView leadingAnchor]];
@@ -50,28 +50,52 @@
     return self;
 }
 
-- (CGFloat)labelHeight:(UILabel*)label
+- (void) attachFooterToBottomAnchor:(NSLayoutYAxisAnchor * _Nonnull)bottomAnchor
 {
-    CGSize constraint = CGSizeMake(label.frame.size.width, CGFLOAT_MAX);
-    CGSize size;
-    NSStringDrawingContext *context = [[NSStringDrawingContext alloc] init];
-    CGSize boundingBox = [label.text boundingRectWithSize:constraint
-                                                  options:NSStringDrawingUsesLineFragmentOrigin
-                                               attributes:@{NSFontAttributeName:label.font}
-                                                  context:context].size;
-    size = CGSizeMake(ceil(boundingBox.width), ceil(boundingBox.height));
-    return size.height;
-}
-
-- (CGFloat)cellHeight;
-{
-    return 20.0f;//[self labelHeight:self.textLabel];
+    UILayoutGuide *bottomSpacer = [[UILayoutGuide alloc] init];
+    self.footerLabel = [[UILabel alloc] init];
+    [self.footerLabel setTextColor:[UIColor colorWithRed:0.21f green:0.24f blue:0.28f alpha:1.0f]];
+    [self.footerLabel setBackgroundColor:[UIColor whiteColor]];
+    [self.footerLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:10.0f]];
+    [self.footerLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
+    UIView *footerBox = [[UIView alloc] init];
+    [footerBox setBackgroundColor:[UIColor whiteColor]];
+    [footerBox setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [footerBox addSubview:self.footerLabel];
+    [self.contentView addSubview:footerBox];
+    [self.contentView addLayoutGuide:bottomSpacer];
+    
+    // Constraints: (must be here in case of UITableViewCell subclass, not in layoutSubviews)
+    
+    //spacer
+    NSLayoutConstraint *bottomSpacerLeadingAnchor = [bottomSpacer.leadingAnchor constraintEqualToAnchor: [self.contentView leadingAnchor]];
+    NSLayoutConstraint *bottomSpacerTrailingAnchor = [bottomSpacer.trailingAnchor constraintEqualToAnchor: [self.contentView trailingAnchor]];
+    NSLayoutConstraint *bottomSpacerTopAnchor = [bottomSpacer.topAnchor constraintEqualToAnchor: bottomAnchor];
+    NSLayoutConstraint *bottomSpacerHeightAnchor = [bottomSpacer.heightAnchor constraintEqualToConstant:0.5];
+    NSArray *bottomSpacerLabelConstraints = @[bottomSpacerLeadingAnchor, bottomSpacerTrailingAnchor, bottomSpacerTopAnchor, bottomSpacerHeightAnchor];
+    [NSLayoutConstraint activateConstraints:bottomSpacerLabelConstraints];
+    
+    //footerBox
+    NSLayoutConstraint *footerBoxLeadingAnchor = [footerBox.leadingAnchor constraintEqualToAnchor: [self.contentView  leadingAnchor]];
+    NSLayoutConstraint *footerBoxTrailingAnchor = [footerBox.trailingAnchor constraintEqualToAnchor: [self.contentView  trailingAnchor]];
+    NSLayoutConstraint *footerBoxTopAnchor = [footerBox.topAnchor constraintEqualToAnchor: [bottomSpacer bottomAnchor]];
+    NSLayoutConstraint *footerBoxHeightAnchor = [footerBox.heightAnchor constraintEqualToConstant:20];
+    NSArray *footerBoxConstraints = @[footerBoxLeadingAnchor, footerBoxTrailingAnchor, footerBoxTopAnchor, footerBoxHeightAnchor];
+    [NSLayoutConstraint activateConstraints:footerBoxConstraints];
+    
+    //footerLabel
+    NSLayoutConstraint *footerLabelLeading = [self.footerLabel.leadingAnchor constraintEqualToAnchor: [footerBox leadingAnchor] constant:16];
+    NSLayoutConstraint *footerLabelTailing = [self.footerLabel.trailingAnchor constraintEqualToAnchor: [footerBox trailingAnchor]];
+    NSLayoutConstraint *footerLabelLTop = [self.footerLabel.topAnchor constraintEqualToAnchor: [footerBox topAnchor]];
+    NSLayoutConstraint *footerLabelHleight = [self.footerLabel.heightAnchor constraintEqualToAnchor: [footerBox heightAnchor]];
+    NSArray *footerLabelConstraints = @[footerLabelLeading, footerLabelTailing, footerLabelLTop, footerLabelHleight];
+    [NSLayoutConstraint activateConstraints:footerLabelConstraints];
 }
 
 - (void) propagateContentFromPost:(TBLPost * _Nonnull)post andBlogMeta:(TBLBlogMeta * _Nonnull)blogMeta
 {
-    self.dateLabel.text = post.date;
-    self.tagsLabel.text = [post.tags componentsJoinedByString:@" "];
+    self.titleLabel.text = post.date;
+    self.footerLabel.text = [NSString stringWithFormat:@"Tagi: %@",[post tagsAsString]];
 }
 
 @end

@@ -38,7 +38,7 @@
 {
     NSString *queryString = [self queryStringForUsername:username startPostIndex:startPostIndex postsCount:postsCount];
     
-    if (self.sessionManager == nil)
+    if (!self.sessionManager)
         self.sessionManager = [[AFHTTPSessionManager alloc] init];
     
     self.sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
@@ -81,7 +81,7 @@
                     success:(void (^ _Nonnull)(UIImage * _Nullable image))success
                     failure:(void (^ _Nonnull)(NSError * _Nonnull error))failure
 {
-    if (self.sessionManager == nil)
+    if (!self.sessionManager)
         self.sessionManager = [[AFHTTPSessionManager alloc] init];
     
     self.sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];

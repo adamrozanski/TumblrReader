@@ -10,12 +10,12 @@
 
 @interface TBLPostCell: UITableViewCell
 
-@property UILabel * _Nullable tagsLabel;
-@property UILabel * _Nullable dateLabel;
+@property UILabel * _Nullable titleLabel;
 @property UIView * _Nullable titleBox;
+@property UILabel * _Nullable footerLabel;
 
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier;
+- (void) attachFooterToBottomAnchor:(NSLayoutYAxisAnchor * _Nonnull)bottomAnchor;
 - (void) propagateContentFromPost:(TBLPost * _Nonnull)post andBlogMeta:(TBLBlogMeta * _Nonnull)blogMeta;
-- (CGFloat)cellHeight;
 
 @end

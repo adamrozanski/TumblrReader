@@ -20,5 +20,6 @@
 + (TBLPostType)postTypeForJSONPost:(NSDictionary * _Nonnull)JSONPost;
 - (nullable instancetype)initWithJSONPost:(NSDictionary * _Nonnull)JSONPost;
 - (nonnull NSString*)toHTML;
+- (nonnull NSString*)tagsAsString;
 
 @end

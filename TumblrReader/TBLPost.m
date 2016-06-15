@@ -21,14 +21,13 @@
     if ((self = [super init]))
     {
         NSString *type = [JSONPost objectForKey:@"type"];
-        NSString *slug = [JSONPost objectForKey:@"slug"];
         NSString *date = [JSONPost objectForKey:@"date"];
         
-        if (slug == nil || type == nil || date == nil )
+        if (!type || !date)
             return nil;
         
         self.postID = [[JSONPost objectForKey:@"id"] intValue];
-        self.slug = slug;
+        self.slug = [JSONPost objectForKey:@"slug"];
         self.type = [TBLPostTypeMap postTypeForString:type];
         self.tags = [JSONPost objectForKey:@"tags"];
         self.date = date;
@@ -39,12 +38,12 @@
 
 - (nonnull NSString*)toHTML
 {
-    return @"<html><body></body></html>";
+    return @"<html><body>TBLPost should be subclassed</body></html>";
 }
 
 - (nonnull NSString*)tagsAsString
 {
-    return [self.tags componentsJoinedByString:@" "];
+    return (self.tags) ? [self.tags componentsJoinedByString:@" "] : @"brak";
 }
 
 @end

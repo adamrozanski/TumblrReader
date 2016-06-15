@@ -19,14 +19,13 @@ int const postsCountPerRequest = 10;
 {
     if ((self = [super init]))
     {
-        if (blogMeta == nil)
+        if (!blogMeta)
             return nil;
         self.blogMeta = blogMeta;
         self.blogPosts = blogPosts;
     }
     return self;
 }
-
 
 - (void) fetchPostsWithCompletionSuccess:(void (^)(NSURLSessionTask * _Nonnull task, TBLBlogMeta * _Nullable blogMeta, NSArray<TBLPost *> * _Nullable posts, NSError * _Nullable error))success
                                  failure:(void (^)(NSURLSessionTask * _Nullable task, NSError * _Nonnull error))failure
@@ -57,19 +56,6 @@ int const postsCountPerRequest = 10;
     TBLAPIManager *manager = [TBLAPIManager sharedManager];
     [manager imageFromURLString:URLString success:success failure:failure];
 }
-
-
-
-
-/*
- 
- postForRowAtIndexPath
- numberOfRowsInSection
- for (TBLPost *post in posts) {
- NSLog(@"Loaded %u with ID: (%@)", post.type, [TBLPostTypeMap stringForPostType:post.postID]);
- 
- }
- */
 
 @end
 

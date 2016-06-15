@@ -17,7 +17,7 @@
         NSString *caption = [JSONPost objectForKey:@"photo-caption"];
         NSString *photo1280URL = [JSONPost objectForKey:@"photo-url-1280"];
         NSString *photo500URL = [JSONPost objectForKey:@"photo-url-500"];
-        if (caption == nil || photo1280URL == nil || photo500URL == nil)
+        if (!caption || !photo1280URL|| !photo500URL)
             return nil;
         self.caption = caption;
         self.photo1280URL = photo1280URL;
@@ -30,7 +30,7 @@
 
 - (nonnull NSString*)toHTML
 {
-    NSString *photoURLString = self.width > 1242 ? self.photo500URL : self.photo1280URL;
+    NSString *photoURLString = self.width > 1245 ? self.photo500URL : self.photo1280URL;
     NSString *HTMLImage = [NSString stringWithFormat:@"<img alt=\"\" data-caption=\"\" data-entity-type=\"file\" data-entity-uuid=\"\" src=\"%@\"/>",photoURLString];
     return [NSString stringWithFormat:@"<html><body>%@%@</body></html>",HTMLImage,self.caption];
 }

@@ -148,10 +148,10 @@
 		66E6DA081D0F785100B8DF5D /* TumblrReader */ = {
 			isa = PBXGroup;
 			children = (
-				66E6DA251D0F790E00B8DF5D /* Networking */,
 				66E6DA231D0F78EB00B8DF5D /* Data Model */,
 				66E6DA241D0F78F500B8DF5D /* Views */,
 				66E6DA221D0F78D900B8DF5D /* View Controllers */,
+				66E6DA251D0F790E00B8DF5D /* Networking */,
 				66E6DA151D0F785100B8DF5D /* Assets.xcassets */,
 				66E6DA091D0F785100B8DF5D /* Supporting Files */,
 			);

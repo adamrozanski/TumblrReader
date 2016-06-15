@@ -7,6 +7,7 @@
 //
 
 #import "TBLPostPhoto.h"
+#import <UIKit/UIKit.h>
 
 @implementation TBLPostPhoto
 
@@ -30,17 +31,24 @@
 
 - (nonnull NSString*)toHTML
 {
-    NSString *photoURLString = self.photo1280URL;
-    NSString *HTMLImage = [NSString stringWithFormat:@"<img alt=\"\" data-caption=\"\" data-entity-type=\"file\" data-entity-uuid=\"\" src=\"%@\"/>",photoURLString];
-    return [NSString stringWithFormat:@"<html><body>%@%@</body></html>",HTMLImage,self.caption];
+    CGFloat targetWidth = [[UIScreen mainScreen] bounds].size.width-20;
+    CGFloat targetHeight = targetWidth * [self photoAspectRatio];
+    NSString *htmlString = [NSString stringWithFormat:@"%@", @"<html><head><meta name='viewport' content='user-scalable=yes,width=device-width'></head><body><img src='%@' width='%f' height='%f' style='max-width:200% max-height:200%'><p>%@</p></body></html>"];
+    return [[NSString alloc] initWithFormat:htmlString, [self iPhoneOptimizedPhotoURLString], targetWidth, targetHeight, self.caption];
 }
+
 
 - (nonnull NSString*)captionToHTML
 {
     return [NSString stringWithFormat:@"<html><body>%@</body></html>",self.caption];
 }
 
-- (nonnull NSString*)iPhoneOptimizedPhotoURL
+- (CGFloat) photoAspectRatio
+{
+    return self.height/self.width;
+}
+
+- (nonnull NSString*)iPhoneOptimizedPhotoURLString
 {
     return (self.width > 1250) ? self.photo500URL : self.photo1280URL;
 }

@@ -26,7 +26,7 @@
 
 - (nonnull NSString*)toHTML
 {
-    return [NSString stringWithFormat:@"<html><body><h1>%@</h1><h2>%@</h2></body></html>",self.conversationTitle, self.conversationText];
+    return [NSString stringWithFormat:@"<html><meta name=\"viewport\" content=\"initial-scale=1.0\" /><body><p><h1>%@</h1></p><p><h2>%@</h2></p></body></html>",self.conversationTitle, self.conversationText];
 }
 
 

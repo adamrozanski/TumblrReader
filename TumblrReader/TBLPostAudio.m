@@ -33,7 +33,7 @@
 
 - (nonnull NSString*)toHTML
 {
-    return [NSString stringWithFormat:@"<html><body><h1><strong>%@</strong></h1><h2>%@</h2>%@<p>%@</p></body></html>",self.title, self.artist, self.caption, self.playerEmbed];
+    return [NSString stringWithFormat:@"<html><meta name=\"viewport\" content=\"initial-scale=1.0\" /><body><h1><strong>%@</strong></h1><h2>%@</h2>%@<p>%@</p></body></html>",self.title, self.artist, self.caption, self.playerEmbed];
 }
 
 

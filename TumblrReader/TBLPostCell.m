@@ -33,7 +33,7 @@
         // Constraints: (must be here in case of UITableViewCell subclass, not in layoutSubviews)
         
         //titleLabel
-        NSLayoutConstraint *titleLabelLeading = [self.titleLabel.leadingAnchor constraintEqualToAnchor: [self.titleBox leadingAnchor] constant:16];
+        NSLayoutConstraint *titleLabelLeading = [self.titleLabel.leadingAnchor constraintEqualToAnchor: [self.titleBox leadingAnchor] constant:4];
         NSLayoutConstraint *titleLabelTailing = [self.titleLabel.trailingAnchor constraintEqualToAnchor: [self.titleBox trailingAnchor]];
         NSLayoutConstraint *titleLabelLTop = [self.titleLabel.topAnchor constraintEqualToAnchor: [self.titleBox topAnchor]];
         NSLayoutConstraint *titleLabelHleight = [self.titleLabel.heightAnchor constraintEqualToAnchor: [self.titleBox heightAnchor]];
@@ -85,7 +85,7 @@
     [NSLayoutConstraint activateConstraints:footerBoxConstraints];
     
     //footerLabel
-    NSLayoutConstraint *footerLabelLeading = [self.footerLabel.leadingAnchor constraintEqualToAnchor: [footerBox leadingAnchor] constant:16];
+    NSLayoutConstraint *footerLabelLeading = [self.footerLabel.leadingAnchor constraintEqualToAnchor: [footerBox leadingAnchor] constant:4];
     NSLayoutConstraint *footerLabelTailing = [self.footerLabel.trailingAnchor constraintEqualToAnchor: [footerBox trailingAnchor]];
     NSLayoutConstraint *footerLabelLTop = [self.footerLabel.topAnchor constraintEqualToAnchor: [footerBox topAnchor]];
     NSLayoutConstraint *footerLabelHleight = [self.footerLabel.heightAnchor constraintEqualToAnchor: [footerBox heightAnchor]];

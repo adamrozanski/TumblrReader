@@ -30,6 +30,6 @@
 
 - (nonnull NSString*)toHTML
 {
-    return [NSString stringWithFormat:@"<html><body><h1><a href=\"%@\">%@</a></h1><h2>%@</h2></body></html>",self.linkText, self.linkURL, self.linkDescription];
+    return [NSString stringWithFormat:@"<html><meta name=\"viewport\" content=\"initial-scale=1.0\" /><body><h1><a href=\"%@\">%@</a></h1><h2>%@</h2></body></html>",self.linkText, self.linkURL, self.linkDescription];
 }
 @end

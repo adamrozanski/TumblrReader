@@ -31,15 +31,16 @@
 {
     [super viewDidLoad];
     [self setupTableView];
-    [self setupRefreshControl];
     [self configureNavigationContolller];
-    [self userEnterBlogName];
+    [self configureViewControllerForBlogName:@"epicbeta"];
+    [self loadPosts];
     
 }
 
 -(void) setupTableView
 {
     self.tableView.backgroundColor = [UIColor colorWithRed:0.21f green:0.24f blue:0.28f alpha:1.0f];
+    self.tableView.separatorColor = [UIColor colorWithRed:0.21f green:0.24f blue:0.28f alpha:1.0f];
     [self.tableView registerClass:[TBLQuoteCell class] forCellReuseIdentifier:@"quote"];
     [self.tableView registerClass:[TBLPhotoCell class] forCellReuseIdentifier:@"photo"];
     [self.tableView registerClass:[TBLRegularCell class] forCellReuseIdentifier:@"regular"];
@@ -66,6 +67,8 @@
     self.blogPosts = [NSMutableArray array];
     self.dataSource = [[TBLDataSource alloc] initWithBlog:self.blogMeta blogPosts:self.blogPosts];
     [self.tableView reloadData];
+    [self setupRefreshControl];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -103,7 +106,7 @@
         photoCell.photoView.alpha = 0.0f;
         if (photoPost.photoURLsAreNotNil)
         {
-            NSURL *URL = [NSURL URLWithString:photoPost.iPhoneOptimizedPhotoURL];
+            NSURL *URL = [NSURL URLWithString:photoPost.iPhoneOptimizedPhotoURLString];
             [photoCell.photoView pin_setImageFromURL:URL completion:^(PINRemoteImageManagerResult * _Nonnull result) {
                 if (result.requestDuration > 0.25) {
                     [UIView animateWithDuration:0.3 animations:^{
@@ -125,7 +128,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return  260;
+    return  270;
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -168,14 +171,14 @@
 
 - (void) loadPosts
 {
-    if (!self.dataSource)
+    if (!self.dataSource || self.isFetchingPosts)
         return;
     self.isFetchingPosts = YES;
     [self.dataSource fetchPostsWithCompletionSuccess:^(NSURLSessionTask * _Nonnull task, TBLBlogMeta * _Nullable blog, NSArray<TBLPost *> * _Nullable posts, NSError * _Nullable error) {
         if (error)
         {
             self.isFetchingPosts = NO;
-            [self presentMessage:@"Nie można przetworzyć danych z Tumblr" title:@"Błąd"];
+            [self presentMessage:@"Nie można przetworzyć danych z blogu" title:@"Błąd"];
             return;
         }
         if ([self.blogPosts count] == 0 && [posts count] == 0)
@@ -197,6 +200,7 @@
                                              failure:^(NSURLSessionTask * _Nullable task, NSError * _Nonnull error) {
                                                  self.isFetchingPosts = NO;
                                                  [self presentMessage:@"Nie ma takiego bloga w Tumblr" title:@"Błędna nazwa"];
+                                                 return;
                                              }];
     
 }
@@ -238,15 +242,20 @@
         [self configureViewControllerForBlogName:searchTextField.text];
         [self loadPosts];
     }];
-    UIAlertAction *starwars = [UIAlertAction actionWithTitle:@"Lub użyj: starwars" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [self configureViewControllerForBlogName:@"starwars"];
+    UIAlertAction *epicbeta = [UIAlertAction actionWithTitle:@"Użyj: epicbeta" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self configureViewControllerForBlogName:@"epicbeta"];
+        [self loadPosts];
+    }];
+    UIAlertAction *travelgurus = [UIAlertAction actionWithTitle:@"Użyj: travelgurus" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self configureViewControllerForBlogName:@"travelgurus"];
         [self loadPosts];
     }];
     UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Anuluj" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
     }];
     [searchController addAction:ok];
     [searchController addAction:cancel];
-    [searchController addAction:starwars];
+    [searchController addAction:travelgurus];
+    [searchController addAction:epicbeta];
     [searchController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
         searchTextField = textField;
         searchTextField.placeholder = @"Nazwa bloga";

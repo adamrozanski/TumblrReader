@@ -40,10 +40,7 @@
         id post = [TBLPostFactory createSpecializedPostFromJSONPost:JSONPost];
         if (post != nil) {
             [posts addObject: post];
-        } else {
-            NSLog(@"!!! POST == NIL !!!");
         }
-        
     }
     return posts;
 }

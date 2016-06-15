@@ -21,7 +21,7 @@
 
 @property TBLPost *post;
 @property TBLBlogMeta *blogMeta;
-@property WKWebView *webView;
+@property UIWebView *webView;
 
 @end
 
@@ -48,13 +48,14 @@
 
 - (void)configureSubviews
 {
-    self.webView = [[WKWebView alloc] initWithFrame:self.view.bounds];
+    self.webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:self.webView];
     [self.webView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    self.webView.scrollView.bounces = NO;
     
     NSLayoutConstraint *webViewLeadingAnchor = [self.webView.leadingAnchor constraintEqualToAnchor: self.view.leadingAnchor];
     NSLayoutConstraint *webViewTrailingAnchor = [self.webView.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor];
-    NSLayoutConstraint *webViewTopAnchor = [self.webView.topAnchor constraintEqualToAnchor:self.topLayoutGuide.bottomAnchor]; //bottomAnchor
+    NSLayoutConstraint *webViewTopAnchor = [self.webView.topAnchor constraintEqualToAnchor:self.topLayoutGuide.topAnchor]; //bottomAnchor
     NSLayoutConstraint *webViewBottomAnchor = [self.webView.bottomAnchor constraintEqualToAnchor:self.bottomLayoutGuide.bottomAnchor];
     NSArray *webViewConstraints = @[webViewLeadingAnchor, webViewTrailingAnchor, webViewTopAnchor, webViewBottomAnchor];
     [NSLayoutConstraint activateConstraints:webViewConstraints];
@@ -62,27 +63,11 @@
 
 - (void) loadContent
 {
-    
     [self.webView loadHTMLString:self.post.toHTML baseURL:nil];
-    /*
-    TBLPostType postType = self.post.type;
-    switch (postType) {
-        case Quote:
-            return [[TBLPostQuote alloc] initWithJSONPost:JSONPost];
-        case Photo:
-            return [[TBLPostPhoto alloc] initWithJSONPost:JSONPost];
-        case Link:
-            return [[TBLPostLink alloc] initWithJSONPost:JSONPost];
-        case Conversation:
-            return [[TBLPostConversation alloc] initWithJSONPost:JSONPost];
-        case Audio:
-            return [[TBLPostAudio alloc] initWithJSONPost:JSONPost];
-        case Regular:
-            return [[TBLPostRegular alloc] initWithJSONPost:JSONPost];
-        default:
-            return nil;
-    }
-    */
+    NSString *setTextSizeRule = [NSString stringWithFormat:@"addCSSRule('body', '-webkit-text-size-adjust: %d%%;')",200];
+    [self.webView stringByEvaluatingJavaScriptFromString:setTextSizeRule];
 }
+
+
 
 @end

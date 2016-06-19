@@ -9,10 +9,8 @@
 #import "TBLPostRegular.h"
 
 @implementation TBLPostRegular
-- (nullable instancetype)initWithJSONPost:(NSDictionary * _Nonnull)JSONPost
-{
-    if ((self = [super initWithJSONPost:JSONPost]))
-    {
+- (nullable instancetype)initWithJSONPost:(NSDictionary * _Nonnull)JSONPost {
+    if ((self = [super initWithJSONPost:JSONPost])) {
         NSString *HTMLBody = [JSONPost objectForKey:@"regular-body"];
         if (!HTMLBody)
             return nil;
@@ -23,8 +21,7 @@
     return self;
 }
 
-- (nonnull NSString*)toHTML
-{
+- (nonnull NSString*)toHTML {
     return [NSString stringWithFormat:@"<html><meta name=\"viewport\" content=\"initial-scale=1.0\" /><body><h1><strong>%@</strong></h1>%@</body></html>",self.title, self.HTMLBody];
 }
 @end

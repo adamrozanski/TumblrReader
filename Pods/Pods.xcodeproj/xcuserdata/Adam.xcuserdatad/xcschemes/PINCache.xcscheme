@@ -13,11 +13,11 @@
             buildForProfiling = "YES"
             buildForArchiving = "YES">
             <BuildableReference
-               BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '8321202504B0C62110C8BD59'
-               BlueprintName = 'PINCache'
-               ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPINCache.a'>
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "E5BD7DB5429C9BFBBE579170D8516936"
+               BlueprintName = "PINCache"
+               ReferencedContainer = "container:Pods.xcodeproj"
+               BuildableName = "libPINCache.a">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

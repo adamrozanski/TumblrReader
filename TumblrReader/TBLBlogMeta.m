@@ -11,19 +11,19 @@
 @implementation TBLBlogMeta
 
 
-- (nonnull instancetype)initWithUsername:(NSString * _Nonnull)username
+- (nonnull instancetype)initWithBlogName:(NSString * _Nonnull)blogName
 {
     if ((self = [super init]))
     {
-        if (!username)
+        if (!blogName)
             return nil;
-        self.name = username;
+        self.name = blogName;
         self.startPostIndex = 0;
     }
     return self;
 }
 
-- (nullable instancetype)initWithJSONResponse:(NSDictionary *)json
+- (nullable instancetype)initWithJSONResponse:(NSDictionary * _Nullable)json
 {
     if ((self = [super init]))
     {
@@ -36,7 +36,7 @@
         if (startPostIndex == nil || totalPostsCount == nil || self.name == nil || self.title == nil)
             return nil;
         self.startPostIndex = startPostIndex.intValue;
-        self.totalPostsCount = totalPostsCount.intValue;;
+        self.totalPostsCount = totalPostsCount.intValue;
     }
     return self;
 }

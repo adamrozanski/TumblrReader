@@ -8,15 +8,14 @@
 
 #import "TBLPostTypeMap.h"
 
-
+// TODO: use NSDictionary as singleton instead
 static const int postTypesCount = 7;
 static NSString *postTypeNames[7] = { @"undefined", @"quote", @"photo", @"link", @"conversation", @"audio", @"regular" };
 
 
 @implementation TBLPostTypeMap
 
-+ (TBLPostType)postTypeForString: (NSString  * _Nonnull )stringType;
-{
++ (TBLPostType)postTypeForString: (NSString  * _Nonnull )stringType; {
     for (TBLPostType type = 0; type < postTypesCount; type++) {
         if ([postTypeNames[type] isEqualToString:stringType])
             return type;
@@ -24,8 +23,7 @@ static NSString *postTypeNames[7] = { @"undefined", @"quote", @"photo", @"link",
     return 0;
 }
 
-+ (nullable NSString*)stringForPostType: (TBLPostType)postType
-{
++ (nullable NSString*)stringForPostType: (TBLPostType)postType {
     for (TBLPostType type = 0; type < postTypesCount; type++) {
         if (type == postType)
             return (type != Undefined) ? postTypeNames[type] : nil;

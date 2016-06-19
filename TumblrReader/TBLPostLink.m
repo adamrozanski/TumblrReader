@@ -10,10 +10,8 @@
 
 @implementation TBLPostLink
 
-- (nullable instancetype)initWithJSONPost:(NSDictionary * _Nonnull)JSONPost
-{
-    if ((self = [super initWithJSONPost:JSONPost]))
-    {
+- (nullable instancetype)initWithJSONPost:(NSDictionary * _Nonnull)JSONPost {
+    if ((self = [super initWithJSONPost:JSONPost])) {
         NSString *linkText = [JSONPost objectForKey:@"link-text"];
         NSString *linkURL = [JSONPost objectForKey:@"link-url"];
         NSString *linkDescription = [JSONPost objectForKey:@"link-description"];
@@ -28,8 +26,7 @@
     return self;
 }
 
-- (nonnull NSString*)toHTML
-{
+- (nonnull NSString*)toHTML {
     return [NSString stringWithFormat:@"<html><meta name=\"viewport\" content=\"initial-scale=1.0\" /><body><h1><a href=\"%@\">%@</a></h1><h2>%@</h2></body></html>",self.linkText, self.linkURL, self.linkDescription];
 }
 @end

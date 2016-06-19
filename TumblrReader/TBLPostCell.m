@@ -11,11 +11,9 @@
 
 @implementation TBLPostCell
 
-- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier
-{
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-
         self.contentView.backgroundColor = [UIColor colorWithRed:0.21f green:0.24f blue:0.28f alpha:1.0f];
         self.selectionStyle = UITableViewCellSelectionStyleNone;
 
@@ -51,8 +49,7 @@
     return self;
 }
 
-- (void) attachFooterToBottomAnchor:(NSLayoutYAxisAnchor * _Nonnull)bottomAnchor
-{
+- (void) attachFooterToBottomAnchor:(NSLayoutYAxisAnchor * _Nonnull)bottomAnchor {
     UILayoutGuide *bottomSpacer = [[UILayoutGuide alloc] init];
     self.footerLabel = [[UILabel alloc] init];
     [self.footerLabel setTextColor:[UIColor colorWithRed:0.21f green:0.24f blue:0.28f alpha:1.0f]];
@@ -93,15 +90,13 @@
     [NSLayoutConstraint activateConstraints:footerLabelConstraints];
 }
 
-- (void) propagateContentFromPost:(TBLPost * _Nonnull)post andBlogMeta:(TBLBlogMeta * _Nonnull)blogMeta
-{
+- (void) propagateContentFromPost:(TBLPost * _Nonnull)post andBlogMeta:(TBLBlogMeta * _Nonnull)blogMeta {
     self.titleLabel.text = post.date;
     self.footerLabel.text = [NSString stringWithFormat:@"Tagi: %@",[post tagsAsString]];
 }
 
 - (void)setSelected:(BOOL)selected
-           animated:(BOOL)animated
-{
+           animated:(BOOL)animated {
     [super setSelected:NO animated:animated];
 }
 

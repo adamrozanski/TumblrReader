@@ -15,7 +15,7 @@
 @property int startPostIndex;
 @property int totalPostsCount;
 
+- (nonnull instancetype)initWithBlogName:(NSString * _Nonnull)blogName;
 - (nullable instancetype)initWithJSONResponse:(NSDictionary * _Nullable)json;
-- (nonnull instancetype)initWithUsername:(NSString * _Nonnull)username;
-    
+
 @end

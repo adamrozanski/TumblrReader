@@ -11,10 +11,8 @@
 
 @implementation TBLPostPhoto
 
-- (nullable instancetype)initWithJSONPost:(NSDictionary * _Nonnull)JSONPost
-{
-    if ((self = [super initWithJSONPost:JSONPost]))
-    {
+- (nullable instancetype)initWithJSONPost:(NSDictionary * _Nonnull)JSONPost {
+    if ((self = [super initWithJSONPost:JSONPost])) {
         NSString *caption = [JSONPost objectForKey:@"photo-caption"];
         NSString *photo1280URL = [JSONPost objectForKey:@"photo-url-1280"];
         NSString *photo500URL = [JSONPost objectForKey:@"photo-url-500"];
@@ -29,8 +27,7 @@
     return self;
 }
 
-- (nonnull NSString*)toHTML
-{
+- (nonnull NSString*)toHTML {
     CGFloat targetWidth = [[UIScreen mainScreen] bounds].size.width-20;
     CGFloat targetHeight = targetWidth * [self photoAspectRatio];
     NSString *htmlString = [NSString stringWithFormat:@"%@", @"<html><head><meta name='viewport' content='user-scalable=yes,width=device-width'></head><body><img src='%@' width='%f' height='%f' style='max-width:200% max-height:200%'><p>%@</p></body></html>"];
@@ -38,25 +35,20 @@
 }
 
 
-- (nonnull NSString*)captionToHTML
-{
+- (nonnull NSString*)captionToHTML {
     return [NSString stringWithFormat:@"<html><body>%@</body></html>",self.caption];
 }
 
-- (CGFloat) photoAspectRatio
-{
+- (CGFloat) photoAspectRatio {
     return self.height/self.width;
 }
 
-- (nonnull NSString*)iPhoneOptimizedPhotoURLString
-{
+- (nonnull NSString*)iPhoneOptimizedPhotoURLString {
     return (self.width > 1250) ? self.photo500URL : self.photo1280URL;
 }
 
-- (BOOL) photoURLsAreNotNil
-{
+- (BOOL) photoURLsAreNotNil {
     return (self.photo1280URL != nil && self.photo500URL != nil);
 }
-
 
 @end

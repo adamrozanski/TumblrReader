@@ -8,15 +8,6 @@
 
 #import "TBLPostViewController.h"
 
-#import <WebKit/WebKit.h>
-#import "TBLPostQuote.h"
-#import "TBLPostPhoto.h"
-#import "TBLPostLink.h"
-#import "TBLPostConversation.h"
-#import "TBLPostAudio.h"
-#import "TBLPostRegular.h"
-#import "TBLPostTypeMap.h"
-
 @interface TBLPostViewController ()
 
 @property TBLPost *post;
@@ -27,8 +18,7 @@
 
 @implementation TBLPostViewController
 
-- (instancetype) initWithBlogMeta:(TBLBlogMeta *)blogMeta post:(TBLPost *)post
-{
+- (instancetype) initWithBlogMeta:(TBLBlogMeta *)blogMeta post:(TBLPost *)post {
     self = [super init];
     if (self) {
         self.post = post;
@@ -38,16 +28,14 @@
     return self;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     [self configureSubviews];
     if (self.post)
         [self loadContent];
 }
 
-- (void)configureSubviews
-{
+- (void)configureSubviews {
     self.webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:self.webView];
     [self.webView setTranslatesAutoresizingMaskIntoConstraints:NO];
@@ -61,13 +49,10 @@
     [NSLayoutConstraint activateConstraints:webViewConstraints];
 }
 
-- (void) loadContent
-{
+- (void) loadContent {
     [self.webView loadHTMLString:self.post.toHTML baseURL:nil];
     NSString *setTextSizeRule = [NSString stringWithFormat:@"addCSSRule('body', '-webkit-text-size-adjust: %d%%;')",200];
     [self.webView stringByEvaluatingJavaScriptFromString:setTextSizeRule];
 }
-
-
 
 @end

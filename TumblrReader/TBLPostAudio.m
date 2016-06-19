@@ -10,10 +10,8 @@
 
 @implementation TBLPostAudio
 
-- (nullable instancetype)initWithJSONPost:(NSDictionary * _Nonnull)JSONPost
-{
-    if ((self = [super initWithJSONPost:JSONPost]))
-    {
+- (nullable instancetype)initWithJSONPost:(NSDictionary * _Nonnull)JSONPost {
+    if ((self = [super initWithJSONPost:JSONPost])) {
         
         NSString *artist = [JSONPost objectForKey:@"id3-artist"];
         NSString *title = [JSONPost objectForKey:@"id3-title"];
@@ -31,10 +29,8 @@
     return self;
 }
 
-- (nonnull NSString*)toHTML
-{
+- (nonnull NSString*)toHTML {
     return [NSString stringWithFormat:@"<html><meta name=\"viewport\" content=\"initial-scale=1.0\" /><body><h1><strong>%@</strong></h1><h2>%@</h2>%@<p>%@</p></body></html>",self.title, self.artist, self.caption, self.playerEmbed];
 }
-
 
 @end

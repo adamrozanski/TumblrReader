@@ -16,8 +16,9 @@
 
 @interface TBLTableViewController () <UITableViewDelegate,UITableViewDataSource>
 
+// TODO: decouple datasource props & methods from view controller
 @property TBLBlogMeta * _Nullable blogMeta;
-@property NSMutableArray<TBLPost * > * _Nullable blogPosts;
+@property NSMutableArray<TBLPost *> * _Nullable blogPosts;
 @property TBLDataSource * _Nullable dataSource;
 @property BOOL isFetchingPosts;
 
@@ -27,18 +28,15 @@
 
 #pragma mark - Initial Section
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     [self setupTableView];
     [self configureNavigationContolller];
     [self configureViewControllerForBlogName:@"epicbeta"];
     [self loadPosts];
-    
 }
 
--(void) setupTableView
-{
+-(void) setupTableView {
     self.tableView.backgroundColor = [UIColor colorWithRed:0.21f green:0.24f blue:0.28f alpha:1.0f];
     self.tableView.separatorColor = [UIColor colorWithRed:0.21f green:0.24f blue:0.28f alpha:1.0f];
     [self.tableView registerClass:[TBLQuoteCell class] forCellReuseIdentifier:@"quote"];
@@ -49,37 +47,31 @@
     [self.tableView registerClass:[TBLLinkCell class] forCellReuseIdentifier:@"link"];
 }
 
-- (void) updateBlogTitle
-{
+- (void) updateBlogTitle {
     self.title = (self.blogMeta == nil) ? @"Tumblr Reader" : self.blogMeta.name;
 }
 
-- (void) configureNavigationContolller
-{
+- (void) configureNavigationContolller {
     UIBarButtonItem *searchForBlog = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(userEnterBlogName)];
     self.navigationItem.rightBarButtonItem = searchForBlog;
     [self updateBlogTitle];
 }
 
-- (void) configureViewControllerForBlogName:(NSString*)blogName
-{
-    self.blogMeta = [[TBLBlogMeta alloc] initWithUsername:blogName];  //epicbeta
+- (void) configureViewControllerForBlogName:(NSString*)blogName {
+    self.blogMeta = [[TBLBlogMeta alloc] initWithBlogName:blogName];
     self.blogPosts = [NSMutableArray array];
     self.dataSource = [[TBLDataSource alloc] initWithBlog:self.blogMeta blogPosts:self.blogPosts];
     [self.tableView reloadData];
     [self setupRefreshControl];
-
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
 #pragma mark - Table View
 
-- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     TBLPost *post = [self.blogPosts objectAtIndex:indexPath.row];
     TBLPostViewController *postViewController = [[TBLPostViewController alloc] initWithBlogMeta:self.blogMeta post:post];
@@ -93,19 +85,19 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return _blogPosts.count;
+    return self.blogPosts.count;
 }
+// TODO: create datasource method: cellForRowAtIndexPath
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    TBLPost *post = _blogPosts[indexPath.row];
+    TBLPost *post = self.blogPosts[indexPath.row];
     NSString *identifier = [TBLPostTypeMap stringForPostType:post.type];
-    TBLPostCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
-    if ([cell.reuseIdentifier isEqualToString:@"photo"])
-    {
+    TBLPostCell *cell = [self.tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
+
+    if ([cell.reuseIdentifier isEqualToString:@"photo"]) {
         __weak TBLPostPhoto * photoPost = (TBLPostPhoto *)post;
         __weak TBLPhotoCell * photoCell = (TBLPhotoCell *)cell;
         photoCell.photoView.alpha = 0.0f;
-        if (photoPost.photoURLsAreNotNil)
-        {
+        if (photoPost.photoURLsAreNotNil) {
             NSURL *URL = [NSURL URLWithString:photoPost.iPhoneOptimizedPhotoURLString];
             [photoCell.photoView pin_setImageFromURL:URL completion:^(PINRemoteImageManagerResult * _Nonnull result) {
                 if (result.requestDuration > 0.25) {
@@ -126,8 +118,7 @@
     return cell;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return  270;
 }
 
@@ -146,18 +137,15 @@
     }
 }
 
-- (void) refreshPosts
-{
-    if (!self.dataSource || (self.refreshControl && self.refreshControl.refreshing))
-    {
+- (void) refreshPosts {
+    if (!self.dataSource || (self.refreshControl && self.refreshControl.refreshing)) {
         [self.refreshControl endRefreshing];
         return;
     }
     [self loadPosts];
 }
 
-- (void) updateLastTimeRefreshed
-{
+- (void) updateLastTimeRefreshed {
     NSDate *lastTime = [[NSDate alloc] init];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.dateStyle = NSDateFormatterShortStyle;
@@ -168,26 +156,27 @@
 
 
 #pragma mark - Fetch Data
-
-- (void) loadPosts
-{
+// TODO: move to datasource class
+- (void) loadPosts {
     if (!self.dataSource || self.isFetchingPosts)
         return;
     self.isFetchingPosts = YES;
+    [self activityIndicatorEnabled:YES];
     [self.dataSource fetchPostsWithCompletionSuccess:^(NSURLSessionTask * _Nonnull task, TBLBlogMeta * _Nullable blog, NSArray<TBLPost *> * _Nullable posts, NSError * _Nullable error) {
-        if (error)
-        {
+        if (error) {
             self.isFetchingPosts = NO;
+            [self activityIndicatorEnabled:NO];
             [self presentMessage:@"Nie można przetworzyć danych z blogu" title:@"Błąd"];
             return;
         }
-        if ([self.blogPosts count] == 0 && [posts count] == 0)
-        {
+        if ([self.blogPosts count] == 0 && [posts count] == 0) {
             self.isFetchingPosts = NO;
+            [self activityIndicatorEnabled:NO];
             [self presentMessage:@"Nie ma takiego bloga w Tumblr " title:@"Bład"];
             return;
         }
         self.isFetchingPosts = NO;
+        [self activityIndicatorEnabled:NO];
         if (self.refreshControl && self.refreshControl.refreshing)
             [self.refreshControl endRefreshing];
         self.blogMeta.startPostIndex = blog.startPostIndex;
@@ -196,22 +185,19 @@
         [self.tableView reloadData];
         [self updateBlogTitle];
         [self updateLastTimeRefreshed];
-    }
-                                             failure:^(NSURLSessionTask * _Nullable task, NSError * _Nonnull error) {
-                                                 self.isFetchingPosts = NO;
-                                                 [self presentMessage:@"Nie ma takiego bloga w Tumblr" title:@"Błędna nazwa"];
-                                                 return;
-                                             }];
-    
+    } failure:^(NSURLSessionTask * _Nullable task, NSError * _Nonnull error) {
+        self.isFetchingPosts = NO;
+        [self activityIndicatorEnabled:NO];
+        [self presentMessage:@"Brak połączenia z internetem" title:@"Błąd"];
+        return;
+    }];
 }
 
-- (void) activityIndicatorEnabled:(BOOL)active
-{
+- (void) activityIndicatorEnabled:(BOOL)active {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = active;
 }
-
-- (BOOL) shouldFetchNewPostsForIndexPath:(NSIndexPath *)indexPath
-{
+// TODO: move to datasource class
+- (BOOL) shouldFetchNewPostsForIndexPath:(NSIndexPath *)indexPath {
     long rowsLoaded = (long)[self.blogPosts count];
     long rowsRemaining = rowsLoaded - (long)indexPath.row;
     long rowsToLoadFromBottom = 10;
@@ -220,22 +206,18 @@
 
 #pragma mark - Dialogs
 
-- (void) presentMessage:(NSString*)message title:(NSString*)title
-{
+- (void) presentMessage:(NSString*)message title:(NSString*)title {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
     [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
     [self.parentViewController presentViewController:alert animated:YES completion:nil];
 }
 
-
-- (void) userEnterBlogName
-{
+- (void) userEnterBlogName {
     UITextField * __block searchTextField;
     UIAlertController *searchController = [UIAlertController alertControllerWithTitle:@"Hello Braintri" message:@"Wprowadź nazwę bloga w serwisie Tumblr" preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         
-        if ([searchTextField.text isEqualToString:@""])
-        {
+        if ([searchTextField.text isEqualToString:@""]) {
             [self presentMessage:@"Nieprawidłowa nazwa bloga " title:@"Bład"];
             return;
         }
@@ -262,6 +244,5 @@
     }];
     [self.parentViewController presentViewController:searchController animated:YES completion:nil];
 }
-
 
 @end

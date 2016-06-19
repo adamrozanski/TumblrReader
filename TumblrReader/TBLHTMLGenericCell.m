@@ -10,8 +10,7 @@
 #import <WebKit/WebKit.h> 
 @implementation TBLHTMLGenericCell
 
-- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier
-{
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         
@@ -45,13 +44,9 @@
     return self;
 }
 
-
-
-- (void) propagateContentFromPost:(TBLPost * _Nonnull)post andBlogMeta:(TBLBlogMeta * _Nonnull)blogMeta;
-{
+- (void) propagateContentFromPost:(TBLPost * _Nonnull)post andBlogMeta:(TBLBlogMeta * _Nonnull)blogMeta; {
     [super propagateContentFromPost:post andBlogMeta:blogMeta];
     [self.webView loadHTMLString:[post toHTML] baseURL:nil];
-
 }
 
 

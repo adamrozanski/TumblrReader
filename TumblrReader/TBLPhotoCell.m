@@ -10,11 +10,9 @@
 
 @implementation TBLPhotoCell
 
-- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier
-{
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        
         UILayoutGuide *spacer1 = [[UILayoutGuide alloc] init];
         self.photoView = [[UIImageView alloc] initWithFrame:self.bounds];
         self.photoView.contentMode = UIViewContentModeScaleAspectFill;
@@ -27,7 +25,6 @@
         [self.captionView setBackgroundColor:[UIColor whiteColor]];
         [self.captionView setTranslatesAutoresizingMaskIntoConstraints:NO];
         [self.contentView addSubview:self.captionView];
-
         
         [self.contentView addLayoutGuide:spacer1];
         [self.contentView addSubview:self.photoView];
@@ -55,23 +52,19 @@
         NSLayoutConstraint *captionViewLeading = [self.captionView.leadingAnchor constraintEqualToAnchor: [self.contentView leadingAnchor]];
         NSLayoutConstraint *captionViewTrailing = [self.captionView.trailingAnchor constraintEqualToAnchor: [self.contentView trailingAnchor]];
         NSLayoutConstraint *captionViewTop = [self.captionView.topAnchor constraintEqualToAnchor: [self.photoView bottomAnchor]];
-        NSLayoutConstraint *captionViewHight = [self.captionView.heightAnchor constraintEqualToConstant:18];
-        NSArray *captionViewConstraints = @[captionViewLeading, captionViewTrailing, captionViewTop, captionViewHight];
+        NSLayoutConstraint *captionViewHeight = [self.captionView.heightAnchor constraintEqualToConstant:18];
+        NSArray *captionViewConstraints = @[captionViewLeading, captionViewTrailing, captionViewTop, captionViewHeight];
         [NSLayoutConstraint activateConstraints:captionViewConstraints];
         
         [self attachFooterToBottomAnchor:self.captionView.bottomAnchor];
-
     }
     return self;
 }
 
-
-
-- (void) propagateContentFromPost:(TBLPostPhoto * _Nonnull)post andBlogMeta:(TBLBlogMeta * _Nonnull)blogMeta
-{
-    [super propagateContentFromPost:post andBlogMeta:blogMeta];
-    [self.captionView loadHTMLString:[post captionToHTML] baseURL:nil];
+- (void) propagateContentFromPost:(TBLPost * _Nonnull)post andBlogMeta:(TBLBlogMeta * _Nonnull)blogMeta {
+    TBLPostPhoto *photoPost = (TBLPostPhoto *)post;
+    [super propagateContentFromPost:photoPost andBlogMeta:blogMeta];
+    [self.captionView loadHTMLString:[photoPost captionToHTML] baseURL:nil];
 }
-
 
 @end

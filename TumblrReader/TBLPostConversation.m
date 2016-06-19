@@ -10,10 +10,8 @@
 
 @implementation TBLPostConversation
 
-- (nullable instancetype)initWithJSONPost:(NSDictionary * _Nonnull)JSONPost
-{
-    if ((self = [super initWithJSONPost:JSONPost]))
-    {
+- (nullable instancetype)initWithJSONPost:(NSDictionary * _Nonnull)JSONPost {
+    if ((self = [super initWithJSONPost:JSONPost])) {
 
         NSString *conversationText = [JSONPost objectForKey:@"conversation-text"];
         if (!conversationText)
@@ -24,10 +22,8 @@
     return self;
 }
 
-- (nonnull NSString*)toHTML
-{
+- (nonnull NSString*)toHTML {
     return [NSString stringWithFormat:@"<html><meta name=\"viewport\" content=\"initial-scale=1.0\" /><body><p><h1>%@</h1></p><p><h2>%@</h2></p></body></html>",self.conversationTitle, self.conversationText];
 }
-
 
 @end

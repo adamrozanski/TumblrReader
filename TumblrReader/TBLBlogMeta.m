@@ -27,12 +27,12 @@
 {
     if ((self = [super init]))
     {
-        NSDictionary *tumblelogField = [json objectForKey:@"tumblelog"];
-        self.name = [tumblelogField objectForKey:@"name"];
-        self.title = [tumblelogField objectForKey:@"title"];
+        NSDictionary *tumblelogField = json[@"tumblelog"];
+        self.name = tumblelogField[@"name"];
+        self.title = tumblelogField[@"title"];
         
-        NSString *startPostIndex = [json objectForKey:@"posts-start"];
-        NSString *totalPostsCount = [json objectForKey:@"posts-total"];
+        NSString *startPostIndex = json[@"posts-start"];
+        NSString *totalPostsCount = json[@"posts-total"];
         if (startPostIndex == nil || totalPostsCount == nil || self.name == nil || self.title == nil)
             return nil;
         self.startPostIndex = startPostIndex.intValue;

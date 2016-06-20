@@ -12,12 +12,11 @@
 
 - (nullable instancetype)initWithJSONPost:(NSDictionary * _Nonnull)JSONPost {
     if ((self = [super initWithJSONPost:JSONPost])) {
-
-        NSString *conversationText = [JSONPost objectForKey:@"conversation-text"];
+        NSString *conversationText = JSONPost[@"conversation-text"];
         if (!conversationText)
             return nil;
         self.conversationText = conversationText;
-        self.conversationTitle = [JSONPost objectForKey:@"conversation-title"];
+        self.conversationTitle = JSONPost[@"conversation-title"];
     }
     return self;
 }

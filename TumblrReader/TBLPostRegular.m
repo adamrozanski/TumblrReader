@@ -11,11 +11,11 @@
 @implementation TBLPostRegular
 - (nullable instancetype)initWithJSONPost:(NSDictionary * _Nonnull)JSONPost {
     if ((self = [super initWithJSONPost:JSONPost])) {
-        NSString *HTMLBody = [JSONPost objectForKey:@"regular-body"];
+        NSString *HTMLBody = JSONPost[@"regular-body"];
         if (!HTMLBody)
             return nil;
         self.HTMLBody = HTMLBody;
-        self.title = [JSONPost objectForKey:@"regular-title"];
+        self.title = JSONPost[@"regular-title"];
 
     }
     return self;

@@ -11,7 +11,7 @@
 @implementation TBLPost
 
 + (TBLPostType)postTypeForJSONPost:(NSDictionary * _Nonnull)JSONPost {
-    NSString *stringType = [JSONPost objectForKey:@"type"];
+    NSString *stringType = JSONPost[@"type"];
     return [TBLPostTypeMap postTypeForString:stringType];
 }
 

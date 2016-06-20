@@ -31,7 +31,7 @@
 }
 
 + (nullable NSArray<TBLPost * >*) postsArrayFromJSONResponse: (NSDictionary * _Nonnull)json; {
-    NSDictionary *JSONPosts = [json objectForKey:@"posts"];
+    NSDictionary *JSONPosts = json[@"posts"];
     NSMutableArray<TBLPost*> *posts = [NSMutableArray array];
     
     for (NSDictionary *JSONPost in JSONPosts) {

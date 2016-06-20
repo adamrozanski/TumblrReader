@@ -16,15 +16,15 @@ static NSString *postTypeNames[7] = { @"undefined", @"quote", @"photo", @"link",
 @implementation TBLPostTypeMap
 
 + (TBLPostType)postTypeForString: (NSString  * _Nonnull )stringType; {
-    for (TBLPostType type = 0; type < postTypesCount; type++) {
+    for (TBLPostType type = Undefined; type < postTypesCount; type++) {
         if ([postTypeNames[type] isEqualToString:stringType])
             return type;
     }
-    return 0;
+    return Undefined;
 }
 
 + (nullable NSString*)stringForPostType: (TBLPostType)postType {
-    for (TBLPostType type = 0; type < postTypesCount; type++) {
+    for (TBLPostType type = Undefined; type < postTypesCount; type++) {
         if (type == postType)
             return (type != Undefined) ? postTypeNames[type] : nil;
     }

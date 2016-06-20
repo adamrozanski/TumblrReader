@@ -13,10 +13,10 @@
 - (nullable instancetype)initWithJSONPost:(NSDictionary * _Nonnull)JSONPost {
     if ((self = [super initWithJSONPost:JSONPost])) {
         
-        NSString *artist = [JSONPost objectForKey:@"id3-artist"];
-        NSString *title = [JSONPost objectForKey:@"id3-title"];
-        NSString *caption = [JSONPost objectForKey:@"audio-caption"];
-        NSString *playerEmbed = [JSONPost objectForKey:@"audio-embed"];
+        NSString *artist = JSONPost[@"id3-artist"];
+        NSString *title = JSONPost[@"id3-title"];
+        NSString *caption = JSONPost[@"audio-caption"];
+        NSString *playerEmbed = JSONPost[@"audio-embed"];
         
         if (!artist || !title || !playerEmbed || !caption)
             return nil;

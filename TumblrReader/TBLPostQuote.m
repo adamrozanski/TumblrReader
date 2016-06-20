@@ -11,8 +11,8 @@
 
 - (nullable instancetype)initWithJSONPost:(NSDictionary * _Nonnull)JSONPost {
     if ((self = [super initWithJSONPost:JSONPost])) {
-        NSString *quoteText = [JSONPost objectForKey:@"quote-text"];
-        NSString *quoteSource = [JSONPost objectForKey:@"quote-source"];
+        NSString *quoteText = JSONPost[@"quote-text"];
+        NSString *quoteSource = JSONPost[@"quote-source"];
         if (!quoteText || !quoteSource)
             return nil;
         self.quoteText = quoteText;

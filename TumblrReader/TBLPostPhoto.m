@@ -13,16 +13,16 @@
 
 - (nullable instancetype)initWithJSONPost:(NSDictionary * _Nonnull)JSONPost {
     if ((self = [super initWithJSONPost:JSONPost])) {
-        NSString *caption = [JSONPost objectForKey:@"photo-caption"];
-        NSString *photo1280URL = [JSONPost objectForKey:@"photo-url-1280"];
-        NSString *photo500URL = [JSONPost objectForKey:@"photo-url-500"];
+        NSString *caption = JSONPost[@"photo-caption"];
+        NSString *photo1280URL = JSONPost[@"photo-url-1280"];
+        NSString *photo500URL = JSONPost[@"photo-url-500"];
         if (!caption || !photo1280URL|| !photo500URL)
             return nil;
         self.caption = caption;
         self.photo1280URL = photo1280URL;
         self.photo500URL = photo500URL;
-        self.width = [[JSONPost objectForKey:@"width"] intValue];
-        self.height = [[JSONPost objectForKey:@"height"] intValue];
+        self.width = [JSONPost[@"width"] intValue];
+        self.height = [JSONPost[@"height"] intValue];
     }
     return self;
 }

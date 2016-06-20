@@ -61,8 +61,7 @@
 #pragma mark - Table View
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    TBLPost *post = self.dataSource.blogPosts[indexPath.row];
+    TBLPost *post = self.dataSource.blogPosts[(NSUInteger)indexPath.row];
     TBLPostViewController *postViewController = [[TBLPostViewController alloc] initWithBlogMeta:self.dataSource.blogMeta post:post];
     [self.navigationController pushViewController:postViewController animated:YES];    
 }

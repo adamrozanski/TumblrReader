@@ -72,8 +72,8 @@
 
 - (NSData *) extractJSONDataFromTumblrAPIV1Response: (NSData *)data
 {
-    int varDeclarationLength = 21;
-    int semicolonLength = 1;
+    NSUInteger varDeclarationLength = 21;
+    NSUInteger semicolonLength = 1;
     return [data subdataWithRange: NSMakeRange(varDeclarationLength, data.length - varDeclarationLength - semicolonLength)];
 }
 

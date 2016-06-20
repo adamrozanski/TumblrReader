@@ -7,7 +7,6 @@
 //
 
 #import "TBLHTMLGenericCell.h"
-#import <WebKit/WebKit.h> 
 @implementation TBLHTMLGenericCell
 
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier {

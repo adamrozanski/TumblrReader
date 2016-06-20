@@ -38,7 +38,7 @@ int const postsCountPerRequest = 20;
 }
 
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath {
-    TBLPost *post = self.blogPosts[indexPath.row];
+    TBLPost *post = self.blogPosts[(NSUInteger)indexPath.row];
     NSString *identifier = [TBLPostTypeMap stringForPostType:post.type];
     TBLPostCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
     if ([cell.reuseIdentifier isEqualToString:@"photo"]) {

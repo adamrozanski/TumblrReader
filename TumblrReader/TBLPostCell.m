@@ -34,8 +34,8 @@
         NSLayoutConstraint *titleLabelLeading = [self.titleLabel.leadingAnchor constraintEqualToAnchor: [self.titleBox leadingAnchor] constant:4];
         NSLayoutConstraint *titleLabelTailing = [self.titleLabel.trailingAnchor constraintEqualToAnchor: [self.titleBox trailingAnchor]];
         NSLayoutConstraint *titleLabelLTop = [self.titleLabel.topAnchor constraintEqualToAnchor: [self.titleBox topAnchor]];
-        NSLayoutConstraint *titleLabelHleight = [self.titleLabel.heightAnchor constraintEqualToAnchor: [self.titleBox heightAnchor]];
-        NSArray *titleLabelConstraints = @[titleLabelLeading, titleLabelTailing, titleLabelLTop, titleLabelHleight];
+        NSLayoutConstraint *titleLabelHeight = [self.titleLabel.heightAnchor constraintEqualToAnchor: [self.titleBox heightAnchor]];
+        NSArray *titleLabelConstraints = @[titleLabelLeading, titleLabelTailing, titleLabelLTop, titleLabelHeight];
         [NSLayoutConstraint activateConstraints:titleLabelConstraints];
         
         //titleBox

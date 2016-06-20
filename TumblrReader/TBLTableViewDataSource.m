@@ -64,7 +64,7 @@ int const postsCountPerRequest = 20;
     return cell;
 }
 
-#pragma mark - Fetch Data
+#pragma mark - Load Content
 
 // TODO: use "insertCell" instead of "reloadData"
 - (void) loadPostsIntoTableView:(UITableView * _Nonnull)tableView

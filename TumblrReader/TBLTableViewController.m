@@ -24,6 +24,7 @@
     [self setupTableView];
     [self configureNavigationController];
     [self configureViewControllerForBlogName:@"epicbeta"];
+    [self setupRefreshControl];
     [self loadPosts];
 }
 
@@ -51,7 +52,6 @@
 - (void) configureViewControllerForBlogName:(NSString*)blogName {
     self.dataSource = [[TBLTableViewDataSource alloc] initWithBlogName:blogName];
     [self.tableView reloadData];
-    [self setupRefreshControl];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -76,7 +76,6 @@
     return [self.dataSource tableView:tableView numberOfRowsInSection:section];
 }
 
-// TODO: create datasource method: cellForRowAtIndexPath
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     return [self.dataSource tableView:tableView cellForRowAtIndexPath:indexPath];
 }

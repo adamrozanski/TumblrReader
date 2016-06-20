@@ -30,7 +30,7 @@
 - (nonnull NSString*)toHTML {
     CGFloat targetWidth = [[UIScreen mainScreen] bounds].size.width-20;
     CGFloat targetHeight = targetWidth * [self photoAspectRatio];
-    NSString *htmlString = [NSString stringWithFormat:@"%@", @"<html><head><meta name='viewport' content='user-scalable=yes,width=device-width'></head><body><img src='%@' width='%f' height='%f' style='max-width:200% max-height:200%'><p>%@</p></body></html>"];
+    NSString *htmlString = @"<html><head><meta name='viewport' content='user-scalable=yes,width=device-width'></head><body><img src='%@' width='%f' height='%f' style='max-width:200% max-height:200%'><p>%@</p></body></html>";
     return [[NSString alloc] initWithFormat:htmlString, [self iPhoneOptimizedPhotoURLString], targetWidth, targetHeight, self.caption];
 }
 

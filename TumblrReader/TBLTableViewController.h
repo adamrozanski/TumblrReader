@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "TBLAPIManager.h"
-#import "TBLDataSource.h"
+#import "TBLTableViewDataSource.h"
 #import "TBLBlogMeta.h"
 #import "TBLPost.h"
 #import "TBLPostPhoto.h"

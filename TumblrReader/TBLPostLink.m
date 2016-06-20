@@ -12,9 +12,9 @@
 
 - (nullable instancetype)initWithJSONPost:(NSDictionary * _Nonnull)JSONPost {
     if ((self = [super initWithJSONPost:JSONPost])) {
-        NSString *linkText = [JSONPost objectForKey:@"link-text"];
-        NSString *linkURL = [JSONPost objectForKey:@"link-url"];
-        NSString *linkDescription = [JSONPost objectForKey:@"link-description"];
+        NSString *linkText = JSONPost[@"link-text"];
+        NSString *linkURL = JSONPost[@"link-url"];
+        NSString *linkDescription = JSONPost[@"link-description"];
         
         if (!linkText || !linkURL || !linkDescription)
             return nil;

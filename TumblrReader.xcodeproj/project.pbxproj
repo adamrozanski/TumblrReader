@@ -20,7 +20,7 @@
 		66E6DA191D0F785100B8DF5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66E6DA171D0F785100B8DF5D /* LaunchScreen.storyboard */; };
 		66E6DA211D0F787800B8DF5D /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 66E6DA201D0F787800B8DF5D /* Podfile */; };
 		66E6DA281D0F794500B8DF5D /* TBLAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E6DA271D0F794500B8DF5D /* TBLAPIManager.m */; };
-		66E6DA2B1D0F795000B8DF5D /* TBLDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E6DA2A1D0F795000B8DF5D /* TBLDataSource.m */; };
+		66E6DA2B1D0F795000B8DF5D /* TBLTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E6DA2A1D0F795000B8DF5D /* TBLTableViewDataSource.m */; };
 		66E6DA4A1D0F79AD00B8DF5D /* TBLBlogMeta.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E6DA2D1D0F79AD00B8DF5D /* TBLBlogMeta.m */; };
 		66E6DA4B1D0F79AD00B8DF5D /* TBLPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E6DA2F1D0F79AD00B8DF5D /* TBLPhotoCell.m */; };
 		66E6DA4C1D0F79AD00B8DF5D /* TBLPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E6DA311D0F79AD00B8DF5D /* TBLPost.m */; };
@@ -64,8 +64,8 @@
 		66E6DA201D0F787800B8DF5D /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		66E6DA261D0F794500B8DF5D /* TBLAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBLAPIManager.h; sourceTree = "<group>"; };
 		66E6DA271D0F794500B8DF5D /* TBLAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBLAPIManager.m; sourceTree = "<group>"; };
-		66E6DA291D0F795000B8DF5D /* TBLDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBLDataSource.h; sourceTree = "<group>"; };
-		66E6DA2A1D0F795000B8DF5D /* TBLDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBLDataSource.m; sourceTree = "<group>"; };
+		66E6DA291D0F795000B8DF5D /* TBLTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBLTableViewDataSource.h; sourceTree = "<group>"; };
+		66E6DA2A1D0F795000B8DF5D /* TBLTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBLTableViewDataSource.m; sourceTree = "<group>"; };
 		66E6DA2C1D0F79AD00B8DF5D /* TBLBlogMeta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBLBlogMeta.h; sourceTree = "<group>"; };
 		66E6DA2D1D0F79AD00B8DF5D /* TBLBlogMeta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBLBlogMeta.m; sourceTree = "<group>"; };
 		66E6DA2E1D0F79AD00B8DF5D /* TBLPhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBLPhotoCell.h; sourceTree = "<group>"; };
@@ -174,6 +174,8 @@
 		66E6DA221D0F78D900B8DF5D /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				66E6DA291D0F795000B8DF5D /* TBLTableViewDataSource.h */,
+				66E6DA2A1D0F795000B8DF5D /* TBLTableViewDataSource.m */,
 				66E6DA0F1D0F785100B8DF5D /* TBLTableViewController.h */,
 				66E6DA101D0F785100B8DF5D /* TBLTableViewController.m */,
 				66496F241D10F31E00418191 /* TBLPostViewController.h */,
@@ -235,8 +237,6 @@
 		66E6DA251D0F790E00B8DF5D /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				66E6DA291D0F795000B8DF5D /* TBLDataSource.h */,
-				66E6DA2A1D0F795000B8DF5D /* TBLDataSource.m */,
 				66E6DA261D0F794500B8DF5D /* TBLAPIManager.h */,
 				66E6DA271D0F794500B8DF5D /* TBLAPIManager.m */,
 			);
@@ -373,7 +373,7 @@
 				66E6DA281D0F794500B8DF5D /* TBLAPIManager.m in Sources */,
 				66E6DA541D0F79AD00B8DF5D /* TBLPostRegular.m in Sources */,
 				66E6DA521D0F79AD00B8DF5D /* TBLPostPhoto.m in Sources */,
-				66E6DA2B1D0F795000B8DF5D /* TBLDataSource.m in Sources */,
+				66E6DA2B1D0F795000B8DF5D /* TBLTableViewDataSource.m in Sources */,
 				66E6DA4C1D0F79AD00B8DF5D /* TBLPost.m in Sources */,
 				66E6DA0E1D0F785100B8DF5D /* AppDelegate.m in Sources */,
 				66DA31731D0FFA2C002C24EC /* TBLAudioCell.m in Sources */,

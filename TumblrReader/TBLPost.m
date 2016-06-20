@@ -17,16 +17,16 @@
 
 - (nullable instancetype)initWithJSONPost:(NSDictionary * _Nonnull)JSONPost {
     if ((self = [super init])) {
-        NSString *type = [JSONPost objectForKey:@"type"];
-        NSString *date = [JSONPost objectForKey:@"date"];
+        NSString *type = JSONPost[@"type"];
+        NSString *date = JSONPost[@"date"];
         
         if (!type || !date)
             return nil;
         
-        self.postID = [[JSONPost objectForKey:@"id"] intValue];
-        self.slug = [JSONPost objectForKey:@"slug"];
+        self.postID = [JSONPost[@"id"] intValue];
+        self.slug = JSONPost[@"slug"];
         self.type = [TBLPostTypeMap postTypeForString:type];
-        self.tags = [JSONPost objectForKey:@"tags"];
+        self.tags = JSONPost[@"tags"];
         self.date = date;
         
     }

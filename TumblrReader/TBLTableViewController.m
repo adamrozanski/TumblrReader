@@ -7,20 +7,11 @@
 //
 
 #import "TBLTableViewController.h"
-
-#import <PINRemoteImage/PINRemoteImage.h>
-#import <PINRemoteImage/PINImageView+PINRemoteImage.h>
-#import <PINCache/PINCache.h>
-#import <FLAnimatedImage/FLAnimatedImageView.h>
 #import "TBLPostViewController.h"
 
-@interface TBLTableViewController () <UITableViewDelegate,UITableViewDataSource>
+@interface TBLTableViewController () <UITableViewDelegate, UITableViewDataSource>
 
-// TODO: decouple datasource props & methods from view controller
-@property TBLBlogMeta * _Nullable blogMeta;
-@property NSMutableArray<TBLPost *> * _Nullable blogPosts;
-@property TBLDataSource * _Nullable dataSource;
-@property BOOL isFetchingPosts;
+@property TBLTableViewDataSource * _Nullable dataSource;
 
 @end
 
@@ -31,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupTableView];
-    [self configureNavigationContolller];
+    [self configureNavigationController];
     [self configureViewControllerForBlogName:@"epicbeta"];
     [self loadPosts];
 }
@@ -48,19 +39,17 @@
 }
 
 - (void) updateBlogTitle {
-    self.title = (self.blogMeta == nil) ? @"Tumblr Reader" : self.blogMeta.name;
+    self.title = (self.dataSource.blogMeta == nil) ? @"Tumblr Reader" : self.dataSource.blogMeta.name;
 }
 
-- (void) configureNavigationContolller {
+- (void) configureNavigationController {
     UIBarButtonItem *searchForBlog = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(userEnterBlogName)];
     self.navigationItem.rightBarButtonItem = searchForBlog;
     [self updateBlogTitle];
 }
 
 - (void) configureViewControllerForBlogName:(NSString*)blogName {
-    self.blogMeta = [[TBLBlogMeta alloc] initWithBlogName:blogName];
-    self.blogPosts = [NSMutableArray array];
-    self.dataSource = [[TBLDataSource alloc] initWithBlog:self.blogMeta blogPosts:self.blogPosts];
+    self.dataSource = [[TBLTableViewDataSource alloc] initWithBlogName:blogName];
     [self.tableView reloadData];
     [self setupRefreshControl];
 }
@@ -73,49 +62,29 @@
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    TBLPost *post = [self.blogPosts objectAtIndex:indexPath.row];
-    TBLPostViewController *postViewController = [[TBLPostViewController alloc] initWithBlogMeta:self.blogMeta post:post];
+    TBLPost *post = self.dataSource.blogPosts[indexPath.row];
+    TBLPostViewController *postViewController = [[TBLPostViewController alloc] initWithBlogMeta:self.dataSource.blogMeta post:post];
     [self.navigationController pushViewController:postViewController animated:YES];    
 }
 
 #pragma mark - Table View Data Source & Delegate Methods
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return [self.dataSource numberOfSectionsInTableView:tableView];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.blogPosts.count;
+    return [self.dataSource tableView:tableView numberOfRowsInSection:section];
 }
+
 // TODO: create datasource method: cellForRowAtIndexPath
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    TBLPost *post = self.blogPosts[indexPath.row];
-    NSString *identifier = [TBLPostTypeMap stringForPostType:post.type];
-    TBLPostCell *cell = [self.tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
+    return [self.dataSource tableView:tableView cellForRowAtIndexPath:indexPath];
+}
 
-    if ([cell.reuseIdentifier isEqualToString:@"photo"]) {
-        __weak TBLPostPhoto * photoPost = (TBLPostPhoto *)post;
-        __weak TBLPhotoCell * photoCell = (TBLPhotoCell *)cell;
-        photoCell.photoView.alpha = 0.0f;
-        if (photoPost.photoURLsAreNotNil) {
-            NSURL *URL = [NSURL URLWithString:photoPost.iPhoneOptimizedPhotoURLString];
-            [photoCell.photoView pin_setImageFromURL:URL completion:^(PINRemoteImageManagerResult * _Nonnull result) {
-                if (result.requestDuration > 0.25) {
-                    [UIView animateWithDuration:0.3 animations:^{
-                        photoCell.photoView.alpha = 1.0f;
-                    }];
-                } else {
-                    [UIView animateWithDuration:0.5 animations:^{
-                        photoCell.photoView.alpha = 1.0f;
-                    }];
-                }
-            }];
-        }
-    }
-    [cell propagateContentFromPost:post andBlogMeta:self.blogMeta];
-    if ([self shouldFetchNewPostsForIndexPath:indexPath])
+- (void) tableView:(UITableView *)tableView willDisplayCell:(nonnull UITableViewCell *)cell forRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    if ([self.dataSource shouldFetchNewPostsForIndexPath:indexPath])
         [self loadPosts];
-    return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -155,53 +124,21 @@
 }
 
 
-#pragma mark - Fetch Data
-// TODO: move to datasource class
+#pragma mark - Load Posts
+
 - (void) loadPosts {
-    if (!self.dataSource || self.isFetchingPosts)
-        return;
-    self.isFetchingPosts = YES;
-    [self activityIndicatorEnabled:YES];
-    [self.dataSource fetchPostsWithCompletionSuccess:^(NSURLSessionTask * _Nonnull task, TBLBlogMeta * _Nullable blog, NSArray<TBLPost *> * _Nullable posts, NSError * _Nullable error) {
-        if (error) {
-            self.isFetchingPosts = NO;
-            [self activityIndicatorEnabled:NO];
-            [self presentMessage:@"Nie można przetworzyć danych z blogu" title:@"Błąd"];
-            return;
-        }
-        if ([self.blogPosts count] == 0 && [posts count] == 0) {
-            self.isFetchingPosts = NO;
-            [self activityIndicatorEnabled:NO];
-            [self presentMessage:@"Nie ma takiego bloga w Tumblr " title:@"Bład"];
-            return;
-        }
-        self.isFetchingPosts = NO;
-        [self activityIndicatorEnabled:NO];
+    [self.dataSource loadPostsIntoTableView:self.tableView success:^(NSString * _Nullable errorMessage) {
         if (self.refreshControl && self.refreshControl.refreshing)
             [self.refreshControl endRefreshing];
-        self.blogMeta.startPostIndex = blog.startPostIndex;
-        self.blogMeta.totalPostsCount = blog.totalPostsCount;
-        [self.blogPosts addObjectsFromArray:posts];
-        [self.tableView reloadData];
+        if (errorMessage) {
+            [self presentMessage:errorMessage title:@"Błąd"];
+            return;
+        }
         [self updateBlogTitle];
         [self updateLastTimeRefreshed];
-    } failure:^(NSURLSessionTask * _Nullable task, NSError * _Nonnull error) {
-        self.isFetchingPosts = NO;
-        [self activityIndicatorEnabled:NO];
-        [self presentMessage:@"Brak połączenia z internetem" title:@"Błąd"];
-        return;
+    } failure:^(NSString * _Nullable errorMessage) {
+        [self presentMessage:errorMessage title:@"Błąd"];
     }];
-}
-
-- (void) activityIndicatorEnabled:(BOOL)active {
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = active;
-}
-// TODO: move to datasource class
-- (BOOL) shouldFetchNewPostsForIndexPath:(NSIndexPath *)indexPath {
-    long rowsLoaded = (long)[self.blogPosts count];
-    long rowsRemaining = rowsLoaded - (long)indexPath.row;
-    long rowsToLoadFromBottom = 10;
-    return (rowsRemaining <= rowsToLoadFromBottom);
 }
 
 #pragma mark - Dialogs

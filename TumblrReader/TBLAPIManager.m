@@ -69,7 +69,7 @@
 }
 
 - (void) imageFromURLString:(NSString * _Nonnull)URLString
-                    success:(void (^ _Nonnull)(UIImage * _Nullable image))succenss
+                    success:(void (^ _Nonnull)(UIImage * _Nullable image))success
                     failure:(void (^ _Nonnull)(NSError * _Nonnull error))failure {
     if (!self.sessionManager)
         self.sessionManager = [[AFHTTPSessionManager alloc] init];

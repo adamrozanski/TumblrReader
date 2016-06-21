@@ -19,16 +19,12 @@
     if ((self = [super init])) {
         NSString *type = JSONPost[@"type"];
         NSString *date = JSONPost[@"date"];
-        
         if (!type || !date)
             return nil;
-        
-        self.postID = [JSONPost[@"id"] intValue];
         self.slug = JSONPost[@"slug"];
         self.type = [TBLPostTypeMap.sharedInstance postTypeForString:type];
         self.tags = JSONPost[@"tags"];
         self.date = date;
-        
     }
     return self;
 }

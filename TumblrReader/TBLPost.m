@@ -12,7 +12,7 @@
 
 + (TBLPostType)postTypeForJSONPost:(NSDictionary * _Nonnull)JSONPost {
     NSString *stringType = JSONPost[@"type"];
-    return [[TBLPostTypeMap sharedInstance] postTypeForString:stringType];
+    return [TBLPostTypeMap.sharedInstance postTypeForString:stringType];
 }
 
 - (nullable instancetype)initWithJSONPost:(NSDictionary * _Nonnull)JSONPost {
@@ -25,7 +25,7 @@
         
         self.postID = [JSONPost[@"id"] intValue];
         self.slug = JSONPost[@"slug"];
-        self.type = [[TBLPostTypeMap sharedInstance] postTypeForString:type];
+        self.type = [TBLPostTypeMap.sharedInstance postTypeForString:type];
         self.tags = JSONPost[@"tags"];
         self.date = date;
         

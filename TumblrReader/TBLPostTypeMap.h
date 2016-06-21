@@ -7,20 +7,20 @@
 //
 #import <Foundation/Foundation.h>
 
-typedef enum {
-    Undefined,
-    Quote,
-    Photo,
-    Link,
-    Conversation,
-    Audio,
-    Regular
-} TBLPostType;
+typedef NS_ENUM(NSInteger, TBLPostType) {
+    TBLPostTypeUndefined,
+    TBLPostTypeQuote,
+    TBLPostTypePhoto,
+    TBLPostTypeLink,
+    TBLPostTypeConversation,
+    TBLPostTypeAudio,
+    TBLPostTypeRegular
+};
 
 
 @interface TBLPostTypeMap : NSObject
 + (nonnull TBLPostTypeMap *)sharedInstance;
 - (TBLPostType)postTypeForString: (NSString  * _Nonnull )stringType;
-- (nullable NSString*)stringForPostType: (TBLPostType)intType;
+- (nullable NSString*)stringForPostType: (TBLPostType)postType;
 
 @end

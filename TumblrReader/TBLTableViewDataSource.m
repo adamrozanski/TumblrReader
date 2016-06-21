@@ -41,7 +41,7 @@ int const postsCountPerRequest = 20;
     TBLPost *post = self.posts[(NSUInteger)indexPath.row];
     NSString *identifier = [TBLPostTypeMap.sharedInstance stringForPostType:post.type];
     TBLPostCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
-    if ([cell.reuseIdentifier isEqualToString:@"photo"]) {
+    if ([cell.reuseIdentifier isEqualToString:[TBLPostTypeMap.sharedInstance stringForPostType:TBLPostTypePhoto]]) {
         __weak TBLPostPhoto * photoPost = (TBLPostPhoto *)post;
         __weak TBLPhotoCell * photoCell = (TBLPhotoCell *)cell;
         photoCell.photoView.alpha = 0.0f;

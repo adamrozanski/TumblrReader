@@ -43,12 +43,12 @@
 }
 
 - (TBLPostType)postTypeForString: (NSString  * _Nonnull )stringType {
-    return (TBLPostType)[[self.postTypesDictionary valueForKey:stringType] intValue];
+    return (TBLPostType)[[self.postTypesDictionary valueForKey:stringType] integerValue];
 }
 
 - (nullable NSString*)stringForPostType: (TBLPostType)postType {
     NSArray *allKeys = [self.postTypesDictionary allKeys];
-    for (uint i = 0; i < [allKeys count]; ++i) {
+    for (NSInteger i = 0; i < [allKeys count]; ++i) {
         NSString *key = allKeys[i];
         NSString *value = self.postTypesDictionary[key];
         if ([value isEqual:@(postType)]) {

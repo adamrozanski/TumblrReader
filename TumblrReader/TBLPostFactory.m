@@ -13,17 +13,17 @@
 + (nullable id) createSpecializedPostFromJSONPost:(NSDictionary * _Nonnull)JSONPost {
     TBLPostType postType = [TBLPost postTypeForJSONPost:JSONPost];
     switch (postType) {
-        case Quote:
+        case TBLPostTypeQuote:
             return [[TBLPostQuote alloc] initWithJSONPost:JSONPost];
-        case Photo:
+        case TBLPostTypePhoto:
             return [[TBLPostPhoto alloc] initWithJSONPost:JSONPost];
-        case Link:
+        case TBLPostTypeLink:
             return [[TBLPostLink alloc] initWithJSONPost:JSONPost];
-        case Conversation:
+        case TBLPostTypeConversation:
             return [[TBLPostConversation alloc] initWithJSONPost:JSONPost];
-        case Audio:
+        case TBLPostTypeAudio:
             return [[TBLPostAudio alloc] initWithJSONPost:JSONPost];
-        case Regular:
+        case TBLPostTypeRegular:
             return [[TBLPostRegular alloc] initWithJSONPost:JSONPost];
         default:
             return nil;

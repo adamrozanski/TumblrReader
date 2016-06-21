@@ -32,13 +32,10 @@
                 startPostIndex:(int)startPostIndex
                     postsCount:(int)postsCount
                        success:(void (^ _Nonnull)(NSURLSessionTask * _Nonnull task, TBLBlogMeta * _Nullable blogMeta, NSArray<TBLPost*> * _Nullable posts, NSError * _Nullable error))success
-                       failure:(void (^ _Nonnull)(NSURLSessionTask * _Nullable task, NSError * _Nonnull error))failure
-{
+                       failure:(void (^ _Nonnull)(NSURLSessionTask * _Nullable task, NSError * _Nonnull error))failure {
     NSString *queryString = [self queryStringForUsername:username startPostIndex:startPostIndex postsCount:postsCount];
-    
     if (!self.sessionManager)
         self.sessionManager = [[AFHTTPSessionManager alloc] init];
-    
     self.sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
     [self.sessionManager GET:queryString
                   parameters:nil
@@ -61,26 +58,21 @@
      ];
 }
 
-
-- (NSString *) queryStringForUsername:(NSString*)username startPostIndex:(int)startIndex postsCount:(int)postsCount
-{
+- (NSString *) queryStringForUsername:(NSString*)username startPostIndex:(int)startIndex postsCount:(int)postsCount {
     return [NSString stringWithFormat:@"http://%@.tumblr.com/api/read/json?start=%i&num=%i", username, startIndex, postsCount];
 }
 
-- (NSData *) extractJSONDataFromTumblrAPIV1Response: (NSData *)data
-{
+- (NSData *) extractJSONDataFromTumblrAPIV1Response: (NSData *)data {
     NSUInteger varDeclarationLength = 21;
     NSUInteger semicolonLength = 1;
     return [data subdataWithRange: NSMakeRange(varDeclarationLength, data.length - varDeclarationLength - semicolonLength)];
 }
 
 - (void) imageFromURLString:(NSString * _Nonnull)URLString
-                    success:(void (^ _Nonnull)(UIImage * _Nullable image))success
-                    failure:(void (^ _Nonnull)(NSError * _Nonnull error))failure
-{
+                    success:(void (^ _Nonnull)(UIImage * _Nullable image))succenss
+                    failure:(void (^ _Nonnull)(NSError * _Nonnull error))failure {
     if (!self.sessionManager)
         self.sessionManager = [[AFHTTPSessionManager alloc] init];
-    
     self.sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
     [self.sessionManager GET:URLString
                   parameters:nil

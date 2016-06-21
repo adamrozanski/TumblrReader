@@ -11,7 +11,6 @@
 
 @interface TBLPost : NSObject
 
-@property int postID;
 @property TBLPostType type;   // TBLPostType == uint
 @property (nonnull) NSString *slug;
 @property (nonnull) NSString *date;

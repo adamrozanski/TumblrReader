@@ -48,7 +48,7 @@
 }
 
 - (BOOL) photoURLsAreNotNil {
-    return (self.photo1280URL != nil && self.photo500URL != nil);
+    return (self.photo1280URL && self.photo500URL);
 }
 
 @end

@@ -31,12 +31,12 @@
     if ((self = [super init])) {
         self.postTypesDictionary = @{
                 @"undefined": @0,
-                @"quote":@1,
-                @"photo":@2,
-                @"link":@3,
-                @"conversation":@4,
-                @"audio":@5,
-                @"regular":@6
+                @"quote": @1,
+                @"photo": @2,
+                @"link": @3,
+                @"conversation": @4,
+                @"audio": @5,
+                @"regular": @6
         };
     }
     return self;

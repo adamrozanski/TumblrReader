@@ -36,7 +36,7 @@
     
     for (NSDictionary *JSONPost in JSONPosts) {
         id post = [TBLPostFactory createSpecializedPostFromJSONPost:JSONPost];
-        if (post != nil) {
+        if (post) {
             [posts addObject: post];
         }
     }

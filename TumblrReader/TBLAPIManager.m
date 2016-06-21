@@ -18,7 +18,6 @@
 
 @implementation TBLAPIManager
 
-
 + (nonnull TBLAPIManager *)sharedManager {
     static TBLAPIManager *_sharedManager = nil;
     static dispatch_once_t oncePredicate;
@@ -28,7 +27,6 @@
     
     return _sharedManager;
 }
-
 
 - (void) fetchPostsForUsername:(NSString * _Nonnull)username
                 startPostIndex:(int)startPostIndex
@@ -68,7 +66,6 @@
 {
     return [NSString stringWithFormat:@"http://%@.tumblr.com/api/read/json?start=%i&num=%i", username, startIndex, postsCount];
 }
-
 
 - (NSData *) extractJSONDataFromTumblrAPIV1Response: (NSData *)data
 {

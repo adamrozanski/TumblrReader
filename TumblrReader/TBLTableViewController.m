@@ -22,8 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupTableView];
-    [self configureNavigationController];
-    [self configureViewControllerForBlogName:@"epicbeta"];
+    [self addNavigationButtonItem];
+    [self configureTableViewForBlogName:@"epicbeta"];
     [self setupRefreshControl];
     [self loadPosts];
 }
@@ -43,15 +43,15 @@
     self.title = (self.dataSource.blogMeta == nil) ? @"Tumblr Reader" : self.dataSource.blogMeta.name;
 }
 
-- (void) configureNavigationController {
+- (void)addNavigationButtonItem {
     UIBarButtonItem *searchForBlog = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(userEnterBlogName)];
     self.navigationItem.rightBarButtonItem = searchForBlog;
-    [self updateBlogTitle];
 }
 
-- (void) configureViewControllerForBlogName:(NSString*)blogName {
+- (void)configureTableViewForBlogName:(NSString*)blogName {
     self.dataSource = [[TBLTableViewDataSource alloc] initWithBlogName:blogName];
     [self.tableView reloadData];
+    [self updateBlogTitle];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -61,7 +61,7 @@
 #pragma mark - Table View
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    TBLPost *post = self.dataSource.blogPosts[(NSUInteger)indexPath.row];
+    TBLPost *post = self.dataSource.posts[(NSUInteger)indexPath.row];
     TBLPostViewController *postViewController = [[TBLPostViewController alloc] initWithBlogMeta:self.dataSource.blogMeta post:post];
     [self.navigationController pushViewController:postViewController animated:YES];    
 }
@@ -156,15 +156,15 @@
             [self presentMessage:@"Nieprawidłowa nazwa bloga " title:@"Bład"];
             return;
         }
-        [self configureViewControllerForBlogName:searchTextField.text];
+        [self configureTableViewForBlogName:searchTextField.text];
         [self loadPosts];
     }];
     UIAlertAction *epicbeta = [UIAlertAction actionWithTitle:@"Użyj: epicbeta" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [self configureViewControllerForBlogName:@"epicbeta"];
+        [self configureTableViewForBlogName:@"epicbeta"];
         [self loadPosts];
     }];
     UIAlertAction *travelgurus = [UIAlertAction actionWithTitle:@"Użyj: travelgurus" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [self configureViewControllerForBlogName:@"travelgurus"];
+        [self configureTableViewForBlogName:@"travelgurus"];
         [self loadPosts];
     }];
     UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Anuluj" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {

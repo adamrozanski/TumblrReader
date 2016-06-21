@@ -21,11 +21,11 @@
 #import "TBLConversationCell.h"
 #import "TBLLinkCell.h"
 
-@interface TBLTableViewDataSource : NSObject
+@interface TBLTableViewDataSource : NSObject <UITableViewDataSource>
 
 @property BOOL isFetchingPosts;
 @property TBLBlogMeta  * _Nullable blogMeta;
-@property NSMutableArray<TBLPost *> * _Nullable blogPosts;
+@property NSMutableArray<TBLPost *> * _Nullable posts;
 
 - (nullable instancetype)initWithBlogName:(NSString * _Nonnull)blogName;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section;

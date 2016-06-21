@@ -19,8 +19,8 @@ typedef enum {
 
 
 @interface TBLPostTypeMap : NSObject
-
-+ (TBLPostType)postTypeForString: (NSString  * _Nonnull )stringType;
-+ (nullable NSString*)stringForPostType: (TBLPostType)intType;
++ (nonnull TBLPostTypeMap *)sharedInstance;
+- (TBLPostType)postTypeForString: (NSString  * _Nonnull )stringType;
+- (nullable NSString*)stringForPostType: (TBLPostType)intType;
 
 @end

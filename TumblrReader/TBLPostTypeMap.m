@@ -8,25 +8,52 @@
 
 #import "TBLPostTypeMap.h"
 
-// TODO: use NSDictionary as singleton instead
-static const int postTypesCount = 7;
-static NSString *postTypeNames[7] = { @"undefined", @"quote", @"photo", @"link", @"conversation", @"audio", @"regular" };
+@interface TBLPostTypeMap ()
 
+@property NSDictionary *postTypesDictionary;
+
+@end
 
 @implementation TBLPostTypeMap
 
-+ (TBLPostType)postTypeForString: (NSString  * _Nonnull )stringType; {
-    for (TBLPostType type = Undefined; type < postTypesCount; type++) {
-        if ([postTypeNames[type] isEqualToString:stringType])
-            return type;
-    }
-    return Undefined;
+
++ (nonnull TBLPostTypeMap *)sharedInstance {
+    static TBLPostTypeMap *_sharedInstance = nil;
+    static dispatch_once_t oncePredicate;
+    dispatch_once(&oncePredicate, ^{
+        _sharedInstance = [[self alloc] init];
+    });
+
+    return _sharedInstance;
 }
 
-+ (nullable NSString*)stringForPostType: (TBLPostType)postType {
-    for (TBLPostType type = Undefined; type < postTypesCount; type++) {
-        if (type == postType)
-            return (type != Undefined) ? postTypeNames[type] : nil;
+-(nonnull instancetype)init {
+    if ((self = [super init])) {
+        self.postTypesDictionary = @{
+                @"undefined": @0,
+                @"quote":@1,
+                @"photo":@2,
+                @"link":@3,
+                @"conversation":@4,
+                @"audio":@5,
+                @"regular":@6
+        };
+    }
+    return self;
+}
+
+- (TBLPostType)postTypeForString: (NSString  * _Nonnull )stringType {
+    return (TBLPostType)[[self.postTypesDictionary valueForKey:stringType] intValue];
+}
+
+- (nullable NSString*)stringForPostType: (TBLPostType)postType {
+    NSArray *allKeys = [self.postTypesDictionary allKeys];
+    for (uint i = 0; i < [allKeys count]; ++i) {
+        NSString *key = allKeys[i];
+        NSString *value = self.postTypesDictionary[key];
+        if ([value isEqual:@(postType)]) {
+            return key;
+        }
     }
     return nil;
 }

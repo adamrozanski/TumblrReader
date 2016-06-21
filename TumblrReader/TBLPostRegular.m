@@ -16,7 +16,6 @@
             return nil;
         self.HTMLBody = HTMLBody;
         self.title = JSONPost[@"regular-title"];
-
     }
     return self;
 }

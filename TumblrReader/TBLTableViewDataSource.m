@@ -22,7 +22,7 @@ int const postsCountPerRequest = 20;
     if ((self = [super init]))
     {
         self.blogMeta = [[TBLBlogMeta alloc] initWithBlogName:blogName];
-        self.blogPosts = [NSMutableArray array];
+        self.posts = [NSMutableArray array];
     }
     return self;
 }
@@ -30,7 +30,7 @@ int const postsCountPerRequest = 20;
 #pragma mark - Table View Data Source Methods
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.blogPosts.count;
+    return self.posts.count;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView {
@@ -38,8 +38,8 @@ int const postsCountPerRequest = 20;
 }
 
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath {
-    TBLPost *post = self.blogPosts[(NSUInteger)indexPath.row];
-    NSString *identifier = [TBLPostTypeMap stringForPostType:post.type];
+    TBLPost *post = self.posts[(NSUInteger)indexPath.row];
+    NSString *identifier = [[TBLPostTypeMap sharedInstance] stringForPostType:post.type];
     TBLPostCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
     if ([cell.reuseIdentifier isEqualToString:@"photo"]) {
         __weak TBLPostPhoto * photoPost = (TBLPostPhoto *)post;
@@ -74,7 +74,7 @@ int const postsCountPerRequest = 20;
         return;
     self.isFetchingPosts = YES;
     [self activityIndicatorEnabled:YES];
-    int startPostIndex = [self postsArrayisEmpty] ? self.blogMeta.startPostIndex : [self nextPostIndex];
+    int startPostIndex = [self postsArrayIsEmpty] ? self.blogMeta.startPostIndex : [self nextPostIndex];
     TBLAPIManager *manager = [TBLAPIManager sharedManager];
     [manager fetchPostsForUsername:self.blogMeta.name
                  startPostIndex:startPostIndex
@@ -86,7 +86,7 @@ int const postsCountPerRequest = 20;
             success(@"Nie można przetworzyć danych z blogu");
             return;
         }
-        if ([self.blogPosts count] == 0 && [posts count] == 0) {
+        if ([self.posts count] == 0 && [posts count] == 0) {
             self.isFetchingPosts = NO;
             [self activityIndicatorEnabled:NO];
             success(@"Nie ma takiego bloga w Tumblr");
@@ -96,7 +96,7 @@ int const postsCountPerRequest = 20;
         [self activityIndicatorEnabled:NO];
         self.blogMeta.startPostIndex = blogMeta.startPostIndex;
         self.blogMeta.totalPostsCount = blogMeta.totalPostsCount;
-        [self.blogPosts addObjectsFromArray:posts];
+        [self.posts addObjectsFromArray:posts];
         [tableView reloadData];
     } failure:^(NSURLSessionTask * _Nullable task, NSError * _Nonnull error) {
         self.isFetchingPosts = NO;
@@ -109,12 +109,12 @@ int const postsCountPerRequest = 20;
     return self.blogMeta.startPostIndex + postsCountPerRequest;
 }
 
-- (BOOL) postsArrayisEmpty {
-    return [self.blogPosts count] == 0;
+- (BOOL)postsArrayIsEmpty {
+    return [self.posts count] == 0;
 }
 
 - (BOOL) shouldFetchNewPostsForIndexPath:(NSIndexPath * _Nonnull)indexPath {
-    long rowsLoaded = (long)[self.blogPosts count];
+    long rowsLoaded = (long)[self.posts count];
     long rowsRemaining = rowsLoaded - (long)indexPath.row;
     long rowsToLoadFromBottom = 10;
     return (rowsRemaining <= rowsToLoadFromBottom);

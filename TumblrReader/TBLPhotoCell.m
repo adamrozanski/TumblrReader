@@ -38,8 +38,7 @@
         NSLayoutConstraint *spacer1Height = [spacer1.heightAnchor constraintEqualToConstant:1];
         NSArray *spacer1LabelConstraints = @[spacer1Leading, spacer1Trailing, spacer1Top, spacer1Height];
         [NSLayoutConstraint activateConstraints:spacer1LabelConstraints];
-        
-        
+
         //photoView
         NSLayoutConstraint *photoViewLeading = [self.photoView.leadingAnchor constraintEqualToAnchor: [self.contentView leadingAnchor]];
         NSLayoutConstraint *photoViewTrailing = [self.photoView.trailingAnchor constraintEqualToAnchor: [self.contentView trailingAnchor]];

@@ -7,12 +7,13 @@
 //
 
 #import "TBLPostViewController.h"
+#import <WebKit/WebKit.h> 
 
 @interface TBLPostViewController ()
 
 @property TBLPost *post;
 @property TBLBlogMeta *blogMeta;
-@property UIWebView *webView;
+@property WKWebView *webView;
 
 @end
 
@@ -36,7 +37,9 @@
 }
 
 - (void)configureSubviews {
-    self.webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
+    WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc] init];
+    configuration.selectionGranularity = WKSelectionGranularityCharacter;
+    self.webView = [[WKWebView alloc] initWithFrame:self.view.bounds configuration:configuration];
     [self.view addSubview:self.webView];
     [self.webView setTranslatesAutoresizingMaskIntoConstraints:NO];
     self.webView.scrollView.bounces = NO;
@@ -52,7 +55,7 @@
 - (void) loadContent {
     [self.webView loadHTMLString:self.post.toHTML baseURL:nil];
     NSString *setTextSizeRule = [NSString stringWithFormat:@"addCSSRule('body', '-webkit-text-size-adjust: %d%%;')",200];
-    [self.webView stringByEvaluatingJavaScriptFromString:setTextSizeRule];
+    [self.webView evaluateJavaScript:setTextSizeRule completionHandler:nil];
 }
 
 @end

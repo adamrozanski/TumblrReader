@@ -50,6 +50,7 @@
 
 - (void)configureTableViewForBlogName:(NSString*)blogName {
     self.dataSource = [[TBLTableViewDataSource alloc] initWithBlogName:blogName];
+    self.tableView.dataSource = self.dataSource;
     [self.tableView reloadData];
     [self updateBlogTitle];
 }
@@ -66,19 +67,7 @@
     [self.navigationController pushViewController:postViewController animated:YES];    
 }
 
-#pragma mark - Table View Data Source & Delegate Methods
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return [self.dataSource numberOfSectionsInTableView:tableView];
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.dataSource tableView:tableView numberOfRowsInSection:section];
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [self.dataSource tableView:tableView cellForRowAtIndexPath:indexPath];
-}
+#pragma mark - Table View Delegate Methods
 
 - (void) tableView:(UITableView *)tableView willDisplayCell:(nonnull UITableViewCell *)cell forRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     if ([self.dataSource shouldFetchNewPostsForIndexPath:indexPath])
@@ -86,7 +75,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return  270;
+    return 270;
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

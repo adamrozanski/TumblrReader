@@ -46,10 +46,6 @@
     return [self.photo captionToHTML];
 }
 
-- (CGFloat) photoAspectRatio {
-    return self.photo.height / self.photo.width;
-}
-
 - (nonnull NSString*)iPhoneOptimizedPhotoURLString {
     return (self.photo.width > 1250) ? self.photo.photo500URL : self.photo.photo1280URL;
 }

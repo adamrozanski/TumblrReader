@@ -1,6 +1,6 @@
 //
 //  TBLPostCell.m
-//  TUMBL
+//  TumblrReader
 //
 //  Created by Adam on 13.06.2016.
 //  Copyright © 2016 Adam. All rights reserved.

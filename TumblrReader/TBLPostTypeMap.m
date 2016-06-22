@@ -16,14 +16,12 @@
 
 @implementation TBLPostTypeMap
 
-
 + (nonnull TBLPostTypeMap *)sharedInstance {
     static TBLPostTypeMap *_sharedInstance = nil;
     static dispatch_once_t oncePredicate;
     dispatch_once(&oncePredicate, ^{
         _sharedInstance = [[self alloc] init];
     });
-
     return _sharedInstance;
 }
 

@@ -13,42 +13,49 @@
 
 - (nullable instancetype)initWithJSONPost:(NSDictionary * _Nonnull)JSONPost {
     if ((self = [super initWithJSONPost:JSONPost])) {
-        NSString *caption = JSONPost[@"photo-caption"];
-        NSString *photo1280URL = JSONPost[@"photo-url-1280"];
-        NSString *photo500URL = JSONPost[@"photo-url-500"];
-        if (!caption || !photo1280URL|| !photo500URL)
+        TBLPhoto *photo = [[TBLPhoto alloc] initWithJSONPhoto:JSONPost];
+        if (!photo)
             return nil;
-        self.caption = caption;
-        self.photo1280URL = photo1280URL;
-        self.photo500URL = photo500URL;
-        self.width = [JSONPost[@"width"] intValue];
-        self.height = [JSONPost[@"height"] intValue];
+        self.photo = photo;
+        NSArray<TBLPhoto *> *JSONPhotoGallery = JSONPost[@"photos"];
+        self.photoGallery = [TBLPhoto photoGalleryFromJSONPhotoGallery:JSONPhotoGallery];
     }
     return self;
 }
 
-- (nonnull NSString*)toHTML {
-    CGFloat targetWidth = [[UIScreen mainScreen] bounds].size.width-20;
-    CGFloat targetHeight = targetWidth * [self photoAspectRatio];
-    NSString *htmlString = @"<html><head><meta name='viewport' content='user-scalable=yes,width=device-width'></head><body><img src='%@' width='%f' height='%f' style='max-width:200% max-height:200%'><p>%@</p></body></html>";
-    return [[NSString alloc] initWithFormat:htmlString, [self iPhoneOptimizedPhotoURLString], targetWidth, targetHeight, self.caption];
+- (nonnull NSString *)toHTML {
+    NSString *HTMLString = @"<html><head><meta name='viewport' content='user-scalable=yes,width=device-width'></head><body>%@%@</body></html>";
+    return [NSString stringWithFormat:HTMLString, [self photoToHTML], [self photoGalleryToHTML]];
 }
 
+- (nullable NSString *)photoToHTML {
+    return [self.photo toHTML];
+}
+
+- (nullable NSString *)photoGalleryToHTML {
+    NSMutableString *HTMLString = [NSMutableString string];
+    if (!self.photoGallery || [self.photoGallery count] == 0)
+        return HTMLString;
+    for (TBLPhoto *photo in self.photoGallery) {
+        [HTMLString appendString:photo.toHTML];
+    }
+    return HTMLString;
+}
 
 - (nonnull NSString*)captionToHTML {
-    return [NSString stringWithFormat:@"<html><body>%@</body></html>",self.caption];
+    return [self.photo captionToHTML];
 }
 
 - (CGFloat) photoAspectRatio {
-    return self.height/self.width;
+    return self.photo.height / self.photo.width;
 }
 
 - (nonnull NSString*)iPhoneOptimizedPhotoURLString {
-    return (self.width > 1250) ? self.photo500URL : self.photo1280URL;
+    return (self.photo.width > 1250) ? self.photo.photo500URL : self.photo.photo1280URL;
 }
 
 - (BOOL) photoURLsAreNotNil {
-    return (self.photo1280URL && self.photo500URL);
+    return (self.photo.photo1280URL && self.photo.photo500URL);
 }
 
 @end

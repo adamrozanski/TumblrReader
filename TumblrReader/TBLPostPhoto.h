@@ -7,14 +7,12 @@
 //
 
 #import "TBLPost.h"
+#import "TBLPhoto.h"
 
 @interface TBLPostPhoto : TBLPost
 
-@property (nonnull) NSString *caption;
-@property (nonnull) NSString *photo1280URL;
-@property (nonnull) NSString *photo500URL;
-@property int width;
-@property int height;
+@property (nonnull) TBLPhoto *photo;
+@property (nullable) NSArray<TBLPhoto *> *photoGallery;
 
 - (nullable instancetype)initWithJSONPost:(NSDictionary * _Nonnull)JSONPost;
 - (nonnull NSString*)toHTML;

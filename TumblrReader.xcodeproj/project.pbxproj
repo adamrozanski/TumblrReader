@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		66496F261D10F31E00418191 /* TBLPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66496F251D10F31E00418191 /* TBLPostViewController.m */; };
+		667A46C51D1A054A00B4FC35 /* TBLPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 667A46C41D1A054A00B4FC35 /* TBLPhoto.m */; };
 		668241F81D0F82B000BD5980 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66E6DA121D0F785100B8DF5D /* Main.storyboard */; };
 		66DA31701D0FF2DA002C24EC /* TBLHTMLGenericCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 66DA316F1D0FF2DA002C24EC /* TBLHTMLGenericCell.m */; };
 		66DA31731D0FFA2C002C24EC /* TBLAudioCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 66DA31721D0FFA2C002C24EC /* TBLAudioCell.m */; };
@@ -43,6 +44,8 @@
 		237C8D10E07791FEA3967FAD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		66496F241D10F31E00418191 /* TBLPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBLPostViewController.h; sourceTree = "<group>"; };
 		66496F251D10F31E00418191 /* TBLPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBLPostViewController.m; sourceTree = "<group>"; };
+		667A46C31D1A054A00B4FC35 /* TBLPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBLPhoto.h; sourceTree = "<group>"; };
+		667A46C41D1A054A00B4FC35 /* TBLPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBLPhoto.m; sourceTree = "<group>"; };
 		66DA316E1D0FF2DA002C24EC /* TBLHTMLGenericCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBLHTMLGenericCell.h; sourceTree = "<group>"; };
 		66DA316F1D0FF2DA002C24EC /* TBLHTMLGenericCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBLHTMLGenericCell.m; sourceTree = "<group>"; };
 		66DA31711D0FFA2C002C24EC /* TBLAudioCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBLAudioCell.h; sourceTree = "<group>"; };
@@ -197,6 +200,8 @@
 				66E6DA311D0F79AD00B8DF5D /* TBLPost.m */,
 				66E6DA3C1D0F79AD00B8DF5D /* TBLPostPhoto.h */,
 				66E6DA3D1D0F79AD00B8DF5D /* TBLPostPhoto.m */,
+				667A46C31D1A054A00B4FC35 /* TBLPhoto.h */,
+				667A46C41D1A054A00B4FC35 /* TBLPhoto.m */,
 				66E6DA3A1D0F79AD00B8DF5D /* TBLPostLink.h */,
 				66E6DA3B1D0F79AD00B8DF5D /* TBLPostLink.m */,
 				66E6DA361D0F79AD00B8DF5D /* TBLPostConversation.h */,
@@ -387,6 +392,7 @@
 				66E6DA501D0F79AD00B8DF5D /* TBLPostFactory.m in Sources */,
 				66E6DA551D0F79AD00B8DF5D /* TBLPostTypeMap.m in Sources */,
 				66E6DA571D0F79AD00B8DF5D /* TBLRegularCell.m in Sources */,
+				667A46C51D1A054A00B4FC35 /* TBLPhoto.m in Sources */,
 				66DA31761D0FFBDC002C24EC /* TBLLinkCell.m in Sources */,
 				66E6DA531D0F79AD00B8DF5D /* TBLPostQuote.m in Sources */,
 			);

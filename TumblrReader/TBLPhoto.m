@@ -60,5 +60,9 @@
     return [NSString stringWithFormat:@"<html><body>%@</body></html>",self.caption];
 }
 
+- (BOOL) photoURLsAreNotNil {
+    return (self.photo1280URL && self.photo500URL);
+}
+
 @end
 

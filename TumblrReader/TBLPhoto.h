@@ -20,7 +20,8 @@
 + (nullable NSArray<TBLPhoto *> *)photoGalleryFromJSONPhotoGallery:(NSArray * _Nonnull)JSONPhotoGallery;
 - (nullable instancetype)initWithJSONPhoto:(NSDictionary * _Nonnull)JSONPhoto;
 - (nonnull NSString*)toHTML;
-- (CGFloat) photoAspectRatio;
-- (nonnull NSString*)iPhoneOptimizedPhotoURLString;
 - (nonnull NSString*)captionToHTML;
+- (nonnull NSString*)iPhoneOptimizedPhotoURLString;
+- (CGFloat) photoAspectRatio;
+- (BOOL) photoURLsAreNotNil;
 @end

@@ -47,11 +47,11 @@
 }
 
 - (nonnull NSString*)iPhoneOptimizedPhotoURLString {
-    return (self.photo.width > 1250) ? self.photo.photo500URL : self.photo.photo1280URL;
+    return self.photo.iPhoneOptimizedPhotoURLString;
 }
 
 - (BOOL) photoURLsAreNotNil {
-    return (self.photo.photo1280URL && self.photo.photo500URL);
+    return self.photo.photoURLsAreNotNil;
 }
 
 @end

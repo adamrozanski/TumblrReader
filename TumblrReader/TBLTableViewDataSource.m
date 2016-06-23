@@ -44,19 +44,14 @@ int const postsCountPerRequest = 20;
     if ([cell isMemberOfClass:TBLPhotoCell.class]) {
         __weak TBLPostPhoto * photoPost = (TBLPostPhoto *)post;
         __weak TBLPhotoCell * photoCell = (TBLPhotoCell *)cell;
-        photoCell.photoView.alpha = 0.0f;
+        photoCell.photoView.alpha = 0.0;
         if (photoPost.photoURLsAreNotNil) {
             NSURL *URL = [NSURL URLWithString:photoPost.iPhoneOptimizedPhotoURLString];
             [photoCell.photoView pin_setImageFromURL:URL completion:^(PINRemoteImageManagerResult * _Nonnull result) {
-                if (result.requestDuration > 0.25) {
-                    [UIView animateWithDuration:0.3 animations:^{
-                        photoCell.photoView.alpha = 1.0;
-                    }];
-                } else {
-                    [UIView animateWithDuration:0.5 animations:^{
-                        photoCell.photoView.alpha = 1.0;
-                    }];
-                }
+                double duration = result.requestDuration > 0.25 ? 0.3 : 0.5;
+                [UIView animateWithDuration:duration animations:^{
+                    photoCell.photoView.alpha = 1.0;
+                }];
             }];
         }
     }

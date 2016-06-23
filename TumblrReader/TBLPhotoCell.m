@@ -60,10 +60,9 @@
     return self;
 }
 
-- (void) propagateContentFromPost:(TBLPost * _Nonnull)post andBlogMeta:(TBLBlogMeta * _Nonnull)blogMeta {
-    TBLPostPhoto *photoPost = (TBLPostPhoto *)post;
-    [super propagateContentFromPost:photoPost andBlogMeta:blogMeta];
-    [self.captionView loadHTMLString:[photoPost captionToHTML] baseURL:nil];
+- (void) propagateContentFromPost:(TBLPostPhoto * _Nonnull)post andBlogMeta:(TBLBlogMeta * _Nonnull)blogMeta {
+    [super propagateContentFromPost:post andBlogMeta:blogMeta];
+    [self.captionView loadHTMLString:[post captionToHTML] baseURL:nil];
 }
 
 @end

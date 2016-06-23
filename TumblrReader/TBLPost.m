@@ -30,7 +30,7 @@
 }
 
 - (nonnull NSString*)toHTML {
-    return @"<html><body>TBLPost should be subclassed</body></html>";
+    return @"TBLPost should be subclassed";
 }
 
 - (nonnull NSString*)tagsAsString {

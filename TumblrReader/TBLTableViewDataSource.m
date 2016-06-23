@@ -41,7 +41,7 @@ int const postsCountPerRequest = 20;
     TBLPost *post = self.posts[(NSUInteger)indexPath.row];
     NSString *identifier = [TBLPostTypeMap.sharedInstance stringForPostType:post.type];
     TBLPostCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
-    if ([cell.reuseIdentifier isEqualToString:[TBLPostTypeMap.sharedInstance stringForPostType:TBLPostTypePhoto]]) {
+    if ([cell isMemberOfClass:TBLPhotoCell.class]) {
         __weak TBLPostPhoto * photoPost = (TBLPostPhoto *)post;
         __weak TBLPhotoCell * photoCell = (TBLPhotoCell *)cell;
         photoCell.photoView.alpha = 0.0f;
@@ -50,11 +50,11 @@ int const postsCountPerRequest = 20;
             [photoCell.photoView pin_setImageFromURL:URL completion:^(PINRemoteImageManagerResult * _Nonnull result) {
                 if (result.requestDuration > 0.25) {
                     [UIView animateWithDuration:0.3 animations:^{
-                        photoCell.photoView.alpha = 1.0f;
+                        photoCell.photoView.alpha = 1.0;
                     }];
                 } else {
                     [UIView animateWithDuration:0.5 animations:^{
-                        photoCell.photoView.alpha = 1.0f;
+                        photoCell.photoView.alpha = 1.0;
                     }];
                 }
             }];

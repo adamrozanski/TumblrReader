@@ -46,7 +46,7 @@
 
 - (nullable NSString*)stringForPostType: (TBLPostType)postType {
     NSArray *allKeys = [self.postTypesDictionary allKeys];
-    for (NSInteger i = 0; i < [allKeys count]; ++i) {
+    for (NSUInteger i = 0; i < [allKeys count]; ++i) {
         NSString *key = allKeys[i];
         NSString *value = self.postTypesDictionary[key];
         if ([value isEqual:@(postType)]) {

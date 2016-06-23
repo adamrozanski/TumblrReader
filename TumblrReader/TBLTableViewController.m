@@ -31,12 +31,12 @@
 -(void) setupTableView {
     self.tableView.backgroundColor = [UIColor colorWithRed:0.21f green:0.24f blue:0.28f alpha:1.0f];
     self.tableView.separatorColor = [UIColor colorWithRed:0.21f green:0.24f blue:0.28f alpha:1.0f];
-    [self.tableView registerClass:[TBLQuoteCell class] forCellReuseIdentifier:@"quote"];
-    [self.tableView registerClass:[TBLPhotoCell class] forCellReuseIdentifier:@"photo"];
-    [self.tableView registerClass:[TBLRegularCell class] forCellReuseIdentifier:@"regular"];
-    [self.tableView registerClass:[TBLAudioCell class] forCellReuseIdentifier:@"audio"];
-    [self.tableView registerClass:[TBLConversationCell class] forCellReuseIdentifier:@"conversation"];
-    [self.tableView registerClass:[TBLLinkCell class] forCellReuseIdentifier:@"link"];
+    [self.tableView registerClass:[TBLQuoteCell class] forCellReuseIdentifier:[TBLPostTypeMap.sharedInstance stringForPostType:TBLPostTypeQuote]];
+    [self.tableView registerClass:[TBLPhotoCell class] forCellReuseIdentifier:[TBLPostTypeMap.sharedInstance stringForPostType:TBLPostTypePhoto]];
+    [self.tableView registerClass:[TBLRegularCell class] forCellReuseIdentifier:[TBLPostTypeMap.sharedInstance stringForPostType:TBLPostTypeRegular]];
+    [self.tableView registerClass:[TBLAudioCell class] forCellReuseIdentifier:[TBLPostTypeMap.sharedInstance stringForPostType:TBLPostTypeAudio]];
+    [self.tableView registerClass:[TBLConversationCell class] forCellReuseIdentifier:[TBLPostTypeMap.sharedInstance stringForPostType:TBLPostTypeConversation]];
+    [self.tableView registerClass:[TBLLinkCell class] forCellReuseIdentifier:[TBLPostTypeMap.sharedInstance stringForPostType:TBLPostTypeLink]];
 }
 
 - (void) updateBlogTitle {

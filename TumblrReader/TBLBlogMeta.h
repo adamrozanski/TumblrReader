@@ -10,12 +10,13 @@
 
 @interface TBLBlogMeta : NSObject
 
-@property NSString* _Nonnull name;
-@property NSString* _Nonnull title;
+@property NSString *_Nonnull name;
+@property NSString *_Nonnull title;
 @property int startPostIndex;
 @property int totalPostsCount;
 
-- (nonnull instancetype)initWithBlogName:(NSString * _Nonnull)blogName;
-- (nullable instancetype)initWithJSONResponse:(NSDictionary * _Nullable)json;
+- (nonnull instancetype)initWithBlogName:(NSString *_Nonnull)blogName;
+
+- (nullable instancetype)initWithJSONResponse:(NSDictionary *_Nullable)json;
 
 @end

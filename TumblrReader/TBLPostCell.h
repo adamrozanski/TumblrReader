@@ -8,14 +8,16 @@
 #import "TBLBlogMeta.h"
 #import "TBLPost.h"
 
-@interface TBLPostCell: UITableViewCell
+@interface TBLPostCell : UITableViewCell
 
-@property UILabel * _Nullable titleLabel;
-@property UIView * _Nullable titleBox;
-@property UILabel * _Nullable footerLabel;
+@property UILabel *_Nullable titleLabel;
+@property UIView *_Nullable titleBox;
+@property UILabel *_Nullable footerLabel;
 
-- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier;
-- (void) attachFooterToBottomAnchor:(NSLayoutYAxisAnchor * _Nonnull)bottomAnchor;
-- (void) propagateContentFromPost:(TBLPost * _Nonnull)post andBlogMeta:(TBLBlogMeta * _Nonnull)blogMeta;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *_Nullable)reuseIdentifier;
+
+- (void)attachFooterToBottomAnchor:(NSLayoutYAxisAnchor *_Nonnull)bottomAnchor;
+
+- (void)propagateContentFromPost:(TBLPost *_Nonnull)post andBlogMeta:(TBLBlogMeta *_Nonnull)blogMeta;
 
 @end

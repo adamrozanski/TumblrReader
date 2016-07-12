@@ -20,7 +20,9 @@ typedef NS_ENUM (NSInteger, TBLPostType) {
 
 @interface TBLPostTypeMap : NSObject
 + (nonnull TBLPostTypeMap *)sharedInstance;
-- (TBLPostType)postTypeForString: (NSString  * _Nonnull )stringType;
-- (nullable NSString*)stringForPostType: (TBLPostType)postType;
+
+- (TBLPostType)postTypeForString:(NSString *_Nonnull)stringType;
+
+- (nullable NSString *)stringForPostType:(TBLPostType)postType;
 
 @end

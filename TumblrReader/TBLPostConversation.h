@@ -10,10 +10,11 @@
 
 @interface TBLPostConversation : TBLPost
 
-@property (nullable) NSString *conversationTitle;
-@property (nonnull) NSString *conversationText;
+@property(nullable) NSString *conversationTitle;
+@property(nonnull) NSString *conversationText;
 
-- (nullable instancetype)initWithJSONPost:(NSDictionary * _Nonnull)JSONPost;
-- (nonnull NSString*)toHTML;
+- (nullable instancetype)initWithJSONPost:(NSDictionary *_Nonnull)JSONPost;
+
+- (nonnull NSString *)toHTML;
 
 @end

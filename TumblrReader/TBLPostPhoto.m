@@ -7,11 +7,10 @@
 //
 
 #import "TBLPostPhoto.h"
-#import <UIKit/UIKit.h>
 
 @implementation TBLPostPhoto
 
-- (nullable instancetype)initWithJSONPost:(NSDictionary * _Nonnull)JSONPost {
+- (nullable instancetype)initWithJSONPost:(NSDictionary *_Nonnull)JSONPost {
     if ((self = [super initWithJSONPost:JSONPost])) {
         TBLPhoto *photo = [[TBLPhoto alloc] initWithJSONPhoto:JSONPost];
         if (!photo)
@@ -42,15 +41,15 @@
     return HTMLString;
 }
 
-- (nonnull NSString*)captionToHTML {
+- (nonnull NSString *)captionToHTML {
     return [self.photo captionToHTML];
 }
 
-- (nonnull NSString*)iPhoneOptimizedPhotoURLString {
+- (nonnull NSString *)iPhoneOptimizedPhotoURLString {
     return self.photo.iPhoneOptimizedPhotoURLString;
 }
 
-- (BOOL) photoURLsAreNotNil {
+- (BOOL)photoURLsAreNotNil {
     return self.photo.photoURLsAreNotNil;
 }
 

@@ -11,9 +11,10 @@
 
 @interface TBLPostQuote : TBLPost
 
-@property (nonnull) NSString *quoteText;
-@property (nonnull) NSString *quoteSource;
+@property(nonnull) NSString *quoteText;
+@property(nonnull) NSString *quoteSource;
 
-- (nullable instancetype)initWithJSONPost:(NSDictionary * _Nonnull)JSONPost;
-- (nonnull NSString*)toHTML;
+- (nullable instancetype)initWithJSONPost:(NSDictionary *_Nonnull)JSONPost;
+
+- (nonnull NSString *)toHTML;
 @end

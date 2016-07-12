@@ -10,11 +10,12 @@
 
 @interface TBLPostRegular : TBLPost
 
-@property (nullable) NSString *title;
-@property (nonnull) NSString *HTMLBody;
+@property(nullable) NSString *title;
+@property(nonnull) NSString *HTMLBody;
 
-- (nullable instancetype)initWithJSONPost:(NSDictionary * _Nonnull)JSONPost;
-- (nonnull NSString*)toHTML;
+- (nullable instancetype)initWithJSONPost:(NSDictionary *_Nonnull)JSONPost;
+
+- (nonnull NSString *)toHTML;
 
 @end
 

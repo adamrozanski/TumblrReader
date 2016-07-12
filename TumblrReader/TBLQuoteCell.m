@@ -8,7 +8,7 @@
 
 #import "TBLQuoteCell.h"
 
-@implementation TBLQuoteCell 
+@implementation TBLQuoteCell
 
 
 @end

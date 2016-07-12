@@ -10,12 +10,12 @@
 
 @implementation TBLPost
 
-+ (TBLPostType)postTypeForJSONPost:(NSDictionary * _Nonnull)JSONPost {
++ (TBLPostType)postTypeForJSONPost:(NSDictionary *_Nonnull)JSONPost {
     NSString *stringType = JSONPost[@"type"];
     return [TBLPostTypeMap.sharedInstance postTypeForString:stringType];
 }
 
-- (nullable instancetype)initWithJSONPost:(NSDictionary * _Nonnull)JSONPost {
+- (nullable instancetype)initWithJSONPost:(NSDictionary *_Nonnull)JSONPost {
     if ((self = [super init])) {
         NSString *type = JSONPost[@"type"];
         NSString *date = JSONPost[@"date"];
@@ -29,11 +29,11 @@
     return self;
 }
 
-- (nonnull NSString*)toHTML {
+- (nonnull NSString *)toHTML {
     return @"TBLPost should be subclassed";
 }
 
-- (nonnull NSString*)tagsAsString {
+- (nonnull NSString *)tagsAsString {
     return (self.tags) ? [self.tags componentsJoinedByString:@" "] : @"brak";
 }
 

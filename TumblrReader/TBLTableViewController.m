@@ -11,7 +11,7 @@
 
 @interface TBLTableViewController () <UITableViewDelegate, UITableViewDataSource>
 
-@property TBLTableViewDataSource * _Nullable dataSource;
+@property TBLTableViewDataSource *_Nullable dataSource;
 
 @end
 
@@ -28,9 +28,9 @@
     [self loadPosts];
 }
 
--(void) setupTableView {
-    self.tableView.backgroundColor = [UIColor colorWithRed:0.21f green:0.24f blue:0.28f alpha:1.0f];
-    self.tableView.separatorColor = [UIColor colorWithRed:0.21f green:0.24f blue:0.28f alpha:1.0f];
+- (void)setupTableView {
+    self.tableView.backgroundColor = [UIColor colorWithRed:0.21 green:0.24 blue:0.28 alpha:1.0];
+    self.tableView.separatorColor = [UIColor colorWithRed:0.21 green:0.24 blue:0.28 alpha:1.0];
     [self.tableView registerClass:[TBLQuoteCell class] forCellReuseIdentifier:[[TBLPostTypeMap sharedInstance] stringForPostType:TBLPostTypeQuote]];
     [self.tableView registerClass:[TBLPhotoCell class] forCellReuseIdentifier:[[TBLPostTypeMap sharedInstance] stringForPostType:TBLPostTypePhoto]];
     [self.tableView registerClass:[TBLRegularCell class] forCellReuseIdentifier:[[TBLPostTypeMap sharedInstance] stringForPostType:TBLPostTypeRegular]];
@@ -39,7 +39,7 @@
     [self.tableView registerClass:[TBLLinkCell class] forCellReuseIdentifier:[[TBLPostTypeMap sharedInstance] stringForPostType:TBLPostTypeLink]];
 }
 
-- (void) updateBlogTitle {
+- (void)updateBlogTitle {
     self.title = (self.dataSource.blogMeta == nil) ? @"Tumblr Reader" : self.dataSource.blogMeta.name;
 }
 
@@ -48,7 +48,7 @@
     self.navigationItem.rightBarButtonItem = searchForBlog;
 }
 
-- (void)configureTableViewForBlogName:(NSString*)blogName {
+- (void)configureTableViewForBlogName:(NSString *)blogName {
     self.dataSource = [[TBLTableViewDataSource alloc] initWithBlogName:blogName];
     self.tableView.dataSource = self.dataSource;
     [self.tableView reloadData];
@@ -61,15 +61,15 @@
 
 #pragma mark - Table View
 
-- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    TBLPost *post = self.dataSource.posts[(NSUInteger)indexPath.row];
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    TBLPost *post = self.dataSource.posts[(NSUInteger) indexPath.row];
     TBLPostViewController *postViewController = [[TBLPostViewController alloc] initWithBlogMeta:self.dataSource.blogMeta post:post];
-    [self.navigationController pushViewController:postViewController animated:YES];    
+    [self.navigationController pushViewController:postViewController animated:YES];
 }
 
 #pragma mark - Table View Delegate Methods
 
-- (void) tableView:(UITableView *)tableView willDisplayCell:(nonnull UITableViewCell *)cell forRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView willDisplayCell:(nonnull UITableViewCell *)cell forRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     if ([self.dataSource shouldFetchNewPostsForIndexPath:indexPath])
         [self loadPosts];
 }
@@ -84,8 +84,7 @@
 
 #pragma mark - Pull to Refresh
 
--(void) setupRefreshControl
-{
+- (void)setupRefreshControl {
     if (self.refreshControl == nil) {
         self.refreshControl = [[UIRefreshControl alloc] init];
         self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Przesuń w dół, żeby odświeżyć"];
@@ -93,7 +92,7 @@
     }
 }
 
-- (void) refreshPosts {
+- (void)refreshPosts {
     if (!self.dataSource || (self.refreshControl && self.refreshControl.refreshing)) {
         [self.refreshControl endRefreshing];
         return;
@@ -101,20 +100,20 @@
     [self loadPosts];
 }
 
-- (void) updateLastTimeRefreshed {
+- (void)updateLastTimeRefreshed {
     NSDate *lastTime = [[NSDate alloc] init];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.dateStyle = NSDateFormatterShortStyle;
     dateFormatter.timeStyle = NSDateFormatterLongStyle;
-    NSString *lastTimeString = [NSString stringWithFormat:@"Ostatnia aktualizacja: %@",[dateFormatter stringFromDate:lastTime]];
+    NSString *lastTimeString = [NSString stringWithFormat:@"Ostatnia aktualizacja: %@", [dateFormatter stringFromDate:lastTime]];
     self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:lastTimeString];
 }
 
 
 #pragma mark - Load Posts
 
-- (void) loadPosts {
-    [self.dataSource loadPostsIntoTableView:self.tableView success:^(NSString * _Nullable errorMessage) {
+- (void)loadPosts {
+    [self.dataSource loadPostsIntoTableView:self.tableView success:^(NSString *_Nullable errorMessage) {
         if (self.refreshControl && self.refreshControl.refreshing)
             [self.refreshControl endRefreshing];
         if (errorMessage) {
@@ -123,24 +122,24 @@
         }
         [self updateBlogTitle];
         [self updateLastTimeRefreshed];
-    } failure:^(NSString * _Nullable errorMessage) {
+    }                               failure:^(NSString *_Nullable errorMessage) {
         [self presentMessage:errorMessage title:@"Błąd"];
     }];
 }
 
 #pragma mark - Dialogs
 
-- (void) presentMessage:(NSString*)message title:(NSString*)title {
+- (void)presentMessage:(NSString *)message title:(NSString *)title {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
     [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
     [self.parentViewController presentViewController:alert animated:YES completion:nil];
 }
 
-- (void) userEnterBlogName {
-    UITextField * __block searchTextField;
+- (void)userEnterBlogName {
+    UITextField *__block searchTextField;
     UIAlertController *searchController = [UIAlertController alertControllerWithTitle:@"Hello Braintri" message:@"Wprowadź nazwę bloga w serwisie Tumblr" preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        
+    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *_Nonnull action) {
+
         if ([searchTextField.text isEqualToString:@""]) {
             [self presentMessage:@"Nieprawidłowa nazwa bloga " title:@"Bład"];
             return;
@@ -148,21 +147,21 @@
         [self configureTableViewForBlogName:searchTextField.text];
         [self loadPosts];
     }];
-    UIAlertAction *epicbeta = [UIAlertAction actionWithTitle:@"Użyj: epicbeta" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *epicbeta = [UIAlertAction actionWithTitle:@"Użyj: epicbeta" style:UIAlertActionStyleDefault handler:^(UIAlertAction *_Nonnull action) {
         [self configureTableViewForBlogName:@"epicbeta"];
         [self loadPosts];
     }];
-    UIAlertAction *travelgurus = [UIAlertAction actionWithTitle:@"Użyj: travelgurus" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *travelgurus = [UIAlertAction actionWithTitle:@"Użyj: travelgurus" style:UIAlertActionStyleDefault handler:^(UIAlertAction *_Nonnull action) {
         [self configureTableViewForBlogName:@"travelgurus"];
         [self loadPosts];
     }];
-    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Anuluj" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Anuluj" style:UIAlertActionStyleDefault handler:^(UIAlertAction *_Nonnull action) {
     }];
     [searchController addAction:ok];
     [searchController addAction:cancel];
     [searchController addAction:travelgurus];
     [searchController addAction:epicbeta];
-    [searchController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+    [searchController addTextFieldWithConfigurationHandler:^(UITextField *_Nonnull textField) {
         searchTextField = textField;
         searchTextField.placeholder = @"Nazwa bloga";
     }];

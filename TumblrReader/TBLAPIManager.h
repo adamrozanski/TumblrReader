@@ -20,14 +20,15 @@
 @interface TBLAPIManager : NSObject
 
 + (nonnull TBLAPIManager *)sharedManager;
-- (void) fetchPostsForUsername:(NSString * _Nonnull)username
-                startPostIndex:(int)startPostIndex
-                    postsCount:(int)postsCount
-                       success:(void (^ _Nonnull)(NSURLSessionTask * _Nonnull task, TBLBlogMeta * _Nullable blogMeta, NSArray<TBLPost*> * _Nullable posts, NSError * _Nullable error))success
-                       failure:(void (^ _Nonnull)(NSURLSessionTask * _Nullable task, NSError * _Nonnull error))failure;
 
-- (void) imageFromURLString:(NSString * _Nonnull)URLString
-                    success:(void (^ _Nonnull)(UIImage * _Nullable image))success
-                    failure:(void (^ _Nonnull)(NSError * _Nonnull error))failure;
+- (void)fetchPostsForUsername:(NSString *_Nonnull)username
+               startPostIndex:(int)startPostIndex
+                   postsCount:(int)postsCount
+                      success:(void (^ _Nonnull)(NSURLSessionTask *_Nonnull task, TBLBlogMeta *_Nullable blogMeta, NSArray<TBLPost *> *_Nullable posts, NSError *_Nullable error))success
+                      failure:(void (^ _Nonnull)(NSURLSessionTask *_Nullable task, NSError *_Nonnull error))failure;
+
+- (void)imageFromURLString:(NSString *_Nonnull)URLString
+                   success:(void (^ _Nonnull)(UIImage *_Nullable image))success
+                   failure:(void (^ _Nonnull)(NSError *_Nonnull error))failure;
 
 @end

@@ -25,9 +25,48 @@
     <option name="FILTER_BY_CURRENT_PROJECT" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="952e86eb-04a8-4cdf-93d2-f6bd2918b05e" name="Default" comment="">
+    <list default="true" id="952e86eb-04a8-4cdf-93d2-f6bd2918b05e" name="Default" comment="code reformat">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/TumblrReader.iml" afterPath="$PROJECT_DIR$/.idea/TumblrReader.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Adam.xcuserdatad/xcschemes/xcschememanagement.plist" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Adam.xcuserdatad/xcschemes/xcschememanagement.plist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TumblrReader/TBLAPIManager.h" afterPath="$PROJECT_DIR$/TumblrReader/TBLAPIManager.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TumblrReader/TBLAPIManager.m" afterPath="$PROJECT_DIR$/TumblrReader/TBLAPIManager.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TumblrReader/TBLAudioCell.m" afterPath="$PROJECT_DIR$/TumblrReader/TBLAudioCell.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TumblrReader/TBLBlogMeta.h" afterPath="$PROJECT_DIR$/TumblrReader/TBLBlogMeta.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TumblrReader/TBLBlogMeta.m" afterPath="$PROJECT_DIR$/TumblrReader/TBLBlogMeta.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TumblrReader/TBLHTMLGenericCell.h" afterPath="$PROJECT_DIR$/TumblrReader/TBLHTMLGenericCell.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TumblrReader/TBLHTMLGenericCell.m" afterPath="$PROJECT_DIR$/TumblrReader/TBLHTMLGenericCell.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TumblrReader/TBLPhoto.h" afterPath="$PROJECT_DIR$/TumblrReader/TBLPhoto.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TumblrReader/TBLPhoto.m" afterPath="$PROJECT_DIR$/TumblrReader/TBLPhoto.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TumblrReader/TBLPhotoCell.h" afterPath="$PROJECT_DIR$/TumblrReader/TBLPhotoCell.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TumblrReader/TBLPhotoCell.m" afterPath="$PROJECT_DIR$/TumblrReader/TBLPhotoCell.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TumblrReader/TBLPost.h" afterPath="$PROJECT_DIR$/TumblrReader/TBLPost.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TumblrReader/TBLPost.m" afterPath="$PROJECT_DIR$/TumblrReader/TBLPost.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TumblrReader/TBLPostAudio.h" afterPath="$PROJECT_DIR$/TumblrReader/TBLPostAudio.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TumblrReader/TBLPostAudio.m" afterPath="$PROJECT_DIR$/TumblrReader/TBLPostAudio.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TumblrReader/TBLPostCell.h" afterPath="$PROJECT_DIR$/TumblrReader/TBLPostCell.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TumblrReader/TBLPostCell.m" afterPath="$PROJECT_DIR$/TumblrReader/TBLPostCell.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TumblrReader/TBLPostConversation.h" afterPath="$PROJECT_DIR$/TumblrReader/TBLPostConversation.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TumblrReader/TBLPostConversation.m" afterPath="$PROJECT_DIR$/TumblrReader/TBLPostConversation.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TumblrReader/TBLPostFactory.h" afterPath="$PROJECT_DIR$/TumblrReader/TBLPostFactory.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TumblrReader/TBLPostFactory.m" afterPath="$PROJECT_DIR$/TumblrReader/TBLPostFactory.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TumblrReader/TBLPostLink.h" afterPath="$PROJECT_DIR$/TumblrReader/TBLPostLink.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TumblrReader/TBLPostLink.m" afterPath="$PROJECT_DIR$/TumblrReader/TBLPostLink.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TumblrReader/TBLPostPhoto.h" afterPath="$PROJECT_DIR$/TumblrReader/TBLPostPhoto.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TumblrReader/TBLPostPhoto.m" afterPath="$PROJECT_DIR$/TumblrReader/TBLPostPhoto.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TumblrReader/TBLPostQuote.h" afterPath="$PROJECT_DIR$/TumblrReader/TBLPostQuote.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TumblrReader/TBLPostQuote.m" afterPath="$PROJECT_DIR$/TumblrReader/TBLPostQuote.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TumblrReader/TBLPostRegular.h" afterPath="$PROJECT_DIR$/TumblrReader/TBLPostRegular.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TumblrReader/TBLPostRegular.m" afterPath="$PROJECT_DIR$/TumblrReader/TBLPostRegular.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TumblrReader/TBLPostTypeMap.h" afterPath="$PROJECT_DIR$/TumblrReader/TBLPostTypeMap.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TumblrReader/TBLPostTypeMap.m" afterPath="$PROJECT_DIR$/TumblrReader/TBLPostTypeMap.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TumblrReader/TBLPostViewController.h" afterPath="$PROJECT_DIR$/TumblrReader/TBLPostViewController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TumblrReader/TBLPostViewController.m" afterPath="$PROJECT_DIR$/TumblrReader/TBLPostViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TumblrReader/TBLQuoteCell.m" afterPath="$PROJECT_DIR$/TumblrReader/TBLQuoteCell.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TumblrReader/TBLRegularCell.m" afterPath="$PROJECT_DIR$/TumblrReader/TBLRegularCell.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TumblrReader/TBLTableViewController.m" afterPath="$PROJECT_DIR$/TumblrReader/TBLTableViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TumblrReader/TBLTableViewDataSource.h" afterPath="$PROJECT_DIR$/TumblrReader/TBLTableViewDataSource.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TumblrReader/TBLTableViewDataSource.m" afterPath="$PROJECT_DIR$/TumblrReader/TBLTableViewDataSource.m" />
     </list>
     <ignored path="TumblrReader.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,15 +86,23 @@
     <favorites_list name="TumblrReader" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TBLTableViewController.m" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/TumblrReader/TBLTableViewController.m">
+    <leaf>
+      <file leaf-file-name="TBLPhotoCell.m" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPhotoCell.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="918">
-              <caret line="54" column="27" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="27" />
-              <folding>
-                <element signature="e#131#165#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="126">
+              <caret line="36" column="104" selection-start-line="36" selection-start-column="104" selection-end-line="36" selection-end-column="104" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TBLPhotoCell.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPhotoCell.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -69,47 +116,49 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/TumblrReader/TBLAudioCell.m" />
         <option value="$PROJECT_DIR$/TumblrReader/AppDelegate.m" />
-        <option value="$PROJECT_DIR$/TumblrReader/TBLPostViewController.m" />
         <option value="$PROJECT_DIR$/TumblrReader/TBLDataSource.h" />
         <option value="$PROJECT_DIR$/TumblrReader/TBLDataSource.m" />
-        <option value="$PROJECT_DIR$/TumblrReader/TBLHTMLGenericCell.m" />
+        <option value="$PROJECT_DIR$/TumblrReader/TBLQuoteCell.h" />
+        <option value="$PROJECT_DIR$/TumblrReader/TBLRegularCell.h" />
+        <option value="$PROJECT_DIR$/TumblrReader/TBLPostConversation.m" />
+        <option value="$PROJECT_DIR$/TumblrReader/TBLPostConversation.h" />
         <option value="$PROJECT_DIR$/TumblrReader/TBLBlogMeta.h" />
         <option value="$PROJECT_DIR$/TumblrReader/TBLBlogMeta.m" />
+        <option value="$PROJECT_DIR$/TumblrReader/TBLPhoto.h" />
+        <option value="$PROJECT_DIR$/TumblrReader/TBLPhoto.m" />
         <option value="$PROJECT_DIR$/TumblrReader/TBLPost.h" />
+        <option value="$PROJECT_DIR$/TumblrReader/TBLPost.m" />
         <option value="$PROJECT_DIR$/TumblrReader/TBLPostAudio.h" />
         <option value="$PROJECT_DIR$/TumblrReader/TBLPostAudio.m" />
-        <option value="$PROJECT_DIR$/TumblrReader/TBLPostConversation.h" />
-        <option value="$PROJECT_DIR$/TumblrReader/TBLPostConversation.m" />
         <option value="$PROJECT_DIR$/TumblrReader/TBLPostFactory.h" />
         <option value="$PROJECT_DIR$/TumblrReader/TBLPostFactory.m" />
         <option value="$PROJECT_DIR$/TumblrReader/TBLPostLink.h" />
         <option value="$PROJECT_DIR$/TumblrReader/TBLPostLink.m" />
+        <option value="$PROJECT_DIR$/TumblrReader/TBLPostPhoto.h" />
         <option value="$PROJECT_DIR$/TumblrReader/TBLPostQuote.h" />
         <option value="$PROJECT_DIR$/TumblrReader/TBLPostQuote.m" />
         <option value="$PROJECT_DIR$/TumblrReader/TBLPostRegular.h" />
         <option value="$PROJECT_DIR$/TumblrReader/TBLPostRegular.m" />
         <option value="$PROJECT_DIR$/TumblrReader/TBLPostTypeMap.h" />
+        <option value="$PROJECT_DIR$/TumblrReader/TBLPostTypeMap.m" />
         <option value="$PROJECT_DIR$/TumblrReader/TBLAPIManager.h" />
         <option value="$PROJECT_DIR$/TumblrReader/TBLAPIManager.m" />
+        <option value="$PROJECT_DIR$/TumblrReader/TBLPostViewController.h" />
+        <option value="$PROJECT_DIR$/TumblrReader/TBLPostViewController.m" />
+        <option value="$PROJECT_DIR$/TumblrReader/TBLTableViewController.m" />
         <option value="$PROJECT_DIR$/TumblrReader/TBLTableViewDataSource.h" />
+        <option value="$PROJECT_DIR$/TumblrReader/TBLTableViewDataSource.m" />
+        <option value="$PROJECT_DIR$/TumblrReader/TBLAudioCell.m" />
+        <option value="$PROJECT_DIR$/TumblrReader/TBLHTMLGenericCell.m" />
+        <option value="$PROJECT_DIR$/TumblrReader/TBLHTMLGenericCell.h" />
         <option value="$PROJECT_DIR$/TumblrReader/TBLPhotoCell.h" />
         <option value="$PROJECT_DIR$/TumblrReader/TBLPostCell.h" />
         <option value="$PROJECT_DIR$/TumblrReader/TBLPostCell.m" />
-        <option value="$PROJECT_DIR$/TumblrReader/TBLQuoteCell.h" />
         <option value="$PROJECT_DIR$/TumblrReader/TBLQuoteCell.m" />
-        <option value="$PROJECT_DIR$/TumblrReader/TBLRegularCell.h" />
         <option value="$PROJECT_DIR$/TumblrReader/TBLRegularCell.m" />
-        <option value="$PROJECT_DIR$/TumblrReader/TBLPostPhoto.h" />
-        <option value="$PROJECT_DIR$/TumblrReader/TBLPhoto.m" />
-        <option value="$PROJECT_DIR$/TumblrReader/TBLPhoto.h" />
         <option value="$PROJECT_DIR$/TumblrReader/TBLPostPhoto.m" />
         <option value="$PROJECT_DIR$/TumblrReader/TBLPhotoCell.m" />
-        <option value="$PROJECT_DIR$/TumblrReader/TBLPost.m" />
-        <option value="$PROJECT_DIR$/TumblrReader/TBLPostTypeMap.m" />
-        <option value="$PROJECT_DIR$/TumblrReader/TBLTableViewDataSource.m" />
-        <option value="$PROJECT_DIR$/TumblrReader/TBLTableViewController.m" />
       </list>
     </option>
   </component>
@@ -121,10 +170,9 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="329" />
     <option name="y" value="23" />
-    <option name="width" value="1990" />
-    <option name="height" value="1363" />
+    <option name="width" value="1440" />
+    <option name="height" value="835" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -167,6 +215,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Cidr.FilesView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -252,28 +301,9 @@
               <option name="myItemId" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TumblrReader" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TumblrReader" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Data Model" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Cidr.FilesView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -554,7 +584,14 @@
       <option name="project" value="LOCAL" />
       <updated>1466691393168</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="table view controller refactor">
+      <created>1466691631158</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1466691631158</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TodoView">
@@ -567,29 +604,29 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="329" y="23" width="1990" height="1363" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="835" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985553" sideWeight="0.49722221" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2339833" sideWeight="0.49166667" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23368146" sideWeight="0.49166667" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985657" sideWeight="0.50277776" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.07945425" sideWeight="0.49722221" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.125966" sideWeight="0.4888889" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3994778" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.07832898" sideWeight="0.49722221" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12402089" sideWeight="0.4888889" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15427136" sideWeight="0.8947834" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20555556" sideWeight="0.8720627" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TeamCity" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985553" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2035963" sideWeight="0.48143712" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15427136" sideWeight="0.10521662" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.011111111" sideWeight="0.12793733" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3994778" sideWeight="0.49722221" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985553" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -613,7 +650,8 @@
     <MESSAGE value="data source refactor" />
     <MESSAGE value="kosmetyka" />
     <MESSAGE value="table view controller refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="table view controller refactor" />
+    <MESSAGE value="code reformat" />
+    <option name="LAST_COMMIT_MESSAGE" value="code reformat" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -636,216 +674,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLBlogMeta.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPostAudio.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPostConversation.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPostConversation.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPostQuote.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPostQuote.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPostRegular.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPostTypeMap.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPostLink.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPostFactory.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPostFactory.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLAPIManager.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TumblrReader/AppDelegate.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPostViewController.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPostViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLTableViewController.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLAudioCell.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLAudioCell.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLConversationCell.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLHTMLGenericCell.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLLinkCell.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLLinkCell.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPhotoCell.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLQuoteCell.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLQuoteCell.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLRegularCell.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLRegularCell.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPostCell.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLAPIManager.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -860,84 +692,53 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="799">
           <caret line="47" column="124" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="124" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLBlogMeta.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPostPhoto.h">
+    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLBlogMeta.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="30" selection-start-line="19" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state relative-caret-position="442">
+          <caret line="26" column="44" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPost.h">
+    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPhoto.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+        <state relative-caret-position="510">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPostCell.m">
+    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPhoto.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="930">
-          <caret line="102" column="4" selection-start-line="102" selection-start-column="4" selection-end-line="102" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLConversationCell.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLHTMLGenericCell.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPhotoCell.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="811">
-          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPostLink.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPostRegular.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        <state relative-caret-position="-70">
+          <caret line="30" column="70" selection-start-line="30" selection-start-column="70" selection-end-line="30" selection-end-column="70" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPost.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        <state relative-caret-position="270">
+          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPostTypeMap.m">
+    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPostAudio.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
+        <state relative-caret-position="34">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -950,31 +751,239 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPhoto.h">
+    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPostConversation.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPostConversation.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPostFactory.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPostFactory.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="67" selection-start-line="20" selection-start-column="67" selection-end-line="20" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPostLink.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
-          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPhoto.m">
+    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPostLink.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
+        <state relative-caret-position="425">
+          <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLBlogMeta.m">
+    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPostPhoto.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="7" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="56" />
+        <state relative-caret-position="442">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPostQuote.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPostQuote.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPostRegular.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPostRegular.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPostTypeMap.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLAPIManager.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLAPIManager.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-374">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPostViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPostViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="48" column="122" selection-start-line="48" selection-start-column="122" selection-end-line="48" selection-end-column="122" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLTableViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLTableViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TumblrReader/TBLTableViewDataSource.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLAudioCell.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLAudioCell.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLConversationCell.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLConversationCell.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLHTMLGenericCell.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="542">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLHTMLGenericCell.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLLinkCell.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLLinkCell.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPostCell.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPostCell.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="102" column="4" selection-start-line="102" selection-start-column="4" selection-end-line="102" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLQuoteCell.m">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
@@ -982,31 +991,75 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLQuoteCell.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLRegularCell.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLRegularCell.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPost.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPostTypeMap.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPostPhoto.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="43" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
-          <folding>
-            <element signature="e#129#153#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="153">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TumblrReader/TBLTableViewDataSource.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="52" column="52" selection-start-line="52" selection-start-column="52" selection-end-line="52" selection-end-column="52" />
+        <state relative-caret-position="270">
+          <caret line="121" column="8" selection-start-line="121" selection-start-column="8" selection-end-line="121" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLTableViewController.m">
+    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPhotoCell.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="54" column="27" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="27" />
-          <folding>
-            <element signature="e#131#165#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="34">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPhotoCell.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="36" column="104" selection-start-line="36" selection-start-column="104" selection-end-line="36" selection-end-column="104" />
+          <folding />
         </state>
       </provider>
     </entry>

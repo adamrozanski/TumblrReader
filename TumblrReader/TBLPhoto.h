@@ -10,18 +10,24 @@
 
 @interface TBLPhoto : NSObject
 
-@property NSString * _Nullable caption;
+@property NSString *_Nullable caption;
 @property int width;
 @property int height;
-@property NSString * _Nullable photo1280URL;
-@property NSString * _Nullable photo500URL;
-@property NSString * _Nullable photo250URL;
+@property NSString *_Nullable photo1280URL;
+@property NSString *_Nullable photo500URL;
+@property NSString *_Nullable photo250URL;
 
-+ (nullable NSArray<TBLPhoto *> *)photoGalleryFromJSONPhotoGallery:(NSArray * _Nonnull)JSONPhotoGallery;
-- (nullable instancetype)initWithJSONPhoto:(NSDictionary * _Nonnull)JSONPhoto;
-- (nonnull NSString*)toHTML;
-- (nonnull NSString*)captionToHTML;
-- (nonnull NSString*)iPhoneOptimizedPhotoURLString;
-- (CGFloat) photoAspectRatio;
-- (BOOL) photoURLsAreNotNil;
++ (nullable NSArray<TBLPhoto *> *)photoGalleryFromJSONPhotoGallery:(NSArray *_Nonnull)JSONPhotoGallery;
+
+- (nullable instancetype)initWithJSONPhoto:(NSDictionary *_Nonnull)JSONPhoto;
+
+- (nonnull NSString *)toHTML;
+
+- (nonnull NSString *)captionToHTML;
+
+- (nonnull NSString *)iPhoneOptimizedPhotoURLString;
+
+- (CGFloat)photoAspectRatio;
+
+- (BOOL)photoURLsAreNotNil;
 @end

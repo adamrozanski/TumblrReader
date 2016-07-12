@@ -12,6 +12,6 @@
 
 @interface TBLPostViewController : UIViewController
 
-- (instancetype) initWithBlogMeta:(TBLBlogMeta *)blogMeta post:(TBLPost *)post;
+- (instancetype)initWithBlogMeta:(TBLBlogMeta *)blogMeta post:(TBLPost *)post;
 
 @end

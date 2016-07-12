@@ -25,26 +25,26 @@
     return _sharedInstance;
 }
 
--(nonnull instancetype)init {
+- (nonnull instancetype)init {
     if ((self = [super init])) {
         self.postTypesDictionary = @{
-                @"undefined": @0,
-                @"quote": @1,
-                @"photo": @2,
-                @"link": @3,
-                @"conversation": @4,
-                @"audio": @5,
-                @"regular": @6
+                @"undefined" : @0,
+                @"quote" : @1,
+                @"photo" : @2,
+                @"link" : @3,
+                @"conversation" : @4,
+                @"audio" : @5,
+                @"regular" : @6
         };
     }
     return self;
 }
 
-- (TBLPostType)postTypeForString: (NSString  * _Nonnull )stringType {
-    return (TBLPostType)[[self.postTypesDictionary valueForKey:stringType] integerValue];
+- (TBLPostType)postTypeForString:(NSString *_Nonnull)stringType {
+    return (TBLPostType) [[self.postTypesDictionary valueForKey:stringType] integerValue];
 }
 
-- (nullable NSString*)stringForPostType: (TBLPostType)postType {
+- (nullable NSString *)stringForPostType:(TBLPostType)postType {
     NSArray *allKeys = [self.postTypesDictionary allKeys];
     for (NSUInteger i = 0; i < [allKeys count]; ++i) {
         NSString *key = allKeys[i];

@@ -85,8 +85,8 @@
     NSLayoutConstraint *footerLabelLeading = [self.footerLabel.leadingAnchor constraintEqualToAnchor:[footerBox leadingAnchor] constant:4];
     NSLayoutConstraint *footerLabelTailing = [self.footerLabel.trailingAnchor constraintEqualToAnchor:[footerBox trailingAnchor]];
     NSLayoutConstraint *footerLabelLTop = [self.footerLabel.topAnchor constraintEqualToAnchor:[footerBox topAnchor]];
-    NSLayoutConstraint *footerLabelHleight = [self.footerLabel.heightAnchor constraintEqualToAnchor:[footerBox heightAnchor]];
-    NSArray *footerLabelConstraints = @[footerLabelLeading, footerLabelTailing, footerLabelLTop, footerLabelHleight];
+    NSLayoutConstraint *footerLabelHeight = [self.footerLabel.heightAnchor constraintEqualToAnchor:[footerBox heightAnchor]];
+    NSArray *footerLabelConstraints = @[footerLabelLeading, footerLabelTailing, footerLabelLTop, footerLabelHeight];
     [NSLayoutConstraint activateConstraints:footerLabelConstraints];
 }
 

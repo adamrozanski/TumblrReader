@@ -37,8 +37,10 @@
 }
 
 - (void)configureSubviews {
+    //webview bugfix
     WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc] init];
     configuration.selectionGranularity = WKSelectionGranularityCharacter;
+
     self.webView = [[WKWebView alloc] initWithFrame:self.view.bounds configuration:configuration];
     [self.view addSubview:self.webView];
     [self.webView setTranslatesAutoresizingMaskIntoConstraints:NO];

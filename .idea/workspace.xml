@@ -27,7 +27,6 @@
   <component name="ChangeListManager">
     <list default="true" id="952e86eb-04a8-4cdf-93d2-f6bd2918b05e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TumblrReader/TBLPostViewController.m" afterPath="$PROJECT_DIR$/TumblrReader/TBLPostViewController.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TumblrReader/TBLTableViewController.m" afterPath="$PROJECT_DIR$/TumblrReader/TBLTableViewController.m" />
     </list>
     <ignored path="TumblrReader.iws" />
@@ -49,11 +48,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TBLPhotoCell.m" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPhotoCell.m">
+      <file leaf-file-name="TBLTableViewController.m" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/TumblrReader/TBLTableViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="73" selection-start-line="20" selection-start-column="73" selection-end-line="20" selection-end-column="73" />
+            <state relative-caret-position="289">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -64,76 +63,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
               <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TBLTableViewController.m" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TumblrReader/TBLTableViewController.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="918">
-              <caret line="55" column="1" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TBLPostViewController.m" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPostViewController.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="40" column="82" selection-start-line="40" selection-start-column="82" selection-end-line="40" selection-end-column="82" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TBLAudioCell.m" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TumblrReader/TBLAudioCell.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TBLConversationCell.m" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TumblrReader/TBLConversationCell.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TBLHTMLGenericCell.m" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TumblrReader/TBLHTMLGenericCell.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="677">
-              <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TBLTableViewDataSource.m" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TumblrReader/TBLTableViewDataSource.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="131" column="0" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TBLPhotoCell.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPhotoCell.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -189,8 +118,8 @@
         <option value="$PROJECT_DIR$/TumblrReader/TBLRegularCell.m" />
         <option value="$PROJECT_DIR$/TumblrReader/TBLPostPhoto.m" />
         <option value="$PROJECT_DIR$/TumblrReader/TBLPhotoCell.m" />
-        <option value="$PROJECT_DIR$/TumblrReader/TBLTableViewController.m" />
         <option value="$PROJECT_DIR$/TumblrReader/TBLPostViewController.m" />
+        <option value="$PROJECT_DIR$/TumblrReader/TBLTableViewController.m" />
       </list>
     </option>
   </component>
@@ -630,7 +559,14 @@
       <option name="project" value="LOCAL" />
       <updated>1468357695149</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="code reformat">
+      <created>1468358597410</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1468358597410</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TodoView">
@@ -910,14 +846,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLTableViewDataSource.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TumblrReader/TBLAudioCell.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1038,14 +966,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLTableViewDataSource.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="131" column="0" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TumblrReader/TBLAudioCell.m">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -1078,6 +998,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLTableViewDataSource.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLTableViewDataSource.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="131" column="0" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPostViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="40" column="82" selection-start-line="40" selection-start-column="82" selection-end-line="40" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/TumblrReader/TBLTableViewController.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1088,16 +1032,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TumblrReader/TBLTableViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="55" column="1" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TumblrReader/TBLPostViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="40" column="82" selection-start-line="40" selection-start-column="82" selection-end-line="40" selection-end-column="82" />
+        <state relative-caret-position="289">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>

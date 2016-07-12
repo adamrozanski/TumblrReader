@@ -9,7 +9,7 @@
 #import "TBLTableViewController.h"
 #import "TBLPostViewController.h"
 
-@interface TBLTableViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface TBLTableViewController () <UITableViewDelegate>
 
 @property TBLTableViewDataSource *_Nullable dataSource;
 

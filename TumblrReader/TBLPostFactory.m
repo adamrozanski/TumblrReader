@@ -14,17 +14,17 @@
     TBLPostType postType = [TBLPost postTypeForJSONPost:JSONPost];
     switch (postType) {
         case TBLPostTypeQuote:
-            return [[TBLPostQuote alloc] initWithJSONPost:JSONPost];
+            return [[TBLQuotePost alloc] initWithJSONPost:JSONPost];
         case TBLPostTypePhoto:
-            return [[TBLPostPhoto alloc] initWithJSONPost:JSONPost];
+            return [[TBLPhotoPost alloc] initWithJSONPost:JSONPost];
         case TBLPostTypeLink:
-            return [[TBLPostLink alloc] initWithJSONPost:JSONPost];
+            return [[TBLLinkPost alloc] initWithJSONPost:JSONPost];
         case TBLPostTypeConversation:
-            return [[TBLPostConversation alloc] initWithJSONPost:JSONPost];
+            return [[TBLConversationPost alloc] initWithJSONPost:JSONPost];
         case TBLPostTypeAudio:
-            return [[TBLPostAudio alloc] initWithJSONPost:JSONPost];
+            return [[TBLAudioPost alloc] initWithJSONPost:JSONPost];
         case TBLPostTypeRegular:
-            return [[TBLPostRegular alloc] initWithJSONPost:JSONPost];
+            return [[TBLRegularPost alloc] initWithJSONPost:JSONPost];
         default:
             return nil;
     }

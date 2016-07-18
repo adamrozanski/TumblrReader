@@ -9,7 +9,7 @@
 #import <WebKit/WebKit.h>
 #import "TBLPostCell.h"
 #import "TBLPost.h"
-#import "TBLPostPhoto.h"
+#import "TBLPhotoPost.h"
 
 @interface TBLPhotoCell : TBLPostCell
 

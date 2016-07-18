@@ -8,12 +8,12 @@
 
 #import "TBLPost.h"
 #import "TBLBlogMeta.h"
-#import "TBLPostQuote.h"
-#import "TBLPostPhoto.h"
-#import "TBLPostLink.h"
-#import "TBLPostConversation.h"
-#import "TBLPostAudio.h"
-#import "TBLPostRegular.h"
+#import "TBLQuotePost.h"
+#import "TBLPhotoPost.h"
+#import "TBLLinkPost.h"
+#import "TBLConversationPost.h"
+#import "TBLAudioPost.h"
+#import "TBLRegularPost.h"
 #import "TBLPostTypeMap.h"
 
 @interface TBLPostFactory : NSObject

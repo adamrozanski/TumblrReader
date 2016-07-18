@@ -1,5 +1,5 @@
 //
-//  TBLPostPhoto.h
+//  TBLPhotoPost.h
 //  TumblrReader
 //
 //  Created by Adam on 11.06.2016.
@@ -9,7 +9,7 @@
 #import "TBLPost.h"
 #import "TBLPhoto.h"
 
-@interface TBLPostPhoto : TBLPost
+@interface TBLPhotoPost : TBLPost
 
 @property(nonnull) TBLPhoto *photo;
 @property(nullable) NSArray<TBLPhoto *> *photoGallery;

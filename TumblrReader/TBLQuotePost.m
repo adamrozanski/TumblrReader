@@ -5,9 +5,9 @@
 //  Created by Adam on 10.06.2016.
 //  Copyright © 2016 Adam. All rights reserved.
 //
-#import "TBLPostQuote.h"
+#import "TBLQuotePost.h"
 
-@implementation TBLPostQuote
+@implementation TBLQuotePost
 
 - (nullable instancetype)initWithJSONPost:(NSDictionary *_Nonnull)JSONPost {
     if ((self = [super initWithJSONPost:JSONPost])) {

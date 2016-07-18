@@ -62,7 +62,7 @@
 
 - (void)propagateContentFromPost:(TBLPost *_Nonnull)post andBlogMeta:(TBLBlogMeta *_Nonnull)blogMeta {
     [super propagateContentFromPost:post andBlogMeta:blogMeta];
-    [self.captionView loadHTMLString:[(TBLPostPhoto *)post captionToHTML] baseURL:nil];
+    [self.captionView loadHTMLString:[(TBLPhotoPost *)post captionToHTML] baseURL:nil];
 }
 
 @end

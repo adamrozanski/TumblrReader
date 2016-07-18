@@ -11,7 +11,7 @@
 #import "TBLTableViewDataSource.h"
 #import "TBLBlogMeta.h"
 #import "TBLPost.h"
-#import "TBLPostPhoto.h"
+#import "TBLPhotoPost.h"
 #import "TBLPostTypeMap.h"
 #import "TBLQuoteCell.h"
 #import "TBLPhotoCell.h"

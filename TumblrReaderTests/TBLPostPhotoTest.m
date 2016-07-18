@@ -8,7 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import <OCMock/OCMock.h>
-#import "TBLPostPhoto.h"
+#import "TBLPhotoPost.h"
 #import "TBLPhoto.h"
 #import "SampleJSONPosts.h"
 
@@ -35,7 +35,7 @@
     // given
     NSDictionary *JSONPostPhoto = nil;
     // when
-    TBLPostPhoto *postPhoto = [[TBLPostPhoto alloc] initWithJSONPost:JSONPostPhoto];
+    TBLPhotoPost *postPhoto = [[TBLPhotoPost alloc] initWithJSONPost:JSONPostPhoto];
     // then
     XCTAssertNil(postPhoto, @"Instance must be Nil after passing Nil to constructor");
 }
@@ -44,7 +44,7 @@
     // given
     NSDictionary *JSONPostPhoto = @{};
     // when
-    TBLPostPhoto *postPhoto = [[TBLPostPhoto alloc] initWithJSONPost:JSONPostPhoto];
+    TBLPhotoPost *postPhoto = [[TBLPhotoPost alloc] initWithJSONPost:JSONPostPhoto];
     // then
     XCTAssertNil(postPhoto, @"Instance must be Nil after passing Nil to constructor");
 }
@@ -53,7 +53,7 @@
     // given
     NSDictionary *JSONPostPhoto = self.samplePostPhoto;
     // when
-    TBLPostPhoto *postPhoto = [[TBLPostPhoto alloc] initWithJSONPost:JSONPostPhoto];
+    TBLPhotoPost *postPhoto = [[TBLPhotoPost alloc] initWithJSONPost:JSONPostPhoto];
     // then
     XCTAssertNotNil(postPhoto.photo, @"Photo property must be initialized after init");
 }
@@ -62,7 +62,7 @@
     // given
     NSDictionary *JSONPostPhoto = self.samplePostPhoto;
     // when
-    TBLPostPhoto *postPhoto = [[TBLPostPhoto alloc] initWithJSONPost:JSONPostPhoto];
+    TBLPhotoPost *postPhoto = [[TBLPhotoPost alloc] initWithJSONPost:JSONPostPhoto];
     // then
     XCTAssertNotNil(postPhoto.photoGallery, @"Photo gallery must be initialized after init");
 }
@@ -71,7 +71,7 @@
     // given
     NSDictionary *JSONPostPhoto = self.samplePostPhoto;
     // when
-    TBLPostPhoto *postPhoto = [[TBLPostPhoto alloc] initWithJSONPost:JSONPostPhoto];
+    TBLPhotoPost *postPhoto = [[TBLPhotoPost alloc] initWithJSONPost:JSONPostPhoto];
     // then
     NSString *HTML = [postPhoto toHTML];
     XCTAssertNotNil(HTML, @"Photo gallery must be initialized after init");
@@ -81,7 +81,7 @@
     // given
     NSDictionary *JSONPostPhoto = self.samplePostPhoto;
     // when
-    TBLPostPhoto *postPhoto = [[TBLPostPhoto alloc] initWithJSONPost:JSONPostPhoto];
+    TBLPhotoPost *postPhoto = [[TBLPhotoPost alloc] initWithJSONPost:JSONPostPhoto];
     // then
     NSString *HTML = [postPhoto captionToHTML];
     XCTAssertNotNil(HTML, @"Photo gallery must be initialized after init");
@@ -91,7 +91,7 @@
     // given
     NSDictionary *JSONPostPhoto = self.samplePostPhoto;
     // when
-    TBLPostPhoto *postPhoto = [[TBLPostPhoto alloc] initWithJSONPost:JSONPostPhoto];
+    TBLPhotoPost *postPhoto = [[TBLPhotoPost alloc] initWithJSONPost:JSONPostPhoto];
     // then
     NSString *URL = [postPhoto iPhoneOptimizedPhotoURLString];
     XCTAssertNotNil(URL, @"Photo gallery must be initialized after init");
@@ -101,7 +101,7 @@
     // given
     NSDictionary *JSONPostPhoto = self.samplePostPhoto;
     // when
-    TBLPostPhoto *postPhoto = [[TBLPostPhoto alloc] initWithJSONPost:JSONPostPhoto];
+    TBLPhotoPost *postPhoto = [[TBLPhotoPost alloc] initWithJSONPost:JSONPostPhoto];
     // then
     XCTAssert([postPhoto photoURLsAreNotNil], @"Photo gallery must be initialized after init");
 }

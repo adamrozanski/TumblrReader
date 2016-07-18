@@ -1,14 +1,15 @@
 //
-//  TBLPostRegular.m
+//  TBLRegularPost.m
 //  TumblrReader
 //
 //  Created by Adam on 11.06.2016.
 //  Copyright © 2016 Adam. All rights reserved.
 //
 
-#import "TBLPostRegular.h"
+#import "TBLRegularPost.h"
 
-@implementation TBLPostRegular
+@implementation TBLRegularPost
+
 - (nullable instancetype)initWithJSONPost:(NSDictionary *_Nonnull)JSONPost {
     if ((self = [super initWithJSONPost:JSONPost])) {
         NSString *HTMLBody = JSONPost[@"regular-body"];

@@ -9,12 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "TBLBlogMeta.h"
 #import "TBLPost.h"
-#import "TBLPostQuote.h"
-#import "TBLPostPhoto.h"
-#import "TBLPostLink.h"
-#import "TBLPostConversation.h"
-#import "TBLPostAudio.h"
-#import "TBLPostRegular.h"
+#import "TBLQuotePost.h"
+#import "TBLPhotoPost.h"
+#import "TBLLinkPost.h"
+#import "TBLConversationPost.h"
+#import "TBLAudioPost.h"
+#import "TBLRegularPost.h"
 #import "TBLPostFactory.h"
 
 @interface TBLAPIManager : NSObject

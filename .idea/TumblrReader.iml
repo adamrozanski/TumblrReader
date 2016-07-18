@@ -24,10 +24,10 @@
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLPhotoCell.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLLinkCell.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLRegularCell.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLPostPhoto.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLPhotoPost.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLPhoto.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLPostCell.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLPostQuote.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLQuotePost.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLTableViewDataSource.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLPostCell.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLTableViewDataSource.m" isTestSource="false" />
@@ -36,20 +36,20 @@
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLAudioCell.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLAPIManager.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLAudioCell.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLPostLink.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLLinkPost.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLConversationCell.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLPostAudio.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLPostRegular.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLAudioPost.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLRegularPost.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLTableViewController.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLPostConversation.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLPostAudio.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLConversationPost.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLAudioPost.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLPhoto.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLPostRegular.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLRegularPost.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/Base.lproj/LaunchScreen.storyboard" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/Base.lproj/Main.storyboard" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLRegularCell.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLConversationCell.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLPostLink.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLLinkPost.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLQuoteCell.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLTableViewController.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLPost.m" isTestSource="false" />
@@ -58,11 +58,11 @@
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLQuoteCell.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLPost.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLPostFactory.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLPostPhoto.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLPhotoPost.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLHTMLGenericCell.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLPostQuote.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLQuotePost.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLPostFactory.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLPostConversation.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLConversationPost.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/Assets.xcassets" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLHTMLGenericCell.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLPostTypeMap.h" isTestSource="false" />

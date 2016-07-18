@@ -1,5 +1,5 @@
 //
-//  TBLPostConversation.h
+//  TBLLinkPost.h
 //  TumblrReader
 //
 //  Created by Adam on 11.06.2016.
@@ -8,10 +8,11 @@
 
 #import "TBLPost.h"
 
-@interface TBLPostConversation : TBLPost
+@interface TBLLinkPost : TBLPost
 
-@property(nullable) NSString *conversationTitle;
-@property(nonnull) NSString *conversationText;
+@property(nonnull) NSString *linkText;
+@property(nonnull) NSString *linkURL;
+@property(nonnull) NSString *linkDescription;
 
 - (nullable instancetype)initWithJSONPost:(NSDictionary *_Nonnull)JSONPost;
 

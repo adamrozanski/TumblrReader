@@ -8,7 +8,7 @@
 
 #import <WebKit/WebKit.h>
 #import "TBLPostCell.h"
-#import "TBLPostRegular.h"
+#import "TBLRegularPost.h"
 #import "TBLBlogMeta.h"
 #import "TBLHTMLGenericCell.h"
 

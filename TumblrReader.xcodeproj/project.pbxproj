@@ -31,14 +31,14 @@
 		66E6DA4A1D0F79AD00B8DF5D /* TBLBlogMeta.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E6DA2D1D0F79AD00B8DF5D /* TBLBlogMeta.m */; };
 		66E6DA4B1D0F79AD00B8DF5D /* TBLPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E6DA2F1D0F79AD00B8DF5D /* TBLPhotoCell.m */; };
 		66E6DA4C1D0F79AD00B8DF5D /* TBLPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E6DA311D0F79AD00B8DF5D /* TBLPost.m */; };
-		66E6DA4D1D0F79AD00B8DF5D /* TBLPostAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E6DA331D0F79AD00B8DF5D /* TBLPostAudio.m */; };
+		66E6DA4D1D0F79AD00B8DF5D /* TBLAudioPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E6DA331D0F79AD00B8DF5D /* TBLAudioPost.m */; };
 		66E6DA4E1D0F79AD00B8DF5D /* TBLPostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E6DA351D0F79AD00B8DF5D /* TBLPostCell.m */; };
-		66E6DA4F1D0F79AD00B8DF5D /* TBLPostConversation.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E6DA371D0F79AD00B8DF5D /* TBLPostConversation.m */; };
+		66E6DA4F1D0F79AD00B8DF5D /* TBLConversationPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E6DA371D0F79AD00B8DF5D /* TBLConversationPost.m */; };
 		66E6DA501D0F79AD00B8DF5D /* TBLPostFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E6DA391D0F79AD00B8DF5D /* TBLPostFactory.m */; };
-		66E6DA511D0F79AD00B8DF5D /* TBLPostLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E6DA3B1D0F79AD00B8DF5D /* TBLPostLink.m */; };
-		66E6DA521D0F79AD00B8DF5D /* TBLPostPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E6DA3D1D0F79AD00B8DF5D /* TBLPostPhoto.m */; };
-		66E6DA531D0F79AD00B8DF5D /* TBLPostQuote.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E6DA3F1D0F79AD00B8DF5D /* TBLPostQuote.m */; };
-		66E6DA541D0F79AD00B8DF5D /* TBLPostRegular.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E6DA411D0F79AD00B8DF5D /* TBLPostRegular.m */; };
+		66E6DA511D0F79AD00B8DF5D /* TBLLinkPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E6DA3B1D0F79AD00B8DF5D /* TBLLinkPost.m */; };
+		66E6DA521D0F79AD00B8DF5D /* TBLPhotoPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E6DA3D1D0F79AD00B8DF5D /* TBLPhotoPost.m */; };
+		66E6DA531D0F79AD00B8DF5D /* TBLQuotePost.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E6DA3F1D0F79AD00B8DF5D /* TBLQuotePost.m */; };
+		66E6DA541D0F79AD00B8DF5D /* TBLRegularPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E6DA411D0F79AD00B8DF5D /* TBLRegularPost.m */; };
 		66E6DA551D0F79AD00B8DF5D /* TBLPostTypeMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E6DA431D0F79AD00B8DF5D /* TBLPostTypeMap.m */; };
 		66E6DA561D0F79AD00B8DF5D /* TBLQuoteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E6DA451D0F79AD00B8DF5D /* TBLQuoteCell.m */; };
 		66E6DA571D0F79AD00B8DF5D /* TBLRegularCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E6DA471D0F79AD00B8DF5D /* TBLRegularCell.m */; };
@@ -96,22 +96,22 @@
 		66E6DA2F1D0F79AD00B8DF5D /* TBLPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBLPhotoCell.m; sourceTree = "<group>"; };
 		66E6DA301D0F79AD00B8DF5D /* TBLPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBLPost.h; sourceTree = "<group>"; };
 		66E6DA311D0F79AD00B8DF5D /* TBLPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBLPost.m; sourceTree = "<group>"; };
-		66E6DA321D0F79AD00B8DF5D /* TBLPostAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBLPostAudio.h; sourceTree = "<group>"; };
-		66E6DA331D0F79AD00B8DF5D /* TBLPostAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBLPostAudio.m; sourceTree = "<group>"; };
+		66E6DA321D0F79AD00B8DF5D /* TBLAudioPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBLAudioPost.h; sourceTree = "<group>"; };
+		66E6DA331D0F79AD00B8DF5D /* TBLAudioPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBLAudioPost.m; sourceTree = "<group>"; };
 		66E6DA341D0F79AD00B8DF5D /* TBLPostCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBLPostCell.h; sourceTree = "<group>"; };
 		66E6DA351D0F79AD00B8DF5D /* TBLPostCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBLPostCell.m; sourceTree = "<group>"; };
-		66E6DA361D0F79AD00B8DF5D /* TBLPostConversation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBLPostConversation.h; sourceTree = "<group>"; };
-		66E6DA371D0F79AD00B8DF5D /* TBLPostConversation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBLPostConversation.m; sourceTree = "<group>"; };
+		66E6DA361D0F79AD00B8DF5D /* TBLConversationPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBLConversationPost.h; sourceTree = "<group>"; };
+		66E6DA371D0F79AD00B8DF5D /* TBLConversationPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBLConversationPost.m; sourceTree = "<group>"; };
 		66E6DA381D0F79AD00B8DF5D /* TBLPostFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBLPostFactory.h; sourceTree = "<group>"; };
 		66E6DA391D0F79AD00B8DF5D /* TBLPostFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBLPostFactory.m; sourceTree = "<group>"; };
-		66E6DA3A1D0F79AD00B8DF5D /* TBLPostLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBLPostLink.h; sourceTree = "<group>"; };
-		66E6DA3B1D0F79AD00B8DF5D /* TBLPostLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBLPostLink.m; sourceTree = "<group>"; };
-		66E6DA3C1D0F79AD00B8DF5D /* TBLPostPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBLPostPhoto.h; sourceTree = "<group>"; };
-		66E6DA3D1D0F79AD00B8DF5D /* TBLPostPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBLPostPhoto.m; sourceTree = "<group>"; };
-		66E6DA3E1D0F79AD00B8DF5D /* TBLPostQuote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBLPostQuote.h; sourceTree = "<group>"; };
-		66E6DA3F1D0F79AD00B8DF5D /* TBLPostQuote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBLPostQuote.m; sourceTree = "<group>"; };
-		66E6DA401D0F79AD00B8DF5D /* TBLPostRegular.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBLPostRegular.h; sourceTree = "<group>"; };
-		66E6DA411D0F79AD00B8DF5D /* TBLPostRegular.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBLPostRegular.m; sourceTree = "<group>"; };
+		66E6DA3A1D0F79AD00B8DF5D /* TBLLinkPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBLLinkPost.h; sourceTree = "<group>"; };
+		66E6DA3B1D0F79AD00B8DF5D /* TBLLinkPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBLLinkPost.m; sourceTree = "<group>"; };
+		66E6DA3C1D0F79AD00B8DF5D /* TBLPhotoPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBLPhotoPost.h; sourceTree = "<group>"; };
+		66E6DA3D1D0F79AD00B8DF5D /* TBLPhotoPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBLPhotoPost.m; sourceTree = "<group>"; };
+		66E6DA3E1D0F79AD00B8DF5D /* TBLQuotePost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBLQuotePost.h; sourceTree = "<group>"; };
+		66E6DA3F1D0F79AD00B8DF5D /* TBLQuotePost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBLQuotePost.m; sourceTree = "<group>"; };
+		66E6DA401D0F79AD00B8DF5D /* TBLRegularPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBLRegularPost.h; sourceTree = "<group>"; };
+		66E6DA411D0F79AD00B8DF5D /* TBLRegularPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBLRegularPost.m; sourceTree = "<group>"; };
 		66E6DA421D0F79AD00B8DF5D /* TBLPostTypeMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBLPostTypeMap.h; sourceTree = "<group>"; };
 		66E6DA431D0F79AD00B8DF5D /* TBLPostTypeMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBLPostTypeMap.m; sourceTree = "<group>"; };
 		66E6DA441D0F79AD00B8DF5D /* TBLQuoteCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBLQuoteCell.h; sourceTree = "<group>"; };
@@ -237,20 +237,20 @@
 				66E6DA431D0F79AD00B8DF5D /* TBLPostTypeMap.m */,
 				66E6DA301D0F79AD00B8DF5D /* TBLPost.h */,
 				66E6DA311D0F79AD00B8DF5D /* TBLPost.m */,
-				66E6DA3C1D0F79AD00B8DF5D /* TBLPostPhoto.h */,
-				66E6DA3D1D0F79AD00B8DF5D /* TBLPostPhoto.m */,
+				66E6DA3C1D0F79AD00B8DF5D /* TBLPhotoPost.h */,
+				66E6DA3D1D0F79AD00B8DF5D /* TBLPhotoPost.m */,
 				667A46C31D1A054A00B4FC35 /* TBLPhoto.h */,
 				667A46C41D1A054A00B4FC35 /* TBLPhoto.m */,
-				66E6DA3A1D0F79AD00B8DF5D /* TBLPostLink.h */,
-				66E6DA3B1D0F79AD00B8DF5D /* TBLPostLink.m */,
-				66E6DA361D0F79AD00B8DF5D /* TBLPostConversation.h */,
-				66E6DA371D0F79AD00B8DF5D /* TBLPostConversation.m */,
-				66E6DA401D0F79AD00B8DF5D /* TBLPostRegular.h */,
-				66E6DA411D0F79AD00B8DF5D /* TBLPostRegular.m */,
-				66E6DA3E1D0F79AD00B8DF5D /* TBLPostQuote.h */,
-				66E6DA3F1D0F79AD00B8DF5D /* TBLPostQuote.m */,
-				66E6DA321D0F79AD00B8DF5D /* TBLPostAudio.h */,
-				66E6DA331D0F79AD00B8DF5D /* TBLPostAudio.m */,
+				66E6DA3A1D0F79AD00B8DF5D /* TBLLinkPost.h */,
+				66E6DA3B1D0F79AD00B8DF5D /* TBLLinkPost.m */,
+				66E6DA361D0F79AD00B8DF5D /* TBLConversationPost.h */,
+				66E6DA371D0F79AD00B8DF5D /* TBLConversationPost.m */,
+				66E6DA401D0F79AD00B8DF5D /* TBLRegularPost.h */,
+				66E6DA411D0F79AD00B8DF5D /* TBLRegularPost.m */,
+				66E6DA3E1D0F79AD00B8DF5D /* TBLQuotePost.h */,
+				66E6DA3F1D0F79AD00B8DF5D /* TBLQuotePost.m */,
+				66E6DA321D0F79AD00B8DF5D /* TBLAudioPost.h */,
+				66E6DA331D0F79AD00B8DF5D /* TBLAudioPost.m */,
 			);
 			name = "Data Model";
 			sourceTree = "<group>";
@@ -520,20 +520,20 @@
 			files = (
 				66E6DA4E1D0F79AD00B8DF5D /* TBLPostCell.m in Sources */,
 				66496F261D10F31E00418191 /* TBLPostViewController.m in Sources */,
-				66E6DA511D0F79AD00B8DF5D /* TBLPostLink.m in Sources */,
+				66E6DA511D0F79AD00B8DF5D /* TBLLinkPost.m in Sources */,
 				66E6DA111D0F785100B8DF5D /* TBLTableViewController.m in Sources */,
 				66E6DA4B1D0F79AD00B8DF5D /* TBLPhotoCell.m in Sources */,
 				66E6DA281D0F794500B8DF5D /* TBLAPIManager.m in Sources */,
-				66E6DA541D0F79AD00B8DF5D /* TBLPostRegular.m in Sources */,
-				66E6DA521D0F79AD00B8DF5D /* TBLPostPhoto.m in Sources */,
+				66E6DA541D0F79AD00B8DF5D /* TBLRegularPost.m in Sources */,
+				66E6DA521D0F79AD00B8DF5D /* TBLPhotoPost.m in Sources */,
 				66E6DA2B1D0F795000B8DF5D /* TBLTableViewDataSource.m in Sources */,
 				66E6DA4C1D0F79AD00B8DF5D /* TBLPost.m in Sources */,
 				66E6DA0E1D0F785100B8DF5D /* AppDelegate.m in Sources */,
 				66DA31731D0FFA2C002C24EC /* TBLAudioCell.m in Sources */,
 				66E6DA0B1D0F785100B8DF5D /* main.m in Sources */,
-				66E6DA4F1D0F79AD00B8DF5D /* TBLPostConversation.m in Sources */,
+				66E6DA4F1D0F79AD00B8DF5D /* TBLConversationPost.m in Sources */,
 				66DA31791D0FFC1F002C24EC /* TBLConversationCell.m in Sources */,
-				66E6DA4D1D0F79AD00B8DF5D /* TBLPostAudio.m in Sources */,
+				66E6DA4D1D0F79AD00B8DF5D /* TBLAudioPost.m in Sources */,
 				66E6DA561D0F79AD00B8DF5D /* TBLQuoteCell.m in Sources */,
 				66E6DA4A1D0F79AD00B8DF5D /* TBLBlogMeta.m in Sources */,
 				66DA31701D0FF2DA002C24EC /* TBLHTMLGenericCell.m in Sources */,
@@ -542,7 +542,7 @@
 				66E6DA571D0F79AD00B8DF5D /* TBLRegularCell.m in Sources */,
 				667A46C51D1A054A00B4FC35 /* TBLPhoto.m in Sources */,
 				66DA31761D0FFBDC002C24EC /* TBLLinkCell.m in Sources */,
-				66E6DA531D0F79AD00B8DF5D /* TBLPostQuote.m in Sources */,
+				66E6DA531D0F79AD00B8DF5D /* TBLQuotePost.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

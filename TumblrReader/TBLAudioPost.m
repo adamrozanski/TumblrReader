@@ -1,14 +1,14 @@
 //
-//  TBLPostAudio.m
+//  TBLAudioPost.m
 //  TumblrReader
 //
 //  Created by Adam on 11.06.2016.
 //  Copyright © 2016 Adam. All rights reserved.
 //
 
-#import "TBLPostAudio.h"
+#import "TBLAudioPost.h"
 
-@implementation TBLPostAudio
+@implementation TBLAudioPost
 
 - (nullable instancetype)initWithJSONPost:(NSDictionary *_Nonnull)JSONPost {
     if ((self = [super initWithJSONPost:JSONPost])) {

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "TBLPost.h"
-#import "TBLPostPhoto.h"
+#import "TBLPhotoPost.h"
 #import "TBLPhoto.h"
 
 @interface SampleJSONPosts : NSObject

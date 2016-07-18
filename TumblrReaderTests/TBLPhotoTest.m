@@ -29,13 +29,13 @@
     [super tearDown];
 }
 
-- (void)testThatItFailsToInitWithNullPhoto {
+- (void)testThatItFailsToInitWithNilPhoto {
     // given
     NSDictionary *JSONPhoto = nil;
     // when
     TBLPhoto *photo = [[TBLPhoto alloc] initWithJSONPhoto:JSONPhoto];
     // then
-    XCTAssertNil(photo, @"Instance must be null after passing null to constructor");
+    XCTAssertNil(photo, @"Instance must be Nil after passing Nil to constructor");
 }
 
 - (void)testThatItFailsToInitWithEmptyPhoto {
@@ -44,7 +44,7 @@
     // when
     TBLPhoto *photo = [[TBLPhoto alloc] initWithJSONPhoto:JSONPhoto];
     // then
-    XCTAssertNil(photo, @"Instance must be null after passing empty argument to constructor");
+    XCTAssertNil(photo, @"Instance must be Nil after passing empty argument to constructor");
 }
 
 - (void)testThatItParsesWidth {
@@ -122,7 +122,7 @@
     XCTAssertNotNil(URL, @"Photo gallery must be initialized after init");
 }
 
-- (void)testThatItURLsAreNotNull {
+- (void)testThatItURLsAreNotNil {
     // given
     NSDictionary *JSONPhoto = self.samplePhoto;
     // when

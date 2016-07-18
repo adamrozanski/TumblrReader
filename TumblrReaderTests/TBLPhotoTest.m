@@ -29,7 +29,7 @@
     [super tearDown];
 }
 
-- (void)testItFailsToInitWithNullPhoto {
+- (void)testThatItFailsToInitWithNullPhoto {
     // given
     NSDictionary *JSONPhoto = nil;
     // when
@@ -38,7 +38,7 @@
     XCTAssertNil(photo, @"Instance must be null after passing null to constructor");
 }
 
-- (void)testItFailsToInitWithEmptyPhoto {
+- (void)testThatItFailsToInitWithEmptyPhoto {
     // given
     NSDictionary *JSONPhoto = @{};
     // when
@@ -47,7 +47,7 @@
     XCTAssertNil(photo, @"Instance must be null after passing empty argument to constructor");
 }
 
-- (void)testItParsesWidth {
+- (void)testThatItParsesWidth {
     // given
     NSDictionary *JSONPhoto = self.samplePhoto;
     // when
@@ -56,7 +56,7 @@
     XCTAssert(photo.width > 0, @"Height must be set after init");
 }
 
-- (void)testItParsesHeight {
+- (void)testThatItParsesHeight {
     // given
     NSDictionary *JSONPhoto = self.samplePhoto;
     // when
@@ -65,7 +65,7 @@
     XCTAssert(photo.height > 0, @"Width must be set after init");
 }
 
-- (void)testItParsesPhoto1280URL {
+- (void)testThatItParsesPhoto1280URL {
     // given
     NSDictionary *JSONPhoto = self.samplePhoto;
     // when
@@ -74,7 +74,7 @@
     XCTAssertNotNil(photo.photo1280URL, @"photo1280URL must be set after init");
 }
 
-- (void)testItParsesPhoto500URL {
+- (void)testThatItParsesPhoto500URL {
     // given
     NSDictionary *JSONPhoto = self.samplePhoto;
     // when
@@ -83,7 +83,7 @@
     XCTAssertNotNil(photo.photo500URL, @"photo500URL must be set after init");
 }
 
-- (void)testItParsesPhoto250URL {
+- (void)testThatItParsesPhoto250URL {
     // given
     NSDictionary *JSONPhoto = self.samplePhoto;
     // when
@@ -92,7 +92,7 @@
     XCTAssertNotNil(photo.photo250URL, @"photo250URL must be set after init");
 }
 
-- (void)testItConvertsPhotoToHTML {
+- (void)testThatItConvertsPhotoToHTML {
     // given
     NSDictionary *JSONPhoto = self.samplePhoto;
     // when
@@ -102,7 +102,7 @@
     XCTAssertNotNil(HTML, @"Photo gallery must be initialized after init");
 }
 
-- (void)testItConvertsCaptionToHTML {
+- (void)testThatItConvertsCaptionToHTML {
     // given
     NSDictionary *JSONPhoto = self.samplePhoto;
     // when
@@ -112,7 +112,7 @@
     XCTAssertNotNil(HTML, @"Photo gallery must be initialized after init");
 }
 
-- (void)testItReturnsIPhoneOptimizedURL {
+- (void)testThatItReturnsIPhoneOptimizedURL {
     // given
     NSDictionary *JSONPhoto = self.samplePhoto;
     // when
@@ -122,7 +122,7 @@
     XCTAssertNotNil(URL, @"Photo gallery must be initialized after init");
 }
 
-- (void)testItURLsAreNotNull {
+- (void)testThatItURLsAreNotNull {
     // given
     NSDictionary *JSONPhoto = self.samplePhoto;
     // when

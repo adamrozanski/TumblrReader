@@ -27,12 +27,12 @@
     [super tearDown];
 }
 
-- (void)testItInitsWithBlogName {
+- (void)testThatItInitsWithBlogName {
     TBLBlogMeta *blogMeta = [[TBLBlogMeta alloc] initWithBlogName:@"testName"];
     XCTAssertNotNil(blogMeta, "Blog Meta cannot be nil after initialization with name");
 }
 
-- (void)testItFailsToInitWithEmptyBlogName {
+- (void)testThatItFailsToInitWithEmptyBlogName {
     // given
     NSString *name = nil;
     // when
@@ -42,7 +42,7 @@
 }
 
 
-- (void)testItFailsToInitWithJSONBeingNil {
+- (void)testThatItFailsToInitWithJSONBeingNil {
     // given
     NSDictionary *JSON = nil;
     // when
@@ -52,7 +52,7 @@
 
 }
 
-- (void)testItInitsWithJSON {
+- (void)testThatItInitsWithJSON {
     // given
     NSDictionary *tumblelog = @{@"name" : @"jakas nazwa",
             @"title" : @"jakis tytuł"};
@@ -66,7 +66,7 @@
 
 }
 
-- (void)testFailsWithJSONWithNoIndexes {
+- (void)testThatItFailsWithJSONWithNoIndexes {
     // given
     NSDictionary *tumblelog = @{@"name" : @"jakas nazwa",
             @"title" : @"jakis tytuł"};
@@ -78,7 +78,7 @@
 }
 
 
-- (void)testFailsWithJSONWithEmptyTumblelog {
+- (void)testThatItFailsWithJSONWithEmptyTumblelog {
     // given
     NSDictionary *tumblelog = @{};
     NSDictionary *JSONResponse = @{@"tumblelog" : tumblelog};

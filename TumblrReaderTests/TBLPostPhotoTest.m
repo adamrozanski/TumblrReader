@@ -31,25 +31,25 @@
     [super tearDown];
 }
 
-- (void)testItFailsToInitWithNullPost {
+- (void)testThatItFailsToInitWithNilPost {
     // given
     NSDictionary *JSONPostPhoto = nil;
     // when
     TBLPostPhoto *postPhoto = [[TBLPostPhoto alloc] initWithJSONPost:JSONPostPhoto];
     // then
-    XCTAssertNil(postPhoto, @"Instance must be null after passing null to constructor");
+    XCTAssertNil(postPhoto, @"Instance must be Nil after passing Nil to constructor");
 }
 
-- (void)testItFailsToInitWithEmptyPost {
+- (void)testThatItFailsToInitWithEmptyPost {
     // given
     NSDictionary *JSONPostPhoto = @{};
     // when
     TBLPostPhoto *postPhoto = [[TBLPostPhoto alloc] initWithJSONPost:JSONPostPhoto];
     // then
-    XCTAssertNil(postPhoto, @"Instance must be null after passing null to constructor");
+    XCTAssertNil(postPhoto, @"Instance must be Nil after passing Nil to constructor");
 }
 
-- (void)testItParsesPhoto {
+- (void)testThatItParsesPhoto {
     // given
     NSDictionary *JSONPostPhoto = self.samplePostPhoto;
     // when
@@ -58,7 +58,7 @@
     XCTAssertNotNil(postPhoto.photo, @"Photo property must be initialized after init");
 }
 
-- (void)testItParsesPhotoGallery {
+- (void)testThatItParsesPhotoGallery {
     // given
     NSDictionary *JSONPostPhoto = self.samplePostPhoto;
     // when
@@ -67,7 +67,7 @@
     XCTAssertNotNil(postPhoto.photoGallery, @"Photo gallery must be initialized after init");
 }
 
-- (void)testItConvertsPostToHTML {
+- (void)testThatItConvertsPostToHTML {
     // given
     NSDictionary *JSONPostPhoto = self.samplePostPhoto;
     // when
@@ -77,7 +77,7 @@
     XCTAssertNotNil(HTML, @"Photo gallery must be initialized after init");
 }
 
-- (void)testItConvertsCaptionToHTML {
+- (void)testThatItConvertsCaptionToHTML {
     // given
     NSDictionary *JSONPostPhoto = self.samplePostPhoto;
     // when
@@ -87,7 +87,7 @@
     XCTAssertNotNil(HTML, @"Photo gallery must be initialized after init");
 }
 
-- (void)testItReturnsIPhoneOptimizedURL {
+- (void)testThatItReturnsIPhoneOptimizedURL {
     // given
     NSDictionary *JSONPostPhoto = self.samplePostPhoto;
     // when
@@ -97,7 +97,7 @@
     XCTAssertNotNil(URL, @"Photo gallery must be initialized after init");
 }
 
-- (void)testItURLsAreNotNull {
+- (void)testThatItReturnsTrueWhenURLsAreNotNil {
     // given
     NSDictionary *JSONPostPhoto = self.samplePostPhoto;
     // when

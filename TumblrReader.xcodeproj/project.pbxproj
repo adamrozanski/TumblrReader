@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		163443E506F9C977DF17DB41 /* libPods-TumblrReader.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 968F01C6CECE9BA54F64F9CE /* libPods-TumblrReader.a */; };
 		36A758FB17186896FD22B13F /* libPods-TumblrReaderTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E5FE812882FD143E5DCA10A /* libPods-TumblrReaderTests.a */; };
+		6642C7801D4363190034340C /* TBLAPIManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6642C77F1D4363190034340C /* TBLAPIManagerTests.m */; };
 		66496F261D10F31E00418191 /* TBLPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66496F251D10F31E00418191 /* TBLPostViewController.m */; };
 		667A46C51D1A054A00B4FC35 /* TBLPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 667A46C41D1A054A00B4FC35 /* TBLPhoto.m */; };
 		668241F81D0F82B000BD5980 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66E6DA121D0F785100B8DF5D /* Main.storyboard */; };
@@ -56,6 +57,7 @@
 
 /* Begin PBXFileReference section */
 		0E5FE812882FD143E5DCA10A /* libPods-TumblrReaderTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TumblrReaderTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6642C77F1D4363190034340C /* TBLAPIManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBLAPIManagerTests.m; sourceTree = "<group>"; };
 		66496F241D10F31E00418191 /* TBLPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBLPostViewController.h; sourceTree = "<group>"; };
 		66496F251D10F31E00418191 /* TBLPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBLPostViewController.m; sourceTree = "<group>"; };
 		667A46C31D1A054A00B4FC35 /* TBLPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBLPhoto.h; sourceTree = "<group>"; };
@@ -145,9 +147,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6642C77E1D4362F40034340C /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				6642C77F1D4363190034340C /* TBLAPIManagerTests.m */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		66D374DE1D38266B00F34F45 /* TumblrReaderTests */ = {
 			isa = PBXGroup;
 			children = (
+				6642C77E1D4362F40034340C /* Networking */,
 				66D374F01D382A2100F34F45 /* Data Model */,
 				66D374E11D38266B00F34F45 /* Info.plist */,
 			);
@@ -511,6 +522,7 @@
 				66D374EE1D3829C800F34F45 /* TBLPhotoTest.m in Sources */,
 				66D374EC1D3829C800F34F45 /* SampleJSONPosts.m in Sources */,
 				66D374ED1D3829C800F34F45 /* TBLBlogMetaTest.m in Sources */,
+				6642C7801D4363190034340C /* TBLAPIManagerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

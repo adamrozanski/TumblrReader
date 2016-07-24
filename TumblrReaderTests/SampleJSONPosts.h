@@ -6,16 +6,24 @@
 //  Copyright © 2016 Adam. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import "TBLPost.h"
-#import "TBLPhotoPost.h"
 #import "TBLPhoto.h"
+#import "TBLPhotoPost.h"
+#import "TBLPost.h"
+#import <Foundation/Foundation.h>
 
 @interface SampleJSONPosts : NSObject
 
++ (NSData *)JSONDataResponse;
+
++ (NSDictionary *)JSONResponse;
+
++ (NSDictionary *)tumblelog;
+
++ (NSArray *)posts;
+
 + (NSDictionary *)postPhoto;
 
-+ (NSMutableDictionary *)post;
++ (NSMutableDictionary *)genericPost;
 
 + (NSMutableDictionary *)photo;
 

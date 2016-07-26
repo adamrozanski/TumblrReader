@@ -11,8 +11,8 @@
 @interface TBLPhoto : NSObject
 
 @property NSString *_Nullable caption;
-@property int width;
-@property int height;
+@property NSUInteger width;
+@property NSUInteger height;
 @property NSString *_Nullable photo1280URL;
 @property NSString *_Nullable photo500URL;
 @property NSString *_Nullable photo250URL;

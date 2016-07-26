@@ -34,8 +34,8 @@
         self.photo1280URL = photo1280URL;
         self.photo500URL = photo500URL;
         self.photo250URL = photo250URL;
-        self.width = [JSONPhoto[@"width"] intValue];
-        self.height = [JSONPhoto[@"height"] intValue];
+        self.width = [JSONPhoto[@"width"] integerValue];
+        self.height = [JSONPhoto[@"height"] integerValue];
     }
     return self;
 }

@@ -7,7 +7,7 @@
 //
 #import <Foundation/Foundation.h>
 
-typedef NS_ENUM (NSInteger, TBLPostType) {
+typedef NS_ENUM (NSUInteger, TBLPostType) {
     TBLPostTypeUndefined,
     TBLPostTypeQuote,
     TBLPostTypePhoto,

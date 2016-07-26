@@ -31,8 +31,8 @@
         NSString *totalPostsCount = json[@"posts-total"];
         if (!startPostIndex || !totalPostsCount || !self.name || !self.title)
             return nil;
-        self.startPostIndex = startPostIndex.intValue;
-        self.totalPostsCount = totalPostsCount.intValue;
+        self.startPostIndex = startPostIndex.integerValue;
+        self.totalPostsCount = totalPostsCount.integerValue;
     }
     return self;
 }

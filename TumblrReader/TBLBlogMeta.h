@@ -12,8 +12,8 @@
 
 @property NSString *_Nonnull name;
 @property NSString *_Nonnull title;
-@property int startPostIndex;
-@property int totalPostsCount;
+@property NSUInteger startPostIndex;
+@property NSUInteger totalPostsCount;
 
 - (nonnull instancetype)initWithBlogName:(NSString *_Nonnull)blogName;
 

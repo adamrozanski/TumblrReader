@@ -55,15 +55,13 @@
     [self updateBlogTitle];
 }
 
-#pragma mark - Table View
+#pragma mark - Table View Delegate Methods
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    TBLPost *post = self.dataSource.posts[(NSUInteger) indexPath.row];
+    TBLPost *post = self.dataSource.posts[indexPath.row];
     TBLPostViewController *postViewController = [[TBLPostViewController alloc] initWithBlogMeta:self.dataSource.blogMeta post:post];
     [self.navigationController pushViewController:postViewController animated:YES];
 }
-
-#pragma mark - Table View Delegate Methods
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(nonnull UITableViewCell *)cell forRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     if ([self.dataSource shouldFetchNewPostsForIndexPath:indexPath])

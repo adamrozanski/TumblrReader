@@ -7,10 +7,10 @@
 //
 
 #import "TBLTableViewDataSource.h"
-#import <PINRemoteImage/PINRemoteImage.h>
 #import <PINRemoteImage/PINImageView+PINRemoteImage.h>
+#import <PINRemoteImage/PINRemoteImage.h>
 
-int const postsCountPerRequest = 20;
+static NSUInteger const kPostsCountPerRequest = 20;
 
 @interface TBLTableViewDataSource ()
 
@@ -28,7 +28,8 @@ int const postsCountPerRequest = 20;
 
 #pragma mark - Table View Data Source Methods
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(UITableView *)tableView
+ numberOfRowsInSection:(NSInteger)section {
     return self.posts.count;
 }
 
@@ -36,22 +37,26 @@ int const postsCountPerRequest = 20;
     return 1;
 }
 
-- (UITableViewCell *_Nonnull)tableView:(UITableView *_Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath *_Nonnull)indexPath {
+- (UITableViewCell *_Nonnull)tableView:(UITableView *_Nonnull)tableView
+                 cellForRowAtIndexPath:(NSIndexPath *_Nonnull)indexPath {
     TBLPost *post = self.posts[(NSUInteger) indexPath.row];
     NSString *identifier = [TBLPostTypeMap.sharedInstance stringForPostType:post.type];
-    TBLPostCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
+    TBLPostCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier
+                                                        forIndexPath:indexPath];
     if ([cell isMemberOfClass:TBLPhotoCell.class]) {
         __weak TBLPhotoPost *photoPost = (TBLPhotoPost *) post;
         __weak TBLPhotoCell *photoCell = (TBLPhotoCell *) cell;
         photoCell.photoView.alpha = 0.0;
         if (photoPost.photoURLsAreNotNil) {
             NSURL *URL = [NSURL URLWithString:photoPost.iPhoneOptimizedPhotoURLString];
-            [photoCell.photoView pin_setImageFromURL:URL completion:^(PINRemoteImageManagerResult *_Nonnull result) {
-                double duration = result.requestDuration > 0.25 ? 0.3 : 0.5;
-                [UIView animateWithDuration:duration animations:^{
-                    photoCell.photoView.alpha = 1.0;
-                }];
-            }];
+            [photoCell.photoView pin_setImageFromURL:URL
+                                          completion:^(PINRemoteImageManagerResult *_Nonnull result) {
+                                              NSTimeInterval duration = result.requestDuration > 0.25 ? 0.3 : 0.5;
+                                              [UIView animateWithDuration:duration
+                                                               animations:^{
+                                                                   photoCell.photoView.alpha = 1.0;
+                                                               }];
+                                          }];
         }
     }
     [cell propagateContentFromPost:post andBlogMeta:self.blogMeta];
@@ -61,19 +66,26 @@ int const postsCountPerRequest = 20;
 #pragma mark - Load Content
 
 // TODO: use "insertCell" instead of "reloadData"
-- (void)loadPostsIntoTableView:(UITableView *_Nonnull)tableView
-                       success:(void (^ _Nonnull)(NSString *_Nullable errorMessage))success
-                       failure:(void (^ _Nonnull)(NSString *_Nonnull errorMessage))failure {
+- (void)
+loadPostsIntoTableView:(UITableView *_Nonnull)tableView
+               success:
+                       (void (^ _Nonnull)(NSString *_Nullable errorMessage))success
+               failure:
+                       (void (^ _Nonnull)(NSString *_Nonnull errorMessage))failure {
     if (self.isFetchingPosts)
         return;
     self.isFetchingPosts = YES;
     [self activityIndicatorEnabled:YES];
-    int startPostIndex = [self postsArrayIsEmpty] ? self.blogMeta.startPostIndex : [self nextPostIndex];
+    NSUInteger startPostIndex = [self postsArrayIsEmpty]
+            ? self.blogMeta.startPostIndex
+            : [self nextPostIndex];
     TBLAPIManager *manager = [TBLAPIManager sharedManager];
     [manager fetchPostsForUsername:self.blogMeta.name
                     startPostIndex:startPostIndex
-                        postsCount:postsCountPerRequest
-                           success:^(NSURLSessionTask *_Nonnull task, TBLBlogMeta *_Nullable blogMeta, NSArray<TBLPost *> *_Nullable posts, NSError *_Nullable error) {
+                        postsCount:kPostsCountPerRequest
+                           success:^(NSURLSessionTask *_Nonnull task,
+                                   TBLBlogMeta *_Nullable blogMeta,
+                                   NSArray<TBLPost *> *_Nullable posts, NSError *_Nullable error) {
                                if (error) {
                                    self.isFetchingPosts = NO;
                                    [self activityIndicatorEnabled:NO];
@@ -92,16 +104,17 @@ int const postsCountPerRequest = 20;
                                self.blogMeta.totalPostsCount = blogMeta.totalPostsCount;
                                [self.posts addObjectsFromArray:posts];
                                [tableView reloadData];
-                           } failure:^(NSURLSessionTask *_Nullable task, NSError *_Nonnull error) {
-                self.isFetchingPosts = NO;
-                [self activityIndicatorEnabled:NO];
-                failure(@"Brak połączenia z internetem");
-                return;
-            }];
+                           }
+                           failure:^(NSURLSessionTask *_Nullable task, NSError *_Nonnull error) {
+                               self.isFetchingPosts = NO;
+                               [self activityIndicatorEnabled:NO];
+                               failure(@"Brak połączenia z internetem");
+                               return;
+                           }];
 }
 
-- (int)nextPostIndex {
-    return self.blogMeta.startPostIndex + postsCountPerRequest;
+- (NSUInteger)nextPostIndex {
+    return self.blogMeta.startPostIndex + kPostsCountPerRequest;
 }
 
 - (BOOL)postsArrayIsEmpty {
@@ -109,10 +122,10 @@ int const postsCountPerRequest = 20;
 }
 
 - (BOOL)shouldFetchNewPostsForIndexPath:(NSIndexPath *_Nonnull)indexPath {
-    long rowsLoaded = (long) [self.posts count];
-    long rowsRemaining = rowsLoaded - (long) indexPath.row;
-    long rowsToLoadFromBottom = 10;
-    return (rowsRemaining <= rowsToLoadFromBottom);
+    NSUInteger rowsLoaded = [self.posts count];
+    NSUInteger rowsRemaining = rowsLoaded - indexPath.row;
+    NSUInteger rowsToLoadFromBottom = 10;
+    return rowsToLoadFromBottom > rowsRemaining;
 }
 
 - (void)activityIndicatorEnabled:(BOOL)active {
@@ -123,10 +136,7 @@ int const postsCountPerRequest = 20;
                    success:(void (^ _Nonnull)(UIImage *_Nullable image))success
                    failure:(void (^ _Nonnull)(NSError *_Nonnull error))failure {
     TBLAPIManager *manager = [TBLAPIManager sharedManager];
-    [manager imageFromURLString:URLString
-                        success:success
-                        failure:failure];
+    [manager imageFromURLString:URLString success:success failure:failure];
 }
 
 @end
-

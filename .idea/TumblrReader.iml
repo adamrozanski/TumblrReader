@@ -10,69 +10,69 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/TumblrReaderTests/SampleJSONPosts.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReaderTests/TBLPostPhotoTest.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TumblrReaderTests/SampleJSONPosts.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReaderTests/TBLBlogMetaTest.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReaderTests/Info.plist" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/TumblrReaderTests/Networking/TBLAPIManagerTests.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/TumblrReaderTests/SampleJSONPosts.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReaderTests/TBLPhotoTest.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/AppDelegate.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TumblrReaderTests/Networking/TBLAPIManagerTests.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLConversationPost.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLBlogMeta.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLConversationCell.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLConversationPost.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLAPIManager.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/AppDelegate.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/Info.plist" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLLinkCell.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLPostTypeMap.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLQuoteCell.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLRegularCell.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLPostTypeMap.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLAudioCell.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLRegularPost.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLPhoto.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLLinkCell.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLQuotePost.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLPhoto.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLPost.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLTableViewDataSource.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLQuotePost.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLPostCell.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLPostFactory.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/AppDelegate.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLPhoto.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLPostFactory.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLPostCell.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLConversationCell.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLPostCell.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLQuotePost.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLLinkCell.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLPhotoCell.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/AppDelegate.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/main.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLLinkCell.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLPhotoCell.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLAudioCell.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLAudioCell.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLAudioPost.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLPhotoPost.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLPhotoCell.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLConversationPost.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLTableViewDataSource.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLConversationCell.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLLinkPost.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLTableViewController.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLRegularPost.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLPost.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLConversationCell.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLLinkPost.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/Base.lproj/LaunchScreen.storyboard" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/Base.lproj/Main.storyboard" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLHTMLGenericCell.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLRegularCell.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLQuoteCell.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLRegularCell.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLPost.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLAPIManager.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLConversationPost.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLQuoteCell.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLTableViewController.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLAPIManager.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLPostFactory.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLBlogMeta.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLHTMLGenericCell.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/Assets.xcassets" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLPostFactory.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLPhotoPost.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLPostTypeMap.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLPostViewController.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLTableViewDataSource.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLHTMLGenericCell.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLAudioPost.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLPhotoPost.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLPostTypeMap.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/Assets.xcassets" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLPostViewController.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLAudioPost.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TumblrReader/TBLRegularPost.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Podfile" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/FLAnimatedImage/FLAnimatedImage/FLAnimatedImageView.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/FLAnimatedImage/FLAnimatedImage/FLAnimatedImage.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/FLAnimatedImage/FLAnimatedImage/FLAnimatedImageView.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/FLAnimatedImage/FLAnimatedImage/FLAnimatedImage.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/FLAnimatedImage/FLAnimatedImage/FLAnimatedImageView.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/FLAnimatedImage/FLAnimatedImage/FLAnimatedImage.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/FLAnimatedImage/FLAnimatedImage/FLAnimatedImageView.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/PINCache/PINCache/Nullability.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/PINCache/PINCache/PINMemoryCache.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/PINCache/PINCache/PINDiskCache.m" isTestSource="false" />
@@ -82,10 +82,10 @@
       <sourceFolder url="file://$MODULE_DIR$/Pods/PINCache/PINCache/PINMemoryCache.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-TumblrReaderTests/Pods-TumblrReaderTests-frameworks.sh" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-TumblrReaderTests/Pods-TumblrReaderTests-acknowledgements.plist" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-TumblrReaderTests/Pods-TumblrReaderTests.debug.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-TumblrReaderTests/Pods-TumblrReaderTests-resources.sh" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-TumblrReaderTests/Pods-TumblrReaderTests.release.xcconfig" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-TumblrReaderTests/Pods-TumblrReaderTests-acknowledgements.markdown" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-TumblrReaderTests/Pods-TumblrReaderTests-resources.sh" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-TumblrReaderTests/Pods-TumblrReaderTests.debug.xcconfig" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-TumblrReaderTests/Pods-TumblrReaderTests-dummy.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/FLAnimatedImage/FLAnimatedImage-prefix.pch" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/FLAnimatedImage/FLAnimatedImage-dummy.m" isTestSource="false" />
@@ -109,62 +109,63 @@
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/OCMock/OCMock-dummy.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/OCMock/OCMock.xcconfig" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/OCMock/OCMock-prefix.pch" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFURLSessionManager.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFURLSessionManager.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFHTTPSessionManager.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFHTTPSessionManager.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFNetworking.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIButton+AFNetworking.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/UIKit+AFNetworking/AFAutoPurgingImageCache.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFURLSessionManager.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFURLSessionManager.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFHTTPSessionManager.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFNetworking.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFHTTPSessionManager.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIWebView+AFNetworking.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIKit+AFNetworking.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/UIKit+AFNetworking/AFImageDownloader.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/UIKit+AFNetworking/AFImageDownloader.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIButton+AFNetworking.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIRefreshControl+AFNetworking.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIImage+AFNetworking.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIProgressView+AFNetworking.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIButton+AFNetworking.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIRefreshControl+AFNetworking.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/UIKit+AFNetworking/AFAutoPurgingImageCache.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIProgressView+AFNetworking.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/UIKit+AFNetworking/AFImageDownloader.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/UIKit+AFNetworking/AFAutoPurgingImageCache.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIProgressView+AFNetworking.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIKit+AFNetworking.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/UIKit+AFNetworking/AFAutoPurgingImageCache.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIWebView+AFNetworking.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/UIKit+AFNetworking/AFImageDownloader.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/PINRemoteImage/Pod/Classes/PINRemoteImageManagerResult.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/PINRemoteImage/Pod/Classes/PINRemoteImageTask.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/PINRemoteImage/Pod/Classes/PINRemoteImageCallbacks.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/PINRemoteImage/Pod/Classes/PINRemoteImageTask.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/PINRemoteImage/Pod/Classes/PINRemoteImageProcessorTask.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/PINRemoteImage/Pod/Classes/PINRemoteImageManager.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/PINRemoteImage/Pod/Classes/PINProgressiveImage.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/PINRemoteImage/Pod/Classes/PINRemoteImage.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/PINRemoteImage/Pod/Classes/PINRemoteImageCallbacks.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/PINRemoteImage/Pod/Classes/PINRemoteImageTask.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/PINRemoteImage/Pod/Classes/PINProgressiveImage.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/PINRemoteImage/Pod/Classes/PINRemoteImageCategoryManager.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/PINRemoteImage/Pod/Classes/PINProgressiveImage.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/PINRemoteImage/Pod/Classes/PINRemoteImageCallbacks.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/PINRemoteImage/Pod/Classes/PINRemoteImageProcessorTask.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/PINRemoteImage/Pod/Classes/PINRemoteImage.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/PINRemoteImage/Pod/Classes/PINRemoteImageManager.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/PINRemoteImage/Pod/Classes/PINRemoteImageCategoryManager.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/PINRemoteImage/Pod/Classes/PINRemoteImageTask.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/PINRemoteImage/Pod/Classes/PINDataTaskOperation.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/PINRemoteImage/Pod/Classes/Image Categories/PINImageView+PINRemoteImage.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/PINRemoteImage/Pod/Classes/Image Categories/PINImageView+PINRemoteImage.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/PINRemoteImage/Pod/Classes/Image Categories/FLAnimatedImageView+PINRemoteImage.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/PINRemoteImage/Pod/Classes/Image Categories/FLAnimatedImageView+PINRemoteImage.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/PINRemoteImage/Pod/Classes/Image Categories/PINButton+PINRemoteImage.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/PINRemoteImage/Pod/Classes/Image Categories/PINButton+PINRemoteImage.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/PINRemoteImage/Pod/Classes/Image Categories/PINImageView+PINRemoteImage.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/PINRemoteImage/Pod/Classes/PINRemoteImageProcessorTask.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/PINRemoteImage/Pod/Classes/PINRemoteImageCategoryManager.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/PINRemoteImage/Pod/Classes/PINRemoteImageMacros.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/PINRemoteImage/Pod/Classes/PINRemoteImageDownloadTask.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/PINRemoteImage/Pod/Classes/PINDataTaskOperation.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/PINRemoteImage/Pod/Classes/PINRemoteImageManagerResult.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/PINRemoteImage/Pod/Classes/PINRemoteLock.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/PINRemoteImage/Pod/Classes/PINRemoteImageDownloadTask.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/PINRemoteImage/Pod/Classes/Categories/PINImage+DecodedImage.m" isTestSource="false" />
@@ -176,74 +177,73 @@
       <sourceFolder url="file://$MODULE_DIR$/Pods/PINRemoteImage/Pod/Classes/PINURLSessionManager.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/PINRemoteImage/Pod/Classes/PINRemoteImageManagerResult.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/PINRemoteImage/Pod/Classes/PINRemoteLock.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/PINRemoteImage/Pod/Classes/PINRemoteImageMacros.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/PINRemoteImage/Pod/Classes/PINURLSessionManager.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMBoxedReturnValueProvider.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMReturnValueProvider.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMFunctionsPrivate.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMBoxedReturnValueProvider.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMStubRecorder.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/NSObject+OCMAdditions.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMBlockArgCaller.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/NSNotificationCenter+OCMAdditions.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/NSObject+OCMAdditions.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/NSValue+OCMAdditions.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCProtocolMockObject.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/NSNotificationCenter+OCMAdditions.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/NSValue+OCMAdditions.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCProtocolMockObject.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMFunctions.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/NSMethodSignature+OCMAdditions.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMFunctions.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCProtocolMockObject.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMInvocationStub.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMIndirectReturnValueProvider.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/NSMethodSignature+OCMAdditions.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMRecorder.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMRecorder.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/NSNotificationCenter+OCMAdditions.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMInvocationExpectation.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMVerifier.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMRealObjectForwarder.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMVerifier.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMInvocationExpectation.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMBlockCaller.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMInvocationMatcher.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMLocation.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMExceptionReturnValueProvider.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMInvocationMatcher.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMFunctions.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMLocation.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCObserverMockObject.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/NSNotificationCenter+OCMAdditions.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMInvocationMatcher.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMBlockCaller.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCObserverMockObject.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMBlockArgCaller.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMStubRecorder.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMArg.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMockObject.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMStubRecorder.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMArg.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMPassByRefSetter.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMLocation.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMockObject.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMInvocationMatcher.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMPassByRefSetter.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMExpectationRecorder.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMIndirectReturnValueProvider.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMBlockArgCaller.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/NSMethodSignature+OCMAdditions.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMMacroState.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMIndirectReturnValueProvider.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMock.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMExpectationRecorder.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMExpectationRecorder.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMMacroState.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMConstraint.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMExpectationRecorder.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCPartialMockObject.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/NSInvocation+OCMAdditions.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMNotificationPoster.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMConstraint.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMockObject.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMBlockCaller.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/NSInvocation+OCMAdditions.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMNotificationPoster.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMRealObjectForwarder.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMReturnValueProvider.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCPartialMockObject.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMConstraint.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMExceptionReturnValueProvider.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMObserverRecorder.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMInvocationStub.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMObserverRecorder.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMArgAction.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMInvocationStub.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMArgAction.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCMBlockArgCaller.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCClassMockObject.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/OCMock/Source/OCMock/OCClassMockObject.h" isTestSource="false" />
     </content>

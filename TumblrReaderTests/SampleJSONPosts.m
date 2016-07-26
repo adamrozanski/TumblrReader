@@ -7,7 +7,6 @@
 //
 
 #import "SampleJSONPosts.h"
-#import <Foundation/Foundation.h>
 
 @implementation SampleJSONPosts
 
@@ -83,7 +82,7 @@
   return [samplePost copy];
 }
 
-+ (NSMutableDictionary *)photo {
++ (NSDictionary *)photo {
   NSDictionary *captionField = @{ @"photo-caption" : @"some caption" };
   NSDictionary *photo1280URL = @{ @"photo-url-1280" : @"some photo-url-1280" };
   NSDictionary *photo500URL = @{ @"photo-url-500" : @"some photo-url-500" };
@@ -101,7 +100,7 @@
   return [samplePhoto copy];
 }
 
-+ (NSMutableDictionary *)galleryPhoto {
++ (NSDictionary *)galleryPhoto {
   NSDictionary *captionField = @{ @"caption" : @"some caption" };
   NSDictionary *photo1280URL = @{ @"photo-url-1280" : @"some photo-url-1280" };
   NSDictionary *photo500URL = @{ @"photo-url-500" : @"some photo-url-500" };

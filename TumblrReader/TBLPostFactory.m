@@ -40,7 +40,7 @@
             [posts addObject:post];
         }
     }
-    return posts;
+    return [posts copy];
 }
 
 @end

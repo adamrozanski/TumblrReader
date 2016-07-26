@@ -23,8 +23,8 @@
 
 + (NSDictionary *)postPhoto;
 
-+ (NSMutableDictionary *)genericPost;
++ (NSDictionary *)genericPost;
 
-+ (NSMutableDictionary *)photo;
++ (NSDictionary *)photo;
 
 @end

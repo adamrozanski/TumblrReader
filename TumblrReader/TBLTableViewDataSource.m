@@ -8,7 +8,6 @@
 
 #import "TBLTableViewDataSource.h"
 #import <PINRemoteImage/PINImageView+PINRemoteImage.h>
-#import <PINRemoteImage/PINRemoteImage.h>
 
 static NSUInteger const kPostsCountPerRequest = 20;
 
@@ -66,19 +65,14 @@ static NSUInteger const kPostsCountPerRequest = 20;
 #pragma mark - Load Content
 
 // TODO: use "insertCell" instead of "reloadData"
-- (void)
-loadPostsIntoTableView:(UITableView *_Nonnull)tableView
-               success:
-                       (void (^ _Nonnull)(NSString *_Nullable errorMessage))success
-               failure:
-                       (void (^ _Nonnull)(NSString *_Nonnull errorMessage))failure {
+- (void)loadPostsIntoTableView:(UITableView *_Nonnull)tableView
+                       success:(void (^ _Nonnull)(NSString *_Nullable errorMessage))success
+                       failure:(void (^ _Nonnull)(NSString *_Nonnull errorMessage))failure {
     if (self.isFetchingPosts)
         return;
     self.isFetchingPosts = YES;
     [self activityIndicatorEnabled:YES];
-    NSUInteger startPostIndex = [self postsArrayIsEmpty]
-            ? self.blogMeta.startPostIndex
-            : [self nextPostIndex];
+    NSUInteger startPostIndex = [self postsArrayIsEmpty] ? self.blogMeta.startPostIndex : [self nextPostIndex];
     TBLAPIManager *manager = [TBLAPIManager sharedManager];
     [manager fetchPostsForUsername:self.blogMeta.name
                     startPostIndex:startPostIndex

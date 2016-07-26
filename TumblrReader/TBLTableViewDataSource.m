@@ -38,7 +38,7 @@ static NSUInteger const kPostsCountPerRequest = 20;
 
 - (UITableViewCell *_Nonnull)tableView:(UITableView *_Nonnull)tableView
                  cellForRowAtIndexPath:(NSIndexPath *_Nonnull)indexPath {
-    TBLPost *post = self.posts[(NSUInteger) indexPath.row];
+    TBLPost *post = self.posts[indexPath.row];
     NSString *identifier = [TBLPostTypeMap.sharedInstance stringForPostType:post.type];
     TBLPostCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier
                                                         forIndexPath:indexPath];

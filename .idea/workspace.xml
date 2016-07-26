@@ -26,7 +26,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="952e86eb-04a8-4cdf-93d2-f6bd2918b05e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TumblrReader.xcworkspace/xcuserdata/Adam.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/TumblrReader.xcworkspace/xcuserdata/Adam.xcuserdatad/UserInterfaceState.xcuserstate" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TumblrReader/TBLTableViewDataSource.m" afterPath="$PROJECT_DIR$/TumblrReader/TBLTableViewDataSource.m" />
     </list>
@@ -51,8 +50,8 @@
       <file leaf-file-name="TBLTableViewDataSource.m" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TumblrReader/TBLTableViewDataSource.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-187">
-              <caret line="47" column="40" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
+            <state relative-caret-position="449">
+              <caret line="88" column="60" selection-start-line="88" selection-start-column="60" selection-end-line="88" selection-end-column="60" />
               <folding>
                 <element signature="e#139#173#0" expanded="true" />
               </folding>
@@ -354,7 +353,7 @@
       <workItem from="1469553535855" duration="104000" />
       <workItem from="1469554773815" duration="901000" />
       <workItem from="1469561953309" duration="457000" />
-      <workItem from="1469562794715" duration="90000" />
+      <workItem from="1469562794715" duration="175000" />
     </task>
     <task id="LOCAL-00001" summary="kosmetyka">
       <created>1466333708045</created>
@@ -559,11 +558,18 @@
       <option name="project" value="LOCAL" />
       <updated>1469562394560</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="refactor">
+      <created>1469562896994</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1469562896994</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2877000" />
+    <option name="totallyTimeSpent" value="2962000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -989,8 +995,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TumblrReader/TBLTableViewDataSource.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-187">
-          <caret line="47" column="40" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
+        <state relative-caret-position="449">
+          <caret line="88" column="60" selection-start-line="88" selection-start-column="60" selection-end-line="88" selection-end-column="60" />
           <folding>
             <element signature="e#139#173#0" expanded="true" />
           </folding>

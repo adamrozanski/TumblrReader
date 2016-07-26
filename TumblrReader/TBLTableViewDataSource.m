@@ -86,7 +86,7 @@ static NSUInteger const kPostsCountPerRequest = 20;
                                    success(@"Nie można przetworzyć danych z blogu");
                                    return;
                                }
-                               if ([self.posts count] == 0 && [posts count] == 0) {
+                               if ([self postsArrayIsEmpty] && [posts count] == 0) {
                                    self.isFetchingPosts = NO;
                                    [self activityIndicatorEnabled:NO];
                                    success(@"Nie ma takiego bloga w Tumblr");

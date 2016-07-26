@@ -51,7 +51,7 @@ static NSUInteger const kTumblrResponseSemicolonLength = 1;
                          NSDictionary *JSON = [NSJSONSerialization JSONObjectWithData:JSONData
                                                                               options:NSJSONReadingAllowFragments
                                                                                 error:&error];
-                         if (error != nil) {
+                         if (error) {
                              success(operation, nil, nil, error);
                          } else {
                              TBLBlogMeta *blog = [[TBLBlogMeta alloc] initWithJSONResponse:JSON];

@@ -131,7 +131,7 @@
 
 - (void)userEnterBlogName {
     UITextField *__block searchTextField;
-    UIAlertController *searchController = [UIAlertController alertControllerWithTitle:@"Hello Braintri" message:@"Wprowadź nazwę bloga w serwisie Tumblr" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *searchController = [UIAlertController alertControllerWithTitle:@"Hello User" message:@"Wprowadź nazwę bloga w serwisie Tumblr" preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *_Nonnull action) {
 
         if ([searchTextField.text isEqualToString:@""]) {

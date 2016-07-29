@@ -13,7 +13,7 @@
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *_Nullable)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        UILayoutGuide *spacer1 = [[UILayoutGuide alloc] init];
+        UILayoutGuide *spacer = [[UILayoutGuide alloc] init];
         self.photoView = [[UIImageView alloc] initWithFrame:self.bounds];
         self.photoView.contentMode = UIViewContentModeScaleAspectFill;
         self.photoView.clipsToBounds = YES;
@@ -26,23 +26,23 @@
         [self.captionView setTranslatesAutoresizingMaskIntoConstraints:NO];
         [self.contentView addSubview:self.captionView];
 
-        [self.contentView addLayoutGuide:spacer1];
+        [self.contentView addLayoutGuide:spacer];
         [self.contentView addSubview:self.photoView];
 
         // Constraints: (must be here in case of UITableViewCell subclass, not in layoutSubviews)
 
-        //spacer1
-        NSLayoutConstraint *spacer1Leading = [spacer1.leadingAnchor constraintEqualToAnchor:[self.contentView leadingAnchor]];
-        NSLayoutConstraint *spacer1Trailing = [spacer1.trailingAnchor constraintEqualToAnchor:[self.contentView trailingAnchor]];
-        NSLayoutConstraint *spacer1Top = [spacer1.topAnchor constraintEqualToAnchor:[self.titleBox bottomAnchor]];
-        NSLayoutConstraint *spacer1Height = [spacer1.heightAnchor constraintEqualToConstant:1];
-        NSArray *spacer1LabelConstraints = @[spacer1Leading, spacer1Trailing, spacer1Top, spacer1Height];
+        //spacer
+        NSLayoutConstraint *spacerLeading = [spacer.leadingAnchor constraintEqualToAnchor:[self.contentView leadingAnchor]];
+        NSLayoutConstraint *spacerTrailing = [spacer.trailingAnchor constraintEqualToAnchor:[self.contentView trailingAnchor]];
+        NSLayoutConstraint *spacerTop = [spacer.topAnchor constraintEqualToAnchor:[self.titleBox bottomAnchor]];
+        NSLayoutConstraint *spacerHeight = [spacer.heightAnchor constraintEqualToConstant:1];
+        NSArray *spacer1LabelConstraints = @[spacerLeading, spacerTrailing, spacerTop, spacerHeight];
         [NSLayoutConstraint activateConstraints:spacer1LabelConstraints];
 
         //photoView
         NSLayoutConstraint *photoViewLeading = [self.photoView.leadingAnchor constraintEqualToAnchor:[self.contentView leadingAnchor]];
         NSLayoutConstraint *photoViewTrailing = [self.photoView.trailingAnchor constraintEqualToAnchor:[self.contentView trailingAnchor]];
-        NSLayoutConstraint *photoViewTop = [self.photoView.topAnchor constraintEqualToAnchor:[spacer1 bottomAnchor]];
+        NSLayoutConstraint *photoViewTop = [self.photoView.topAnchor constraintEqualToAnchor:[spacer bottomAnchor]];
         NSLayoutConstraint *photoViewHeight = [self.photoView.heightAnchor constraintEqualToConstant:180];
         NSArray *photoViewConstraints = @[photoViewLeading, photoViewTrailing, photoViewTop, photoViewHeight];
         [NSLayoutConstraint activateConstraints:photoViewConstraints];

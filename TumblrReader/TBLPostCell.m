@@ -42,14 +42,14 @@
                                constant:4];
         NSLayoutConstraint *titleLabelTailingConstraint = [self.titleLabel.trailingAnchor
                 constraintEqualToAnchor:[self.titleBox trailingAnchor]];
-        NSLayoutConstraint *titleLabelLTopConstraint = [self.titleLabel.topAnchor
+        NSLayoutConstraint *titleLabelTopConstraint = [self.titleLabel.topAnchor
                 constraintEqualToAnchor:[self.titleBox topAnchor]];
         NSLayoutConstraint *titleLabelHeightConstraint = [self.titleLabel.heightAnchor
                 constraintEqualToAnchor:[self.titleBox heightAnchor]];
         NSArray *titleLabelConstraints = @[
                 titleLabelLeadingConstraint,
                 titleLabelTailingConstraint,
-                titleLabelLTopConstraint,
+                titleLabelTopConstraint,
                 titleLabelHeightConstraint
         ];
         [NSLayoutConstraint activateConstraints:titleLabelConstraints];
@@ -57,14 +57,14 @@
         // titleBox
         NSLayoutConstraint *titleBoxLeadingConstraint = [self.titleBox.leadingAnchor
                 constraintEqualToAnchor:[self.contentView leadingAnchor]];
-        NSLayoutConstraint *ttitleBoxTailingConstraint = [self.titleBox.trailingAnchor
+        NSLayoutConstraint *titleBoxTailingConstraint = [self.titleBox.trailingAnchor
                 constraintEqualToAnchor:[self.contentView trailingAnchor]];
         NSLayoutConstraint *titleBoxTopConstraint = [self.titleBox.topAnchor
                 constraintEqualToAnchor:[self.contentView topAnchor]];
         NSLayoutConstraint *titleBoxHeightConstraint =
                 [self.titleBox.heightAnchor constraintEqualToConstant:20];
         NSArray *titleBoxConstraints =
-                @[titleBoxLeadingConstraint, ttitleBoxTailingConstraint, titleBoxTopConstraint, titleBoxHeightConstraint];
+                @[titleBoxLeadingConstraint, titleBoxTailingConstraint, titleBoxTopConstraint, titleBoxHeightConstraint];
         [NSLayoutConstraint activateConstraints:titleBoxConstraints];
     }
     return self;

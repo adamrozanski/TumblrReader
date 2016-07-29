@@ -13,7 +13,7 @@
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *_Nullable)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        self.webViewHeightAnchor.constant -= 30;
+        self.webViewHeightConstraint.constant -= 30;
     }
     return self;
 }

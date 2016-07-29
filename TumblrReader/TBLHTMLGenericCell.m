@@ -26,35 +26,35 @@
     // layoutSubviews)
 
     // spacer
-    NSLayoutConstraint *spacerLeadingAnchor = [spacer.leadingAnchor
+    NSLayoutConstraint *spacerLeadingConstraint = [spacer.leadingAnchor
         constraintEqualToAnchor:[self.contentView leadingAnchor]];
-    NSLayoutConstraint *spacerTrailingAnchor = [spacer.trailingAnchor
+    NSLayoutConstraint *spacerTrailingConstraint = [spacer.trailingAnchor
         constraintEqualToAnchor:[self.contentView trailingAnchor]];
-    NSLayoutConstraint *spacerTopAnchor =
+    NSLayoutConstraint *spacerTopConstraint =
         [spacer.topAnchor constraintEqualToAnchor:[self.titleBox bottomAnchor]];
-    self.spacerHeightAnchor = [spacer.heightAnchor constraintEqualToConstant:1];
+    self.spacerHeightConstraint = [spacer.heightAnchor constraintEqualToConstant:1];
     NSArray *spacerLabelConstraints = @[
-      spacerLeadingAnchor,
-      spacerTrailingAnchor,
-      spacerTopAnchor,
-      self.spacerHeightAnchor
+      spacerLeadingConstraint,
+      spacerTrailingConstraint,
+      spacerTopConstraint,
+      self.spacerHeightConstraint
     ];
     [NSLayoutConstraint activateConstraints:spacerLabelConstraints];
 
     // webView
-    NSLayoutConstraint *webViewLeadingAnchor = [self.webView.leadingAnchor
+    NSLayoutConstraint *webViewLeadingConstraint = [self.webView.leadingAnchor
         constraintEqualToAnchor:[self.contentView leadingAnchor]];
-    NSLayoutConstraint *webViewTrailingAnchor = [self.webView.trailingAnchor
+    NSLayoutConstraint *webViewTrailingConstraint = [self.webView.trailingAnchor
         constraintEqualToAnchor:[self.contentView trailingAnchor]];
-    NSLayoutConstraint *webViewTopAnchor =
+    NSLayoutConstraint *webViewTopConstraint =
         [self.webView.topAnchor constraintEqualToAnchor:[spacer bottomAnchor]];
-    self.webViewHeightAnchor =
+    self.webViewHeightConstraint =
         [self.webView.heightAnchor constraintEqualToConstant:180];
     NSArray *webViewConstraints = @[
-      webViewLeadingAnchor,
-      webViewTrailingAnchor,
-      webViewTopAnchor,
-      self.webViewHeightAnchor
+      webViewLeadingConstraint,
+      webViewTrailingConstraint,
+      webViewTopConstraint,
+      self.webViewHeightConstraint
     ];
     [NSLayoutConstraint activateConstraints:webViewConstraints];
 

@@ -14,8 +14,8 @@
 @interface TBLHTMLGenericCell : TBLPostCell
 
 @property WKWebView *_Nullable webView;
-@property NSLayoutConstraint *_Nullable webViewHeightAnchor;
-@property NSLayoutConstraint *_Nullable spacerHeightAnchor;
+@property NSLayoutConstraint *_Nullable webViewHeightConstraint;
+@property NSLayoutConstraint *_Nullable spacerHeightConstraint;
 
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *_Nullable)reuseIdentifier;
 

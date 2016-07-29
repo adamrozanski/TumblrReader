@@ -18,8 +18,8 @@
 
 @interface TBLPostFactory : NSObject
 
-+ (nullable id)createSpecializedPostFromJSONPost:(NSDictionary *_Nonnull)JSONPost;
++ (nullable id)specializedPostFromJSONPost:(NSDictionary *_Nonnull)JSONPost;
 
-+ (nullable NSArray<TBLPost * > *)postsArrayFromJSONResponse:(NSDictionary *_Nonnull)json;
++ (nullable NSArray<TBLPost * > *)postsArrayFromJSONResponse:(NSDictionary *_Nonnull)JSON;
 
 @end

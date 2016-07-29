@@ -37,34 +37,34 @@
         // layoutSubviews)
 
         // titleLabel
-        NSLayoutConstraint *titleLabelLeading = [self.titleLabel.leadingAnchor
+        NSLayoutConstraint *titleLabelLeadingConstraint = [self.titleLabel.leadingAnchor
                 constraintEqualToAnchor:[self.titleBox leadingAnchor]
                                constant:4];
-        NSLayoutConstraint *titleLabelTailing = [self.titleLabel.trailingAnchor
+        NSLayoutConstraint *titleLabelTailingConstraint = [self.titleLabel.trailingAnchor
                 constraintEqualToAnchor:[self.titleBox trailingAnchor]];
-        NSLayoutConstraint *titleLabelLTop = [self.titleLabel.topAnchor
+        NSLayoutConstraint *titleLabelLTopConstraint = [self.titleLabel.topAnchor
                 constraintEqualToAnchor:[self.titleBox topAnchor]];
-        NSLayoutConstraint *titleLabelHeight = [self.titleLabel.heightAnchor
+        NSLayoutConstraint *titleLabelHeightConstraint = [self.titleLabel.heightAnchor
                 constraintEqualToAnchor:[self.titleBox heightAnchor]];
         NSArray *titleLabelConstraints = @[
-                titleLabelLeading,
-                titleLabelTailing,
-                titleLabelLTop,
-                titleLabelHeight
+                titleLabelLeadingConstraint,
+                titleLabelTailingConstraint,
+                titleLabelLTopConstraint,
+                titleLabelHeightConstraint
         ];
         [NSLayoutConstraint activateConstraints:titleLabelConstraints];
 
         // titleBox
-        NSLayoutConstraint *titleBoxLeading = [self.titleBox.leadingAnchor
+        NSLayoutConstraint *titleBoxLeadingConstraint = [self.titleBox.leadingAnchor
                 constraintEqualToAnchor:[self.contentView leadingAnchor]];
-        NSLayoutConstraint *ttitleBoxTailing = [self.titleBox.trailingAnchor
+        NSLayoutConstraint *ttitleBoxTailingConstraint = [self.titleBox.trailingAnchor
                 constraintEqualToAnchor:[self.contentView trailingAnchor]];
-        NSLayoutConstraint *titleBoxTop = [self.titleBox.topAnchor
+        NSLayoutConstraint *titleBoxTopConstraint = [self.titleBox.topAnchor
                 constraintEqualToAnchor:[self.contentView topAnchor]];
-        NSLayoutConstraint *titleBoxHeight =
+        NSLayoutConstraint *titleBoxHeightConstraint =
                 [self.titleBox.heightAnchor constraintEqualToConstant:20];
         NSArray *titleBoxConstraints =
-                @[titleBoxLeading, ttitleBoxTailing, titleBoxTop, titleBoxHeight];
+                @[titleBoxLeadingConstraint, ttitleBoxTailingConstraint, titleBoxTopConstraint, titleBoxHeightConstraint];
         [NSLayoutConstraint activateConstraints:titleBoxConstraints];
     }
     return self;
@@ -88,54 +88,54 @@
     // layoutSubviews)
 
     // spacer
-    NSLayoutConstraint *bottomSpacerLeadingAnchor = [bottomSpacer.leadingAnchor
+    NSLayoutConstraint *bottomSpacerLeadingConstraint = [bottomSpacer.leadingAnchor
             constraintEqualToAnchor:[self.contentView leadingAnchor]];
-    NSLayoutConstraint *bottomSpacerTrailingAnchor = [bottomSpacer.trailingAnchor
+    NSLayoutConstraint *bottomSpacerTrailingConstraint = [bottomSpacer.trailingAnchor
             constraintEqualToAnchor:[self.contentView trailingAnchor]];
-    NSLayoutConstraint *bottomSpacerTopAnchor =
+    NSLayoutConstraint *bottomSpacerTopConstraint =
             [bottomSpacer.topAnchor constraintEqualToAnchor:bottomAnchor];
-    NSLayoutConstraint *bottomSpacerHeightAnchor =
+    NSLayoutConstraint *bottomSpacerHeightConstraint =
             [bottomSpacer.heightAnchor constraintEqualToConstant:0.5];
     NSArray *bottomSpacerLabelConstraints = @[
-            bottomSpacerLeadingAnchor,
-            bottomSpacerTrailingAnchor,
-            bottomSpacerTopAnchor,
-            bottomSpacerHeightAnchor
+            bottomSpacerLeadingConstraint,
+            bottomSpacerTrailingConstraint,
+            bottomSpacerTopConstraint,
+            bottomSpacerHeightConstraint
     ];
     [NSLayoutConstraint activateConstraints:bottomSpacerLabelConstraints];
 
     // footerBox
-    NSLayoutConstraint *footerBoxLeadingAnchor = [footerBox.leadingAnchor
+    NSLayoutConstraint *footerBoxLeadingConstraint = [footerBox.leadingAnchor
             constraintEqualToAnchor:[self.contentView leadingAnchor]];
-    NSLayoutConstraint *footerBoxTrailingAnchor = [footerBox.trailingAnchor
+    NSLayoutConstraint *footerBoxTrailingConstraint = [footerBox.trailingAnchor
             constraintEqualToAnchor:[self.contentView trailingAnchor]];
-    NSLayoutConstraint *footerBoxTopAnchor =
+    NSLayoutConstraint *footerBoxTopConstraint =
             [footerBox.topAnchor constraintEqualToAnchor:[bottomSpacer bottomAnchor]];
-    NSLayoutConstraint *footerBoxHeightAnchor =
+    NSLayoutConstraint *footerBoxHeightConstraint =
             [footerBox.heightAnchor constraintEqualToConstant:20];
     NSArray *footerBoxConstraints = @[
-            footerBoxLeadingAnchor,
-            footerBoxTrailingAnchor,
-            footerBoxTopAnchor,
-            footerBoxHeightAnchor
+            footerBoxLeadingConstraint,
+            footerBoxTrailingConstraint,
+            footerBoxTopConstraint,
+            footerBoxHeightConstraint
     ];
     [NSLayoutConstraint activateConstraints:footerBoxConstraints];
 
     // footerLabel
-    NSLayoutConstraint *footerLabelLeading = [self.footerLabel.leadingAnchor
+    NSLayoutConstraint *footerLabelLeadingConstraint = [self.footerLabel.leadingAnchor
             constraintEqualToAnchor:[footerBox leadingAnchor]
                            constant:4];
-    NSLayoutConstraint *footerLabelTailing = [self.footerLabel.trailingAnchor
+    NSLayoutConstraint *footerLabelTrailingConstraint = [self.footerLabel.trailingAnchor
             constraintEqualToAnchor:[footerBox trailingAnchor]];
-    NSLayoutConstraint *footerLabelLTop = [self.footerLabel.topAnchor
+    NSLayoutConstraint *footerLabelTopConstraint = [self.footerLabel.topAnchor
             constraintEqualToAnchor:[footerBox topAnchor]];
-    NSLayoutConstraint *footerLabelHeight = [self.footerLabel.heightAnchor
+    NSLayoutConstraint *footerLabelHeightConstraint = [self.footerLabel.heightAnchor
             constraintEqualToAnchor:[footerBox heightAnchor]];
     NSArray *footerLabelConstraints = @[
-            footerLabelLeading,
-            footerLabelTailing,
-            footerLabelLTop,
-            footerLabelHeight
+            footerLabelLeadingConstraint,
+            footerLabelTrailingConstraint,
+            footerLabelTopConstraint,
+            footerLabelHeightConstraint
     ];
     [NSLayoutConstraint activateConstraints:footerLabelConstraints];
 }

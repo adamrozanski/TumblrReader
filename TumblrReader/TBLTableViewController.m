@@ -135,7 +135,7 @@
     UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *_Nonnull action) {
 
         if ([searchTextField.text isEqualToString:@""]) {
-            [self presentMessage:@"Nieprawidłowa nazwa bloga " title:@"Bład"];
+            [self presentMessage:@"Nieprawidłowa nazwa bloga " title:@"Błąd"];
             return;
         }
         [self configureTableViewForBlogName:searchTextField.text];

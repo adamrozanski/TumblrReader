@@ -67,7 +67,7 @@ static NSUInteger const kTumblrResponseSemicolonLength = 1;
 - (NSString *)queryStringForUsername:(NSString *)username
                       startPostIndex:(NSUInteger)startIndex
                           postsCount:(NSUInteger)postsCount {
-    return [NSString stringWithFormat:@"http://%@.tumblr.com/api/read/json?start=%lu&num=%lu", username, (unsigned long) startIndex, (unsigned long) postsCount];
+    return [NSString stringWithFormat:@"http://%@.tumblr.com/api/read/json?start=%lu&num=%lu", username, (NSUInteger) startIndex, (NSUInteger) postsCount];
 }
 
 - (NSData *)extractJSONDataFromTumblrAPIV1Response:(NSData *)data {

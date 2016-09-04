@@ -53,7 +53,7 @@ static NSUInteger const kTumblrResponseSemicolonLength = 1;
                                                                               options:NSJSONReadingAllowFragments
                                                                                 error:&error];
                          if (error) {
-                             success(operation, nil, nil, error);
+                             failure(operation, error);
                          } else {
                              TBLBlogMeta *blog = [[TBLBlogMeta alloc] initWithJSONResponse:JSON];
                              NSArray<TBLPost *> *posts = [TBLPostFactory postsArrayFromJSONResponse:JSON];

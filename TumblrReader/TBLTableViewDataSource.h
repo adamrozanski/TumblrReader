@@ -33,7 +33,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(nonnull UITableView *)tableView;
 
-- (UITableViewCell *_Nonnull)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath;
+- (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath;
 
 - (void)loadPostsIntoTableView:(nonnull UITableView *)tableView
                        success:(void ( ^ _Nonnull)(NSString *_Nullable errorMessage))success

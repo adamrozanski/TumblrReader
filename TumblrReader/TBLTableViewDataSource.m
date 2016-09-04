@@ -27,8 +27,7 @@ static NSUInteger const kPostsCountPerRequest = 20;
 
 #pragma mark - Table View Data Source Methods
 
-- (NSInteger)tableView:(UITableView *)tableView
- numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.posts.count;
 }
 
@@ -36,8 +35,7 @@ static NSUInteger const kPostsCountPerRequest = 20;
     return 1;
 }
 
-- (UITableViewCell *_Nonnull)tableView:(nonnull UITableView *)tableView
-                 cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+- (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     TBLPost *post = self.posts[indexPath.row];
     NSString *identifier = [TBLPostTypeMap.sharedInstance stringForPostType:post.type];
     TBLPostCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier

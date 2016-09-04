@@ -10,7 +10,7 @@
 
 @implementation TBLPostFactory
 
-+ (nullable id)specializedPostFromJSONPost:(NSDictionary *_Nonnull)JSONPost {
++ (nullable id)specializedPostFromJSONPost:(nonnull NSDictionary *)JSONPost {
     TBLPostType postType = [TBLPost postTypeForJSONPost:JSONPost];
     switch (postType) {
         case TBLPostTypeQuote:
@@ -30,7 +30,7 @@
     }
 }
 
-+ (nullable NSArray<TBLPost * > *)postsArrayFromJSONResponse:(NSDictionary *_Nonnull)JSON; {
++ (nullable NSArray<TBLPost * > *)postsArrayFromJSONResponse:(nonnull NSDictionary *)JSON; {
     NSDictionary *JSONPosts = JSON[@"posts"];
     NSMutableArray<TBLPost *> *posts = [NSMutableArray array];
 

@@ -14,7 +14,7 @@ static NSUInteger const kTumblrResponseSemicolonLength = 1;
 
 @interface TBLAPIManager ()
 
-@property AFHTTPSessionManager *sessionManager;
+@property (strong, nonatomic, nullable) AFHTTPSessionManager *sessionManager;
 
 @end
 
@@ -30,11 +30,12 @@ static NSUInteger const kTumblrResponseSemicolonLength = 1;
     return _sharedManager;
 }
 
-- (void)fetchPostsForUsername:(NSString *_Nonnull)username
+- (void)fetchPostsForUsername:(nonnull NSString *)username
                startPostIndex:(NSUInteger)startPostIndex
                    postsCount:(NSUInteger)postsCount
                       success:(void (^ _Nonnull)(NSURLSessionTask *_Nonnull task, TBLBlogMeta *_Nullable blogMeta, NSArray<TBLPost *> *_Nullable posts, NSError *_Nullable error))success
                       failure:(void (^ _Nonnull)(NSURLSessionTask *_Nullable task, NSError *_Nonnull error))failure {
+    
     NSString *queryString = [self queryStringForUsername:username
                                           startPostIndex:startPostIndex
                                               postsCount:postsCount];
@@ -76,7 +77,7 @@ static NSUInteger const kTumblrResponseSemicolonLength = 1;
             kTumblrResponseSemicolonLength)];
 }
 
-- (void)imageFromURLString:(NSString *_Nonnull)URLString
+- (void)imageFromURLString:(nonnull NSString *)URLString
                    success:(void (^ _Nonnull)(UIImage *_Nullable image))success
                    failure:(void (^ _Nonnull)(NSError *_Nonnull error))failure {
     if (!self.sessionManager)

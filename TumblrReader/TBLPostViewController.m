@@ -11,15 +11,15 @@
 
 @interface TBLPostViewController ()
 
-@property TBLPost *post;
-@property TBLBlogMeta *blogMeta;
-@property WKWebView *webView;
+@property (strong, nonatomic, nullable) TBLPost *post;
+@property (strong, nonatomic, nullable) TBLBlogMeta *blogMeta;
+@property (strong, nonatomic, nonnull) WKWebView *webView;
 
 @end
 
 @implementation TBLPostViewController
 
-- (instancetype)initWithBlogMeta:(TBLBlogMeta *)blogMeta post:(TBLPost *)post {
+- (nullable instancetype)initWithBlogMeta:(nullable TBLBlogMeta *)blogMeta post:(nullable TBLPost *)post {
     self = [super init];
     if (self) {
         self.post = post;
@@ -32,8 +32,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self configureSubviews];
-    if (self.post)
+    if (self.post) {
         [self loadContent];
+    }
 }
 
 - (void)configureSubviews {

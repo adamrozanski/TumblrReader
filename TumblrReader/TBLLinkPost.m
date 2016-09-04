@@ -10,7 +10,7 @@
 
 @implementation TBLLinkPost
 
-- (nullable instancetype)initWithJSONPost:(NSDictionary *_Nonnull)JSONPost {
+- (nullable instancetype)initWithJSONPost:(nonnull NSDictionary *)JSONPost {
     if ((self = [super initWithJSONPost:JSONPost])) {
         NSString *linkText = JSONPost[@"link-text"];
         NSString *linkURL = JSONPost[@"link-url"];

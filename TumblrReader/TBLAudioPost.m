@@ -10,7 +10,7 @@
 
 @implementation TBLAudioPost
 
-- (nullable instancetype)initWithJSONPost:(NSDictionary *_Nonnull)JSONPost {
+- (nullable instancetype)initWithJSONPost:(nonnull NSDictionary *)JSONPost {
     if ((self = [super initWithJSONPost:JSONPost])) {
 
         NSString *artist = JSONPost[@"id3-artist"];

@@ -10,12 +10,12 @@
 
 @implementation TBLPost
 
-+ (TBLPostType)postTypeForJSONPost:(NSDictionary *_Nonnull)JSONPost {
++ (TBLPostType)postTypeForJSONPost:(nonnull NSDictionary *)JSONPost {
     NSString *stringType = JSONPost[@"type"];
     return [TBLPostTypeMap.sharedInstance postTypeForString:stringType];
 }
 
-- (nullable instancetype)initWithJSONPost:(NSDictionary *_Nonnull)JSONPost {
+- (nullable instancetype)initWithJSONPost:(nonnull NSDictionary *)JSONPost {
     if ((self = [super init])) {
         NSString *type = JSONPost[@"type"];
         NSString *date = JSONPost[@"date"];

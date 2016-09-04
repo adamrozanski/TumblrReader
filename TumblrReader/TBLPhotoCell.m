@@ -10,7 +10,7 @@
 
 @implementation TBLPhotoCell
 
-- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *_Nullable)reuseIdentifier {
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(nullable NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         UILayoutGuide *spacer = [[UILayoutGuide alloc] init];
@@ -60,7 +60,7 @@
     return self;
 }
 
-- (void)propagateContentFromPost:(TBLPost *_Nonnull)post andBlogMeta:(TBLBlogMeta *_Nonnull)blogMeta {
+- (void)propagateContentFromPost:(nonnull TBLPost *)post andBlogMeta:(nonnull TBLBlogMeta *)blogMeta {
     [super propagateContentFromPost:post andBlogMeta:blogMeta];
     [self.captionView loadHTMLString:[(TBLPhotoPost *)post captionToHTML] baseURL:nil];
 }

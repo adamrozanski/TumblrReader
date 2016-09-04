@@ -10,8 +10,7 @@
 
 @implementation TBLBlogMeta
 
-
-- (nonnull instancetype)initWithBlogName:(NSString *_Nonnull)blogName {
+- (nonnull instancetype)initWithBlogName:(nonnull NSString *)blogName {
     if ((self = [super init])) {
         if (!blogName)
             return nil;
@@ -21,7 +20,7 @@
     return self;
 }
 
-- (nullable instancetype)initWithJSONResponse:(NSDictionary *_Nullable)json {
+- (nullable instancetype)initWithJSONResponse:(nonnull NSDictionary *)json {
     if ((self = [super init])) {
         NSDictionary *tumblelogField = json[@"tumblelog"];
         self.name = tumblelogField[@"name"];
@@ -29,8 +28,9 @@
 
         NSString *startPostIndex = json[@"posts-start"];
         NSString *totalPostsCount = json[@"posts-total"];
-        if (!startPostIndex || !totalPostsCount || !self.name || !self.title)
+        if (!startPostIndex || !totalPostsCount || !self.name || !self.title) {
             return nil;
+        }
         self.startPostIndex = startPostIndex.integerValue;
         self.totalPostsCount = totalPostsCount.integerValue;
     }

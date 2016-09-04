@@ -10,11 +10,11 @@
 
 @interface TBLLinkPost : TBLPost
 
-@property(nonnull) NSString *linkText;
-@property(nonnull) NSString *linkURL;
-@property(nonnull) NSString *linkDescription;
+@property (strong, nonatomic, nonnull) NSString *linkText;
+@property (strong, nonatomic, nonnull) NSString *linkURL;
+@property (strong, nonatomic, nonnull) NSString *linkDescription;
 
-- (nullable instancetype)initWithJSONPost:(NSDictionary *_Nonnull)JSONPost;
+- (nullable instancetype)initWithJSONPost:(nonnull NSDictionary *)JSONPost;
 
 - (nonnull NSString *)toHTML;
 

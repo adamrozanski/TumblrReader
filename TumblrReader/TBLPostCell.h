@@ -10,14 +10,14 @@
 
 @interface TBLPostCell : UITableViewCell
 
-@property UILabel *_Nullable titleLabel;
-@property UIView *_Nullable titleBox;
-@property UILabel *_Nullable footerLabel;
+@property (strong, nonatomic, nullable) UILabel *titleLabel;
+@property (strong, nonatomic, nullable) UIView *titleBox;
+@property (strong, nonatomic, nullable) UILabel *footerLabel;
 
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *_Nullable)reuseIdentifier;
 
-- (void)attachFooterToBottomAnchor:(NSLayoutYAxisAnchor *_Nonnull)bottomAnchor;
+- (void)attachFooterToBottomAnchor:(nonnull NSLayoutYAxisAnchor *)bottomAnchor;
 
-- (void)propagateContentFromPost:(TBLPost *_Nonnull)post andBlogMeta:(TBLBlogMeta *_Nonnull)blogMeta;
+- (void)propagateContentFromPost:(nonnull TBLPost *)post andBlogMeta:(nonnull TBLBlogMeta *)blogMeta;
 
 @end

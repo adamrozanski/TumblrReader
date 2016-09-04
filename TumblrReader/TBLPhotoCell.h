@@ -13,11 +13,11 @@
 
 @interface TBLPhotoCell : TBLPostCell
 
-@property UIImageView *_Nullable photoView;
-@property WKWebView *_Nullable captionView;
+@property (strong, nonatomic, nullable) UIImageView *photoView;
+@property (strong, nonatomic, nullable) WKWebView *captionView;
 
-- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *_Nullable)reuseIdentifier;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(nullable NSString *)reuseIdentifier;
 
-- (void)propagateContentFromPost:(TBLPost *_Nonnull)post andBlogMeta:(TBLBlogMeta *_Nonnull)blogMeta;
+- (void)propagateContentFromPost:(nonnull TBLPost *)post andBlogMeta:(nonnull TBLBlogMeta *)blogMeta;
 
 @end

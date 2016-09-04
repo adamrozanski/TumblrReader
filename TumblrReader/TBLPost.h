@@ -11,14 +11,14 @@
 
 @interface TBLPost : NSObject
 
-@property TBLPostType type;   // TBLPostType == uint
-@property(nonnull) NSString *slug;
-@property(nonnull) NSString *date;
-@property(nullable) NSArray<NSString *> *tags;
+@property (assign, nonatomic) TBLPostType type;
+@property (strong, nonatomic, nonnull) NSString *slug;
+@property (strong, nonatomic, nonnull) NSString *date;
+@property (strong, nonatomic, nullable) NSArray<NSString *> *tags;
 
-+ (TBLPostType)postTypeForJSONPost:(NSDictionary *_Nonnull)JSONPost;
++ (TBLPostType)postTypeForJSONPost:(nonnull NSDictionary *)JSONPost;
 
-- (nullable instancetype)initWithJSONPost:(NSDictionary *_Nonnull)JSONPost;
+- (nullable instancetype)initWithJSONPost:(nonnull NSDictionary *)JSONPost;
 
 - (nonnull NSString *)toHTML;
 

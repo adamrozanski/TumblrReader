@@ -10,12 +10,12 @@
 
 @interface TBLAudioPost : TBLPost
 
-@property(nonnull) NSString *artist;
-@property(nonnull) NSString *title;
-@property(nonnull) NSString *caption;
-@property(nonnull) NSString *playerEmbed;
+@property (strong, nonatomic, nonnull) NSString *artist;
+@property (strong, nonatomic, nonnull) NSString *title;
+@property (strong, nonatomic, nonnull) NSString *caption;
+@property (strong, nonatomic, nonnull) NSString *playerEmbed;
 
-- (nullable instancetype)initWithJSONPost:(NSDictionary *_Nonnull)JSONPost;
+- (nullable instancetype)initWithJSONPost:(nonnull NSDictionary *)JSONPost;
 
 - (nonnull NSString *)toHTML;
 

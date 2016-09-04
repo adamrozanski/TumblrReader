@@ -9,7 +9,7 @@
 
 @implementation TBLQuotePost
 
-- (nullable instancetype)initWithJSONPost:(NSDictionary *_Nonnull)JSONPost {
+- (nullable instancetype)initWithJSONPost:(nonnull NSDictionary *)JSONPost {
     if ((self = [super initWithJSONPost:JSONPost])) {
         NSString *quoteText = JSONPost[@"quote-text"];
         NSString *quoteSource = JSONPost[@"quote-source"];

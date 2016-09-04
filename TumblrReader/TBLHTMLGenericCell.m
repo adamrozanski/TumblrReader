@@ -11,7 +11,7 @@
 @implementation TBLHTMLGenericCell
 
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style
-                      reuseIdentifier:(NSString *_Nullable)reuseIdentifier {
+                      reuseIdentifier:(nullable NSString *)reuseIdentifier {
   self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
   if (self) {
 
@@ -63,8 +63,8 @@
   return self;
 }
 
-- (void)propagateContentFromPost:(TBLPost *_Nonnull)post
-                     andBlogMeta:(TBLBlogMeta *_Nonnull)blogMeta;
+- (void)propagateContentFromPost:(nonnull TBLPost *)post
+                     andBlogMeta:(nonnull TBLBlogMeta *)blogMeta;
 {
   [super propagateContentFromPost:post andBlogMeta:blogMeta];
   [self.webView loadHTMLString:[post toHTML] baseURL:nil];

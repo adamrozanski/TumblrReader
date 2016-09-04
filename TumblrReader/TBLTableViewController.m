@@ -15,7 +15,7 @@ static NSInteger const kCellHeight = 270;
 
 @interface TBLTableViewController () <UITableViewDelegate>
 
-@property (nonatomic, strong) TBLTableViewDataSource *_Nullable dataSource;
+@property (nonatomic, strong, nullable) TBLTableViewDataSource *dataSource;
 
 @end
 
@@ -62,22 +62,22 @@ static NSInteger const kCellHeight = 270;
 
 #pragma mark - Table View Delegate Methods
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(nonnull UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     TBLPost *post = self.dataSource.posts[indexPath.row];
     TBLPostViewController *postViewController = [[TBLPostViewController alloc] initWithBlogMeta:self.dataSource.blogMeta post:post];
     [self.navigationController pushViewController:postViewController animated:YES];
 }
 
-- (void)tableView:(UITableView *)tableView willDisplayCell:(nonnull UITableViewCell *)cell forRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+- (void)tableView:(nonnull UITableView *)tableView willDisplayCell:(nonnull UITableViewCell *)cell forRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     if ([self.dataSource shouldFetchNewPostsForIndexPath:indexPath])
         [self loadPosts];
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (CGFloat)tableView:(nonnull UITableView *)tableView heightForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     return kCellHeight;
 }
 
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+- (BOOL)tableView:(nonnull UITableView *)tableView canEditRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     return NO;
 }
 
@@ -128,7 +128,7 @@ static NSInteger const kCellHeight = 270;
 
 #pragma mark - Dialogs
 
-- (void)presentMessage:(NSString *)message title:(NSString *)title {
+- (void)presentMessage:(nonnull NSString *)message title:(nonnull NSString *)title {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
     [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
     [self.parentViewController presentViewController:alert animated:YES completion:nil];

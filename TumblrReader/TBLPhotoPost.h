@@ -11,10 +11,10 @@
 
 @interface TBLPhotoPost : TBLPost
 
-@property(nonnull) TBLPhoto *photo;
-@property(nullable) NSArray<TBLPhoto *> *photoGallery;
+@property (strong, nonatomic, nonnull) TBLPhoto *photo;
+@property (strong, nonatomic, nullable) NSArray<TBLPhoto *> *photoGallery;
 
-- (nullable instancetype)initWithJSONPost:(NSDictionary *_Nonnull)JSONPost;
+- (nullable instancetype)initWithJSONPost:(nonnull NSDictionary *)JSONPost;
 
 - (nonnull NSString *)toHTML;
 

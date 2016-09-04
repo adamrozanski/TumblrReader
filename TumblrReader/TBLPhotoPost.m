@@ -10,7 +10,7 @@
 
 @implementation TBLPhotoPost
 
-- (nullable instancetype)initWithJSONPost:(NSDictionary *_Nonnull)JSONPost {
+- (nullable instancetype)initWithJSONPost:(nonnull NSDictionary *)JSONPost {
     if ((self = [super initWithJSONPost:JSONPost])) {
         TBLPhoto *photo = [[TBLPhoto alloc] initWithJSONPhoto:JSONPost];
         if (!photo)

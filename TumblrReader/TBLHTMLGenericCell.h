@@ -13,12 +13,12 @@
 
 @interface TBLHTMLGenericCell : TBLPostCell
 
-@property WKWebView *_Nullable webView;
-@property NSLayoutConstraint *_Nullable webViewHeightConstraint;
-@property NSLayoutConstraint *_Nullable spacerHeightConstraint;
+@property (strong, nonatomic, nullable) WKWebView *webView;
+@property (strong, nonatomic, nullable) NSLayoutConstraint *webViewHeightConstraint;
+@property (strong, nonatomic, nullable) NSLayoutConstraint *spacerHeightConstraint;
 
-- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *_Nullable)reuseIdentifier;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(nullable NSString *)reuseIdentifier;
 
-- (void)propagateContentFromPost:(TBLPost *_Nonnull)post andBlogMeta:(TBLBlogMeta *_Nonnull)blogMeta;
+- (void)propagateContentFromPost:(nonnull TBLPost *)post andBlogMeta:(nonnull TBLBlogMeta *)blogMeta;
 
 @end

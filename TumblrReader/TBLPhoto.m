@@ -12,7 +12,7 @@
 @implementation TBLPhoto
 
 
-+ (nullable NSArray<TBLPhoto *> *)photoGalleryFromJSONPhotoGallery:(NSArray *_Nonnull)JSONPhotoGallery {
++ (nullable NSArray<TBLPhoto *> *)photoGalleryFromJSONPhotoGallery:(nonnull NSArray *)JSONPhotoGallery {
     NSMutableArray<TBLPhoto *> *photoGallery = [NSMutableArray array];
     for (NSDictionary *JSONPhoto in JSONPhotoGallery) {
         [photoGallery addObject:[[TBLPhoto alloc] initWithJSONPhoto:JSONPhoto]];
@@ -20,7 +20,7 @@
     return photoGallery;
 }
 
-- (nullable instancetype)initWithJSONPhoto:(NSDictionary *_Nonnull)JSONPhoto {
+- (nullable instancetype)initWithJSONPhoto:(nonnull NSDictionary *)JSONPhoto {
     if (self = [super init]) {
         NSString *caption = JSONPhoto[@"photo-caption"];
         if (!caption)

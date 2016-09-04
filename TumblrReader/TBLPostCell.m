@@ -11,7 +11,7 @@
 @implementation TBLPostCell
 
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style
-                      reuseIdentifier:(NSString *_Nullable)reuseIdentifier {
+                      reuseIdentifier:(nullable NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         self.contentView.backgroundColor =
@@ -70,7 +70,7 @@
     return self;
 }
 
-- (void)attachFooterToBottomAnchor:(NSLayoutYAxisAnchor *_Nonnull)bottomAnchor {
+- (void)attachFooterToBottomAnchor:(nonnull NSLayoutYAxisAnchor *)bottomAnchor {
     UILayoutGuide *bottomSpacer = [[UILayoutGuide alloc] init];
     self.footerLabel = [[UILabel alloc] init];
     [self.footerLabel setTextColor:[UIColor colorWithRed:0.21 green:0.24 blue:0.28 alpha:1.0]];
@@ -140,8 +140,8 @@
     [NSLayoutConstraint activateConstraints:footerLabelConstraints];
 }
 
-- (void)propagateContentFromPost:(TBLPost *_Nonnull)post
-                     andBlogMeta:(TBLBlogMeta *_Nonnull)blogMeta {
+- (void)propagateContentFromPost:(nonnull TBLPost *)post
+                     andBlogMeta:(nonnull TBLBlogMeta *)blogMeta {
     self.titleLabel.text = post.date;
     self.footerLabel.text =
             [NSString stringWithFormat:@"Tagi: %@", [post tagsAsString]];

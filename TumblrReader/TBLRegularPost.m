@@ -10,7 +10,7 @@
 
 @implementation TBLRegularPost
 
-- (nullable instancetype)initWithJSONPost:(NSDictionary *_Nonnull)JSONPost {
+- (nullable instancetype)initWithJSONPost:(nonnull NSDictionary *)JSONPost {
     if ((self = [super initWithJSONPost:JSONPost])) {
         NSString *HTMLBody = JSONPost[@"regular-body"];
         if (!HTMLBody)

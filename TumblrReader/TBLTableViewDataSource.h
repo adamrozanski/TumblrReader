@@ -23,25 +23,25 @@
 
 @interface TBLTableViewDataSource : NSObject <UITableViewDataSource>
 
-@property BOOL isFetchingPosts;
-@property TBLBlogMeta *_Nullable blogMeta;
-@property NSMutableArray<TBLPost *> *_Nullable posts;
+@property (assign, nonatomic) BOOL isFetchingPosts;
+@property (strong, nonatomic, nullable) TBLBlogMeta *blogMeta;
+@property (strong, nonatomic, nullable) NSMutableArray<TBLPost *> *posts;
 
-- (nullable instancetype)initWithBlogName:(NSString *_Nonnull)blogName;
+- (nullable instancetype)initWithBlogName:(nonnull NSString *)blogName;
 
-- (NSInteger)tableView:(UITableView *_Nonnull)tableView numberOfRowsInSection:(NSInteger)section;
+- (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *_Nonnull)tableView;
+- (NSInteger)numberOfSectionsInTableView:(nonnull UITableView *)tableView;
 
-- (UITableViewCell *_Nonnull)tableView:(UITableView *_Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath *_Nonnull)indexPath;
+- (UITableViewCell *_Nonnull)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath;
 
-- (void)loadPostsIntoTableView:(UITableView *_Nonnull)tableView
-                       success:(void (^ _Nonnull)(NSString *_Nullable errorMessage))success
+- (void)loadPostsIntoTableView:(nonnull UITableView *)tableView
+                       success:(void ( ^ _Nonnull)(NSString *_Nullable errorMessage))success
                        failure:(void (^ _Nonnull)(NSString *_Nonnull errorMessage))failure;
 
-- (void)imageFromURLString:(NSString *_Nonnull)URLString
+- (void)imageFromURLString:(nonnull NSString *)URLString
                    success:(void (^ _Nonnull)(UIImage *_Nullable image))success
                    failure:(void (^ _Nonnull)(NSError *_Nonnull error))failure;
 
-- (BOOL)shouldFetchNewPostsForIndexPath:(NSIndexPath *_Nonnull)indexPath;
+- (BOOL)shouldFetchNewPostsForIndexPath:(nonnull NSIndexPath *)indexPath;
 @end

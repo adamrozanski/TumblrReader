@@ -17,7 +17,7 @@ static NSUInteger const kPostsCountPerRequest = 20;
 
 @implementation TBLTableViewDataSource
 
-- (nullable instancetype)initWithBlogName:(NSString *_Nonnull)blogName {
+- (nullable instancetype)initWithBlogName:(nonnull NSString *)blogName {
     if ((self = [super init])) {
         self.blogMeta = [[TBLBlogMeta alloc] initWithBlogName:blogName];
         self.posts = [NSMutableArray array];
@@ -32,12 +32,12 @@ static NSUInteger const kPostsCountPerRequest = 20;
     return self.posts.count;
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *_Nonnull)tableView {
+- (NSInteger)numberOfSectionsInTableView:(nonnull UITableView *)tableView {
     return 1;
 }
 
-- (UITableViewCell *_Nonnull)tableView:(UITableView *_Nonnull)tableView
-                 cellForRowAtIndexPath:(NSIndexPath *_Nonnull)indexPath {
+- (UITableViewCell *_Nonnull)tableView:(nonnull UITableView *)tableView
+                 cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     TBLPost *post = self.posts[indexPath.row];
     NSString *identifier = [TBLPostTypeMap.sharedInstance stringForPostType:post.type];
     TBLPostCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier
@@ -65,7 +65,7 @@ static NSUInteger const kPostsCountPerRequest = 20;
 #pragma mark - Load Content
 
 // TODO: use "insertCell" instead of "reloadData"
-- (void)loadPostsIntoTableView:(UITableView *_Nonnull)tableView
+- (void)loadPostsIntoTableView:(nonnull UITableView *)tableView
                        success:(void (^ _Nonnull)(NSString *_Nullable errorMessage))success
                        failure:(void (^ _Nonnull)(NSString *_Nonnull errorMessage))failure {
     if (self.isFetchingPosts)
@@ -115,7 +115,7 @@ static NSUInteger const kPostsCountPerRequest = 20;
     return [self.posts count] == 0;
 }
 
-- (BOOL)shouldFetchNewPostsForIndexPath:(NSIndexPath *_Nonnull)indexPath {
+- (BOOL)shouldFetchNewPostsForIndexPath:(nonnull NSIndexPath *)indexPath {
     NSUInteger rowsLoaded = [self.posts count];
     NSUInteger rowsRemaining = rowsLoaded - indexPath.row;
     NSUInteger rowsToLoadFromBottom = 10;
@@ -126,7 +126,7 @@ static NSUInteger const kPostsCountPerRequest = 20;
     [UIApplication sharedApplication].networkActivityIndicatorVisible = active;
 }
 
-- (void)imageFromURLString:(NSString *_Nonnull)URLString
+- (void)imageFromURLString:(nonnull NSString *)URLString
                    success:(void (^ _Nonnull)(UIImage *_Nullable image))success
                    failure:(void (^ _Nonnull)(NSError *_Nonnull error))failure {
     TBLAPIManager *manager = [TBLAPIManager sharedManager];

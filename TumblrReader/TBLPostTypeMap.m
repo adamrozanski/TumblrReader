@@ -10,7 +10,7 @@
 
 @interface TBLPostTypeMap ()
 
-@property NSDictionary *postTypesDictionary;
+@property (strong, nonatomic, nonnull) NSDictionary *postTypesDictionary;
 
 @end
 
@@ -40,7 +40,7 @@
     return self;
 }
 
-- (TBLPostType)postTypeForString:(NSString *_Nonnull)stringType {
+- (TBLPostType)postTypeForString:(nonnull NSString *)stringType {
     return (TBLPostType) [[self.postTypesDictionary valueForKey:stringType] integerValue];
 }
 

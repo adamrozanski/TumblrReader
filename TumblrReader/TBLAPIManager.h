@@ -21,7 +21,7 @@
 
 + (nonnull TBLAPIManager *)sharedManager;
 
-- (void)fetchPostsForUsername:(NSString *_Nonnull)username
+- (void)fetchPostsForUsername:(nonnull NSString *)username
                startPostIndex:(NSUInteger)startPostIndex
                    postsCount:(NSUInteger)postsCount
                       success:(void (^ _Nonnull)(NSURLSessionTask *_Nonnull task,
@@ -31,7 +31,7 @@
                       failure:(void (^ _Nonnull)(NSURLSessionTask *_Nullable task,
                               NSError *_Nonnull error))failure;
 
-- (void)imageFromURLString:(NSString *_Nonnull)URLString
+- (void)imageFromURLString:(nonnull NSString *)URLString
                    success:(void (^ _Nonnull)(UIImage *_Nullable image))success
                    failure:(void (^ _Nonnull)(NSError *_Nonnull error))failure;
 

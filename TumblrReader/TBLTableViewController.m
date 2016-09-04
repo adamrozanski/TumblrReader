@@ -9,9 +9,13 @@
 #import "TBLTableViewController.h"
 #import "TBLPostViewController.h"
 
+static NSString *const kInitialBlogName = @"epicbeta";
+static NSString *const kNavigationBarTitle = @"Tumblr Reader";
+static NSInteger const kCellHeight = 270;
+
 @interface TBLTableViewController () <UITableViewDelegate>
 
-@property TBLTableViewDataSource *_Nullable dataSource;
+@property (nonatomic, strong) TBLTableViewDataSource *_Nullable dataSource;
 
 @end
 
@@ -23,14 +27,15 @@
     [super viewDidLoad];
     [self setupTableView];
     [self addNavigationButtonItem];
-    [self configureTableViewForBlogName:@"epicbeta"];
+    [self configureTableViewForBlogName:kInitialBlogName];
     [self setupRefreshControl];
     [self loadPosts];
 }
 
 - (void)setupTableView {
-    self.tableView.backgroundColor = [UIColor colorWithRed:0.21 green:0.24 blue:0.28 alpha:1.0];
-    self.tableView.separatorColor = [UIColor colorWithRed:0.21 green:0.24 blue:0.28 alpha:1.0];
+    UIColor *greyColor = [UIColor colorWithRed:0.21 green:0.24 blue:0.28 alpha:1.0];
+    self.tableView.backgroundColor = greyColor;
+    self.tableView.separatorColor = greyColor;
     [self.tableView registerClass:[TBLQuoteCell class] forCellReuseIdentifier:[[TBLPostTypeMap sharedInstance] stringForPostType:TBLPostTypeQuote]];
     [self.tableView registerClass:[TBLPhotoCell class] forCellReuseIdentifier:[[TBLPostTypeMap sharedInstance] stringForPostType:TBLPostTypePhoto]];
     [self.tableView registerClass:[TBLRegularCell class] forCellReuseIdentifier:[[TBLPostTypeMap sharedInstance] stringForPostType:TBLPostTypeRegular]];
@@ -40,7 +45,7 @@
 }
 
 - (void)updateBlogTitle {
-    self.title = (self.dataSource.blogMeta == nil) ? @"Tumblr Reader" : self.dataSource.blogMeta.name;
+    self.title = self.dataSource.blogMeta ? self.dataSource.blogMeta.name : kNavigationBarTitle;
 }
 
 - (void)addNavigationButtonItem {
@@ -69,7 +74,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 270;
+    return kCellHeight;
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

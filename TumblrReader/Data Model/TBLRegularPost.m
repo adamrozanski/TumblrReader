@@ -2,16 +2,18 @@
 //  TBLRegularPost.m
 //  TumblrReader
 //
-//  Created by Adam on 11.06.2016.
-//  Copyright © 2016 Adam. All rights reserved.
+//  Created by Adam Różański on 11.06.2016.
+//  Copyright © 2016 Adam Różański. All rights reserved.
 //
 
 #import "TBLRegularPost.h"
 
 @implementation TBLRegularPost
 
-- (nullable instancetype)initWithJSONPost:(nonnull NSDictionary *)JSONPost {
-    if ((self = [super initWithJSONPost:JSONPost])) {
+- (nullable instancetype)initWithJSONPost:(nonnull NSDictionary *)JSONPost
+{
+    if ((self = [super initWithJSONPost:JSONPost]))
+    {
         NSString *HTMLBody = JSONPost[@"regular-body"];
         if (!HTMLBody)
             return nil;
@@ -21,8 +23,8 @@
     return self;
 }
 
-- (nonnull NSString *)toHTML {
+- (nonnull NSString *)toHTML
+{
     return [NSString stringWithFormat:@"<html><meta name=\"viewport\" content=\"initial-scale=1.0\" /><body><h1><strong>%@</strong></h1>%@</body></html>", self.title, self.HTMLBody];
 }
 @end
-

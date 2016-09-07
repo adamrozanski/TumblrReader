@@ -2,12 +2,12 @@
 //  TBLPostViewController.m
 //  TumblrReader
 //
-//  Created by Adam on 15.06.2016.
-//  Copyright © 2016 Adam. All rights reserved.
+//  Created by Adam Różański on 15.06.2016.
+//  Copyright © 2016 Adam Różański. All rights reserved.
 //
 
-#import <WebKit/WebKit.h>
 #import "TBLPostViewController.h"
+#import <WebKit/WebKit.h>
 
 @interface TBLPostViewController ()
 
@@ -19,9 +19,11 @@
 
 @implementation TBLPostViewController
 
-- (nullable instancetype)initWithBlogMeta:(nullable TBLBlogMeta *)blogMeta post:(nullable TBLPost *)post {
+- (nullable instancetype)initWithBlogMeta:(nullable TBLBlogMeta *)blogMeta post:(nullable TBLPost *)post
+{
     self = [super init];
-    if (self) {
+    if (self)
+    {
         self.post = post;
         self.blogMeta = blogMeta;
         self.title = post.date;
@@ -29,15 +31,18 @@
     return self;
 }
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     [self configureSubviews];
-    if (self.post) {
+    if (self.post)
+    {
         [self loadContent];
     }
 }
 
-- (void)configureSubviews {
+- (void)configureSubviews
+{
     //webview bugfix
     WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc] init];
     configuration.selectionGranularity = WKSelectionGranularityCharacter;
@@ -51,11 +56,12 @@
     NSLayoutConstraint *webViewTrailingAnchor = [self.webView.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor];
     NSLayoutConstraint *webViewTopAnchor = [self.webView.topAnchor constraintEqualToAnchor:self.topLayoutGuide.topAnchor];
     NSLayoutConstraint *webViewBottomAnchor = [self.webView.bottomAnchor constraintEqualToAnchor:self.bottomLayoutGuide.bottomAnchor];
-    NSArray *webViewConstraints = @[webViewLeadingAnchor, webViewTrailingAnchor, webViewTopAnchor, webViewBottomAnchor];
+    NSArray *webViewConstraints = @[ webViewLeadingAnchor, webViewTrailingAnchor, webViewTopAnchor, webViewBottomAnchor ];
     [NSLayoutConstraint activateConstraints:webViewConstraints];
 }
 
-- (void)loadContent {
+- (void)loadContent
+{
     [self.webView loadHTMLString:self.post.toHTML baseURL:nil];
     NSString *setTextSizeRule = [NSString stringWithFormat:@"addCSSRule('body', '-webkit-text-size-adjust: %d%%;')", 200];
     [self.webView evaluateJavaScript:setTextSizeRule completionHandler:nil];

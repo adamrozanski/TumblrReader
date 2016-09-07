@@ -2,12 +2,12 @@
 //  TBLPostTypeMap.h
 //  TumblrReader
 //
-//  Created by Adam on 12.06.2016.
-//  Copyright © 2016 Adam. All rights reserved.
+//  Created by Adam Różański on 12.06.2016.
+//  Copyright © 2016 Adam Różański. All rights reserved.
 //
 #import <Foundation/Foundation.h>
 
-typedef NS_ENUM (NSUInteger, TBLPostType) {
+typedef NS_ENUM(NSUInteger, TBLPostType) {
     TBLPostTypeUndefined,
     TBLPostTypeQuote,
     TBLPostTypePhoto,
@@ -16,7 +16,6 @@ typedef NS_ENUM (NSUInteger, TBLPostType) {
     TBLPostTypeAudio,
     TBLPostTypeRegular
 };
-
 
 @interface TBLPostTypeMap : NSObject
 

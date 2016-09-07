@@ -2,16 +2,18 @@
 //  TBRBlog.m
 //  TumblrReader
 //
-//  Created by Adam on 10.06.2016.
-//  Copyright © 2016 Adam. All rights reserved.
+//  Created by Adam Różański on 10.06.2016.
+//  Copyright © 2016 Adam Różański. All rights reserved.
 //
 
 #import "TBLBlogMeta.h"
 
 @implementation TBLBlogMeta
 
-- (nonnull instancetype)initWithBlogName:(nonnull NSString *)blogName {
-    if ((self = [super init])) {
+- (nonnull instancetype)initWithBlogName:(nonnull NSString *)blogName
+{
+    if ((self = [super init]))
+    {
         if (!blogName)
             return nil;
         self.name = blogName;
@@ -20,15 +22,18 @@
     return self;
 }
 
-- (nullable instancetype)initWithJSONResponse:(nonnull NSDictionary *)json {
-    if ((self = [super init])) {
+- (nullable instancetype)initWithJSONResponse:(nonnull NSDictionary *)json
+{
+    if ((self = [super init]))
+    {
         NSDictionary *tumblelogField = json[@"tumblelog"];
         self.name = tumblelogField[@"name"];
         self.title = tumblelogField[@"title"];
 
         NSString *startPostIndex = json[@"posts-start"];
         NSString *totalPostsCount = json[@"posts-total"];
-        if (!startPostIndex || !totalPostsCount || !self.name || !self.title) {
+        if (!startPostIndex || !totalPostsCount || !self.name || !self.title)
+        {
             return nil;
         }
         self.startPostIndex = startPostIndex.integerValue;

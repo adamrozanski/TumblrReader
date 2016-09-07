@@ -2,17 +2,19 @@
 //  TBPhotoCell.m
 //  TumblrReader
 //
-//  Created by Adam on 14.06.2016.
-//  Copyright © 2016 Adam. All rights reserved.
+//  Created by Adam Różański on 14.06.2016.
+//  Copyright © 2016 Adam Różański. All rights reserved.
 //
 
 #import "TBLPhotoCell.h"
 
 @implementation TBLPhotoCell
 
-- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(nullable NSString *)reuseIdentifier {
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(nullable NSString *)reuseIdentifier
+{
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self) {
+    if (self)
+    {
         UILayoutGuide *spacer = [[UILayoutGuide alloc] init];
         self.photoView = [[UIImageView alloc] initWithFrame:self.bounds];
         self.photoView.contentMode = UIViewContentModeScaleAspectFill;
@@ -36,7 +38,7 @@
         NSLayoutConstraint *spacerTrailing = [spacer.trailingAnchor constraintEqualToAnchor:[self.contentView trailingAnchor]];
         NSLayoutConstraint *spacerTop = [spacer.topAnchor constraintEqualToAnchor:[self.titleBox bottomAnchor]];
         NSLayoutConstraint *spacerHeight = [spacer.heightAnchor constraintEqualToConstant:1];
-        NSArray *spacer1LabelConstraints = @[spacerLeading, spacerTrailing, spacerTop, spacerHeight];
+        NSArray *spacer1LabelConstraints = @[ spacerLeading, spacerTrailing, spacerTop, spacerHeight ];
         [NSLayoutConstraint activateConstraints:spacer1LabelConstraints];
 
         //photoView
@@ -44,7 +46,7 @@
         NSLayoutConstraint *photoViewTrailing = [self.photoView.trailingAnchor constraintEqualToAnchor:[self.contentView trailingAnchor]];
         NSLayoutConstraint *photoViewTop = [self.photoView.topAnchor constraintEqualToAnchor:[spacer bottomAnchor]];
         NSLayoutConstraint *photoViewHeight = [self.photoView.heightAnchor constraintEqualToConstant:180];
-        NSArray *photoViewConstraints = @[photoViewLeading, photoViewTrailing, photoViewTop, photoViewHeight];
+        NSArray *photoViewConstraints = @[ photoViewLeading, photoViewTrailing, photoViewTop, photoViewHeight ];
         [NSLayoutConstraint activateConstraints:photoViewConstraints];
 
         //captionView
@@ -52,7 +54,7 @@
         NSLayoutConstraint *captionViewTrailing = [self.captionView.trailingAnchor constraintEqualToAnchor:[self.contentView trailingAnchor]];
         NSLayoutConstraint *captionViewTop = [self.captionView.topAnchor constraintEqualToAnchor:[self.photoView bottomAnchor]];
         NSLayoutConstraint *captionViewHeight = [self.captionView.heightAnchor constraintEqualToConstant:18];
-        NSArray *captionViewConstraints = @[captionViewLeading, captionViewTrailing, captionViewTop, captionViewHeight];
+        NSArray *captionViewConstraints = @[ captionViewLeading, captionViewTrailing, captionViewTop, captionViewHeight ];
         [NSLayoutConstraint activateConstraints:captionViewConstraints];
 
         [self attachFooterToBottomAnchor:self.captionView.bottomAnchor];
@@ -60,7 +62,8 @@
     return self;
 }
 
-- (void)propagateContentFromPost:(nonnull TBLPost *)post andBlogMeta:(nonnull TBLBlogMeta *)blogMeta {
+- (void)propagateContentFromPost:(nonnull TBLPost *)post andBlogMeta:(nonnull TBLBlogMeta *)blogMeta
+{
     [super propagateContentFromPost:post andBlogMeta:blogMeta];
     [self.captionView loadHTMLString:[(TBLPhotoPost *)post captionToHTML] baseURL:nil];
 }

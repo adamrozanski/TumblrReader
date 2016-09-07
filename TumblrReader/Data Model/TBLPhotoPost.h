@@ -2,12 +2,12 @@
 //  TBLPhotoPost.h
 //  TumblrReader
 //
-//  Created by Adam on 11.06.2016.
-//  Copyright © 2016 Adam. All rights reserved.
+//  Created by Adam Różański on 11.06.2016.
+//  Copyright © 2016 Adam Różański. All rights reserved.
 //
 
-#import "TBLPost.h"
 #import "TBLPhoto.h"
+#import "TBLPost.h"
 
 @interface TBLPhotoPost : TBLPost
 
@@ -24,4 +24,3 @@
 
 - (BOOL)photoURLsAreNotNil;
 @end
-

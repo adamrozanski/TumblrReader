@@ -1,9 +1,9 @@
 //
 //  TBLBlogMetaTest.m
-//  UnitTesty
+//  TumblrReader
 //
-//  Created by intern Adam Różański on 07/07/16.
-//  Copyright © 2016 intern Adam Różański. All rights reserved.
+//  Created by Adam Różański on 07/07/16.
+//  Copyright © 2016 Adam Różański. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>

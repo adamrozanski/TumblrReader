@@ -1,9 +1,9 @@
 //
 //  TBLPostPhotoTest.m
-//  UnitTesty
+//  TumblrReader
 //
-//  Created by Adam on 14.07.2016.
-//  Copyright © 2016 intern Adam Różański. All rights reserved.
+//  Created by Adam Różański on 14.07.2016.
+//  Copyright © 2016 Adam Różański. All rights reserved.
 //
 
 #import "SampleJSONPosts.h"

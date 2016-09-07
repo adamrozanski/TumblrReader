@@ -2,13 +2,13 @@
 //  TBLPostViewController.h
 //  TumblrReader
 //
-//  Created by Adam on 15.06.2016.
-//  Copyright © 2016 Adam. All rights reserved.
+//  Created by Adam Różański on 15.06.2016.
+//  Copyright © 2016 Adam Różański. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "TBLPost.h"
 #import "TBLBlogMeta.h"
+#import "TBLPost.h"
+#import <UIKit/UIKit.h>
 
 @interface TBLPostViewController : UIViewController
 

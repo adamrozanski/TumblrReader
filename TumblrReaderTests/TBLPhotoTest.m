@@ -1,9 +1,9 @@
 //
 //  TBLPhotoTest.m
-//  UTMobica
+//  TumblrReader
 //
-//  Created by Adam on 14.07.2016.
-//  Copyright © 2016 Adam. All rights reserved.
+//  Created by Adam Różański on 14.07.2016.
+//  Copyright © 2016 Adam Różański. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>

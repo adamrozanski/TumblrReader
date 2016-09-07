@@ -2,8 +2,8 @@
 //  TBLAPIManagerTests.m
 //  TumblrReader
 //
-//  Created by Adam on 23.07.2016.
-//  Copyright © 2016 Adam. All rights reserved.
+//  Created by Adam Różański on 23.07.2016.
+//  Copyright © 2016 Adam Różański. All rights reserved.
 //
 
 #import "AFNetworking.h"

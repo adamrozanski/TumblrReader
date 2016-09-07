@@ -2,17 +2,19 @@
 //  TBLPostFactory.m
 //  TumblrReader
 //
-//  Created by Adam on 12.06.2016.
-//  Copyright © 2016 Adam. All rights reserved.
+//  Created by Adam Różański on 12.06.2016.
+//  Copyright © 2016 Adam Różański. All rights reserved.
 //
 
 #import "TBLPostFactory.h"
 
 @implementation TBLPostFactory
 
-+ (nullable id)specializedPostFromJSONPost:(nonnull NSDictionary *)JSONPost {
++ (nullable id)specializedPostFromJSONPost:(nonnull NSDictionary *)JSONPost
+{
     TBLPostType postType = [TBLPost postTypeForJSONPost:JSONPost];
-    switch (postType) {
+    switch (postType)
+    {
         case TBLPostTypeQuote:
             return [[TBLQuotePost alloc] initWithJSONPost:JSONPost];
         case TBLPostTypePhoto:
@@ -30,13 +32,16 @@
     }
 }
 
-+ (nullable NSArray<TBLPost * > *)postsArrayFromJSONResponse:(nonnull NSDictionary *)JSON; {
++ (nullable NSArray<TBLPost *> *)postsArrayFromJSONResponse:(nonnull NSDictionary *)JSON;
+{
     NSDictionary *JSONPosts = JSON[@"posts"];
     NSMutableArray<TBLPost *> *posts = [NSMutableArray array];
 
-    for (NSDictionary *JSONPost in JSONPosts) {
+    for (NSDictionary *JSONPost in JSONPosts)
+    {
         id post = [TBLPostFactory specializedPostFromJSONPost:JSONPost];
-        if (post) {
+        if (post)
+        {
             [posts addObject:post];
         }
     }

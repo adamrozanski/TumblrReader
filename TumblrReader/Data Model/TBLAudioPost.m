@@ -2,16 +2,18 @@
 //  TBLAudioPost.m
 //  TumblrReader
 //
-//  Created by Adam on 11.06.2016.
-//  Copyright © 2016 Adam. All rights reserved.
+//  Created by Adam Różański on 11.06.2016.
+//  Copyright © 2016 Adam Różański. All rights reserved.
 //
 
 #import "TBLAudioPost.h"
 
 @implementation TBLAudioPost
 
-- (nullable instancetype)initWithJSONPost:(nonnull NSDictionary *)JSONPost {
-    if ((self = [super initWithJSONPost:JSONPost])) {
+- (nullable instancetype)initWithJSONPost:(nonnull NSDictionary *)JSONPost
+{
+    if ((self = [super initWithJSONPost:JSONPost]))
+    {
 
         NSString *artist = JSONPost[@"id3-artist"];
         NSString *title = JSONPost[@"id3-title"];
@@ -29,7 +31,8 @@
     return self;
 }
 
-- (nonnull NSString *)toHTML {
+- (nonnull NSString *)toHTML
+{
     return [NSString stringWithFormat:@"<html><meta name=\"viewport\" content=\"initial-scale=1.0\" /><body><h1><strong>%@</strong></h1><h2>%@</h2>%@<p>%@</p></body></html>", self.title, self.artist, self.caption, self.playerEmbed];
 }
 

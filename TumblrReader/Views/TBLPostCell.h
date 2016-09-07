@@ -2,11 +2,13 @@
 //  TBLPostCell.h
 //  TumblrReader
 //
-//  Created by Adam on 13.06.2016.
-//  Copyright © 2016 Adam. All rights reserved.
-#import <UIKit/UIKit.h>
+//  Created by Adam Różański on 13.06.2016.
+//  Copyright © 2016 Adam Różański. All rights reserved.
+//
+
 #import "TBLBlogMeta.h"
 #import "TBLPost.h"
+#import <UIKit/UIKit.h>
 
 @interface TBLPostCell : UITableViewCell
 

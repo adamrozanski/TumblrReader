@@ -2,8 +2,8 @@
 //  TBRBlog.h
 //  TumblrReader
 //
-//  Created by Adam on 10.06.2016.
-//  Copyright © 2016 Adam. All rights reserved.
+//  Created by Adam Różański on 10.06.2016.
+//  Copyright © 2016 Adam Różański. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

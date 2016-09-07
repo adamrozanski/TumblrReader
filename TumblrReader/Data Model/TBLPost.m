@@ -2,21 +2,24 @@
 //  TBLPost.m
 //  TumblrReader
 //
-//  Created by Adam on 10.06.2016.
-//  Copyright © 2016 Adam. All rights reserved.
+//  Created by Adam Różański on 10.06.2016.
+//  Copyright © 2016 Adam Różański. All rights reserved.
 //
 
 #import "TBLPost.h"
 
 @implementation TBLPost
 
-+ (TBLPostType)postTypeForJSONPost:(nonnull NSDictionary *)JSONPost {
++ (TBLPostType)postTypeForJSONPost:(nonnull NSDictionary *)JSONPost
+{
     NSString *stringType = JSONPost[@"type"];
     return [TBLPostTypeMap.sharedInstance postTypeForString:stringType];
 }
 
-- (nullable instancetype)initWithJSONPost:(nonnull NSDictionary *)JSONPost {
-    if ((self = [super init])) {
+- (nullable instancetype)initWithJSONPost:(nonnull NSDictionary *)JSONPost
+{
+    if ((self = [super init]))
+    {
         NSString *type = JSONPost[@"type"];
         NSString *date = JSONPost[@"date"];
         if (!type || !date)
@@ -29,11 +32,13 @@
     return self;
 }
 
-- (nonnull NSString *)toHTML {
+- (nonnull NSString *)toHTML
+{
     return @"TBLPost should be subclassed";
 }
 
-- (nonnull NSString *)tagsAsString {
+- (nonnull NSString *)tagsAsString
+{
     return (self.tags) ? [self.tags componentsJoinedByString:@" "] : @"brak";
 }
 

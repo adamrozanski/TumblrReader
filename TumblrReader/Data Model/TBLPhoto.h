@@ -2,8 +2,8 @@
 //  TBLPhoto.h
 //  TumblrReader
 //
-//  Created by Adam on 22.06.2016.
-//  Copyright © 2016 Adam. All rights reserved.
+//  Created by Adam Różański on 22.06.2016.
+//  Copyright © 2016 Adam Różański. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

@@ -7,6 +7,7 @@
 //
 
 #import "TBLLinkPost.h"
+#import "TumblerJSONResponseConsts.h"
 
 @implementation TBLLinkPost
 
@@ -14,12 +15,14 @@
 {
     if ((self = [super initWithJSONPost:JSONPost]))
     {
-        NSString *linkText = JSONPost[@"link-text"];
-        NSString *linkURL = JSONPost[@"link-url"];
-        NSString *linkDescription = JSONPost[@"link-description"];
+        NSString *linkText = JSONPost[kTumblerJSONPostLinkText];
+        NSString *linkURL = JSONPost[kTumblerJSONPostLinkURL];
+        NSString *linkDescription = JSONPost[kTumblerJSONPostLinkDescription];
 
         if (!linkText || !linkURL || !linkDescription)
+        {
             return nil;
+        }
 
         self.linkText = linkText;
         self.linkURL = linkURL;

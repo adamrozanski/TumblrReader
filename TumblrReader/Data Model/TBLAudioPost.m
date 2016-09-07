@@ -7,6 +7,7 @@
 //
 
 #import "TBLAudioPost.h"
+#import "TumblerJSONResponseConsts.h"
 
 @implementation TBLAudioPost
 
@@ -14,14 +15,15 @@
 {
     if ((self = [super initWithJSONPost:JSONPost]))
     {
-
-        NSString *artist = JSONPost[@"id3-artist"];
-        NSString *title = JSONPost[@"id3-title"];
-        NSString *caption = JSONPost[@"audio-caption"];
-        NSString *playerEmbed = JSONPost[@"audio-embed"];
+        NSString *artist = JSONPost[kTumblerJSONPostAudioArtist];
+        NSString *title = JSONPost[kTumblerJSONPostAudioTitle];
+        NSString *caption = JSONPost[kTumblerJSONPostAudioCaption];
+        NSString *playerEmbed = JSONPost[kTumblerJSONPostAudioEmbed];
 
         if (!artist || !title || !playerEmbed || !caption)
+        {
             return nil;
+        }
 
         self.artist = artist;
         self.title = title;

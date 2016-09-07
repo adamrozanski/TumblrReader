@@ -7,6 +7,7 @@
 //
 
 #import "TBLBlogMeta.h"
+#import "TumblerJSONResponseConsts.h"
 
 @implementation TBLBlogMeta
 
@@ -15,7 +16,9 @@
     if ((self = [super init]))
     {
         if (!blogName)
+        {
             return nil;
+        }
         self.name = blogName;
         self.startPostIndex = 0;
     }
@@ -26,12 +29,12 @@
 {
     if ((self = [super init]))
     {
-        NSDictionary *tumblelogField = json[@"tumblelog"];
-        self.name = tumblelogField[@"name"];
-        self.title = tumblelogField[@"title"];
+        NSDictionary *tumblelogField = json[kTumblerJSONTumblelog];
+        self.name = tumblelogField[kTumblerJSONTumblelogBlogName];
+        self.title = tumblelogField[kTumblerJSONTumblelogBlogTitle];
 
-        NSString *startPostIndex = json[@"posts-start"];
-        NSString *totalPostsCount = json[@"posts-total"];
+        NSString *startPostIndex = json[kTumblerJSONBlogStartPostIndex];
+        NSString *totalPostsCount = json[kTumblerJSONBlogTotalPostsCount];
         if (!startPostIndex || !totalPostsCount || !self.name || !self.title)
         {
             return nil;

@@ -42,9 +42,10 @@ static NSUInteger const kTumblrResponseSemicolonLength = 1;
                                           startPostIndex:startPostIndex
                                               postsCount:postsCount];
     if (!self.sessionManager)
+    {
         self.sessionManager = [[AFHTTPSessionManager alloc] init];
-    self.sessionManager.responseSerializer =
-        [AFHTTPResponseSerializer serializer];
+    }
+    self.sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
     [self.sessionManager GET:queryString
         parameters:nil
         progress:nil

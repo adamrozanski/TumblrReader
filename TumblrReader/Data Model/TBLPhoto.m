@@ -7,6 +7,7 @@
 //
 
 #import "TBLPhoto.h"
+#import "TumblerJSONResponseConsts.h"
 
 @implementation TBLPhoto
 
@@ -24,20 +25,22 @@
 {
     if (self = [super init])
     {
-        NSString *caption = JSONPhoto[@"photo-caption"];
+        NSString *caption = JSONPhoto[kTumblerJSONPhotoCaption];
         if (!caption)
-            caption = JSONPhoto[@"caption"];
-        NSString *photo1280URL = JSONPhoto[@"photo-url-1280"];
-        NSString *photo500URL = JSONPhoto[@"photo-url-500"];
-        NSString *photo250URL = JSONPhoto[@"photo-url-250"];
+            caption = JSONPhoto[kTumblerJSONPostMainPhotoCaption];
+        NSString *photo1280URL = JSONPhoto[kTumblerJSONPhotoURL1280];
+        NSString *photo500URL = JSONPhoto[kTumblerJSONPhotoURL500];
+        NSString *photo250URL = JSONPhoto[kTumblerJSONPhotoURL250];
         if (!caption || !photo1280URL || !photo500URL || !photo250URL)
+        {
             return nil;
+        }
         self.caption = caption;
         self.photo1280URL = photo1280URL;
         self.photo500URL = photo500URL;
         self.photo250URL = photo250URL;
-        self.width = [JSONPhoto[@"width"] integerValue];
-        self.height = [JSONPhoto[@"height"] integerValue];
+        self.width = [JSONPhoto[kTumblerJSONPhotoWidth] integerValue];
+        self.height = [JSONPhoto[kTumblerJSONPhotoHeight] integerValue];
     }
     return self;
 }

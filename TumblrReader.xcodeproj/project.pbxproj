@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		163443E506F9C977DF17DB41 /* libPods-TumblrReader.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 968F01C6CECE9BA54F64F9CE /* libPods-TumblrReader.a */; };
 		36A758FB17186896FD22B13F /* libPods-TumblrReaderTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E5FE812882FD143E5DCA10A /* libPods-TumblrReaderTests.a */; };
+		662A8CB81D80C01100EA2626 /* TumblerJSONResponseConsts.m in Sources */ = {isa = PBXBuildFile; fileRef = 662A8CB71D80C01100EA2626 /* TumblerJSONResponseConsts.m */; };
 		6642C7801D4363190034340C /* TBLAPIManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6642C77F1D4363190034340C /* TBLAPIManagerTests.m */; };
 		66A1C65B1D7CC9A200D0CED3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A1C65A1D7CC9A200D0CED3 /* AppDelegate.m */; };
 		66A1C6601D7CC9B600D0CED3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A1C65F1D7CC9B600D0CED3 /* main.m */; };
@@ -56,6 +57,8 @@
 
 /* Begin PBXFileReference section */
 		0E5FE812882FD143E5DCA10A /* libPods-TumblrReaderTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TumblrReaderTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		662A8CB61D80C01100EA2626 /* TumblerJSONResponseConsts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TumblerJSONResponseConsts.h; path = "../Data Model/TumblerJSONResponseConsts.h"; sourceTree = "<group>"; };
+		662A8CB71D80C01100EA2626 /* TumblerJSONResponseConsts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TumblerJSONResponseConsts.m; path = "../Data Model/TumblerJSONResponseConsts.m"; sourceTree = "<group>"; };
 		6642C77F1D4363190034340C /* TBLAPIManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBLAPIManagerTests.m; sourceTree = "<group>"; };
 		66A1C65A1D7CC9A200D0CED3 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		66A1C65C1D7CC9AA00D0CED3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -234,6 +237,8 @@
 		66A1C6A61D7CCAA300D0CED3 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				662A8CB61D80C01100EA2626 /* TumblerJSONResponseConsts.h */,
+				662A8CB71D80C01100EA2626 /* TumblerJSONResponseConsts.m */,
 				66A1C6A71D7CCAA300D0CED3 /* TBLAPIManager.h */,
 				66A1C6A81D7CCAA300D0CED3 /* TBLAPIManager.m */,
 			);
@@ -534,6 +539,7 @@
 				66A1C6A91D7CCAA300D0CED3 /* TBLAPIManager.m in Sources */,
 				66A1C68C1D7CCA5300D0CED3 /* TBLTableViewDataSource.m in Sources */,
 				66A1C6811D7CC9F100D0CED3 /* TBLQuotePost.m in Sources */,
+				662A8CB81D80C01100EA2626 /* TumblerJSONResponseConsts.m in Sources */,
 				66A1C67F1D7CC9F100D0CED3 /* TBLPostFactory.m in Sources */,
 				66A1C67D1D7CC9F100D0CED3 /* TBLPhotoPost.m in Sources */,
 				66A1C6801D7CC9F100D0CED3 /* TBLPostTypeMap.m in Sources */,

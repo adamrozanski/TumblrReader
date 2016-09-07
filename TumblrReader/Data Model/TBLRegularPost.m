@@ -7,6 +7,7 @@
 //
 
 #import "TBLRegularPost.h"
+#import "TumblerJSONResponseConsts.h"
 
 @implementation TBLRegularPost
 
@@ -14,11 +15,13 @@
 {
     if ((self = [super initWithJSONPost:JSONPost]))
     {
-        NSString *HTMLBody = JSONPost[@"regular-body"];
+        NSString *HTMLBody = JSONPost[kTumblerJSONPostRegularBody];
         if (!HTMLBody)
+        {
             return nil;
+        }
         self.HTMLBody = HTMLBody;
-        self.title = JSONPost[@"regular-title"];
+        self.title = JSONPost[kTumblerJSONPostRegularTitle];
     }
     return self;
 }

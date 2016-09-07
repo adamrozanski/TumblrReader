@@ -7,6 +7,7 @@
 //
 
 #import "TBLPhotoPost.h"
+#import "TumblerJSONResponseConsts.h"
 
 @implementation TBLPhotoPost
 
@@ -16,9 +17,11 @@
     {
         TBLPhoto *photo = [[TBLPhoto alloc] initWithJSONPhoto:JSONPost];
         if (!photo)
+        {
             return nil;
+        }
         self.photo = photo;
-        NSArray<TBLPhoto *> *JSONPhotoGallery = JSONPost[@"photos"];
+        NSArray<TBLPhoto *> *JSONPhotoGallery = JSONPost[kTumblerJSONPostPhotoGallery];
         self.photoGallery = [TBLPhoto photoGalleryFromJSONPhotoGallery:JSONPhotoGallery];
     }
     return self;

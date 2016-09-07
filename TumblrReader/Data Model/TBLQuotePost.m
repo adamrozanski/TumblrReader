@@ -6,6 +6,7 @@
 //  Copyright © 2016 Adam Różański. All rights reserved.
 //
 #import "TBLQuotePost.h"
+#import "TumblerJSONResponseConsts.h"
 
 @implementation TBLQuotePost
 
@@ -13,10 +14,12 @@
 {
     if ((self = [super initWithJSONPost:JSONPost]))
     {
-        NSString *quoteText = JSONPost[@"quote-text"];
-        NSString *quoteSource = JSONPost[@"quote-source"];
+        NSString *quoteText = JSONPost[kTumblerJSONPostQuoteText];
+        NSString *quoteSource = JSONPost[kTumblerJSONPostQuoteSource];
         if (!quoteText || !quoteSource)
+        {
             return nil;
+        }
         self.quoteText = quoteText;
         self.quoteSource = quoteSource;
     }

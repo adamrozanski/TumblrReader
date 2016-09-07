@@ -35,7 +35,7 @@
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath;
 
 - (void)loadPostsIntoTableView:(nonnull UITableView *)tableView
-                       success:(void (^_Nonnull)(NSString *_Nullable errorMessage))success
+                       success:(void (^_Nonnull)())success
                        failure:(void (^_Nonnull)(NSString *_Nonnull errorMessage))failure;
 
 - (void)imageFromURLString:(nonnull NSString *)URLString

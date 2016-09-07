@@ -7,12 +7,13 @@
 //
 
 #import "TBLPost.h"
+#import "TumblerJSONResponseConsts.h"
 
 @implementation TBLPost
 
 + (TBLPostType)postTypeForJSONPost:(nonnull NSDictionary *)JSONPost
 {
-    NSString *stringType = JSONPost[@"type"];
+    NSString *stringType = JSONPost[kTumblerJSONPostType];
     return [TBLPostTypeMap.sharedInstance postTypeForString:stringType];
 }
 
@@ -20,13 +21,15 @@
 {
     if ((self = [super init]))
     {
-        NSString *type = JSONPost[@"type"];
-        NSString *date = JSONPost[@"date"];
+        NSString *type = JSONPost[kTumblerJSONPostType];
+        NSString *date = JSONPost[kTumblerJSONPostDate];
         if (!type || !date)
+        {
             return nil;
-        self.slug = JSONPost[@"slug"];
+        }
+        self.slug = JSONPost[kTumblerJSONPostSlug];
         self.type = [TBLPostTypeMap.sharedInstance postTypeForString:type];
-        self.tags = JSONPost[@"tags"];
+        self.tags = JSONPost[kTumblerJSONPostTags];
         self.date = date;
     }
     return self;

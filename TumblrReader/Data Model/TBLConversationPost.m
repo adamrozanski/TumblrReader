@@ -7,6 +7,7 @@
 //
 
 #import "TBLConversationPost.h"
+#import "TumblerJSONResponseConsts.h"
 
 @implementation TBLConversationPost
 
@@ -14,11 +15,13 @@
 {
     if ((self = [super initWithJSONPost:JSONPost]))
     {
-        NSString *conversationText = JSONPost[@"conversation-text"];
+        NSString *conversationText = JSONPost[kTumblerJSONPostConversationText];
         if (!conversationText)
+        {
             return nil;
+        }
         self.conversationText = conversationText;
-        self.conversationTitle = JSONPost[@"conversation-title"];
+        self.conversationTitle = JSONPost[kTumblerJSONPostConversationTitle];
     }
     return self;
 }

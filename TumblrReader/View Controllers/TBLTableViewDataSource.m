@@ -71,11 +71,13 @@ static NSUInteger const kPostsCountPerRequest = 20;
 
 // TODO: use "insertCell" instead of "reloadData"
 - (void)loadPostsIntoTableView:(nonnull UITableView *)tableView
-                       success:(void (^_Nonnull)(NSString *_Nullable errorMessage))success
+                       success:(void (^_Nonnull)())success
                        failure:(void (^_Nonnull)(NSString *_Nonnull errorMessage))failure
 {
     if (self.isFetchingPosts)
+    {
         return;
+    }
     self.isFetchingPosts = YES;
     [self activityIndicatorEnabled:YES];
     NSUInteger startPostIndex = [self postsArrayIsEmpty] ? self.blogMeta.startPostIndex : [self nextPostIndex];
@@ -90,14 +92,14 @@ static NSUInteger const kPostsCountPerRequest = 20;
           {
               self.isFetchingPosts = NO;
               [self activityIndicatorEnabled:NO];
-              success(@"Nie można przetworzyć danych z blogu");
+              failure(@"Nie można przetworzyć danych z blogu");
               return;
           }
           if ([self postsArrayIsEmpty] && [posts count] == 0)
           {
               self.isFetchingPosts = NO;
               [self activityIndicatorEnabled:NO];
-              success(@"Nie ma takiego bloga w Tumblr");
+              failure(@"Nie ma takiego bloga w Tumblr");
               return;
           }
           self.isFetchingPosts = NO;
@@ -106,6 +108,7 @@ static NSUInteger const kPostsCountPerRequest = 20;
           self.blogMeta.totalPostsCount = blogMeta.totalPostsCount;
           [self.posts addObjectsFromArray:posts];
           [tableView reloadData];
+          success();
         }
         failure:^(NSURLSessionTask *_Nullable task, NSError *_Nonnull error) {
           self.isFetchingPosts = NO;

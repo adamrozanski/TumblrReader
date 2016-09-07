@@ -29,8 +29,8 @@ static NSInteger const kCellHeight = 270;
     [self setupTableView];
     [self addNavigationButtonItem];
     [self configureTableViewForBlogName:kInitialBlogName];
+    [self updateBlogTitle];
     [self setupRefreshControl];
-    [self loadPosts];
 }
 
 - (void)setupTableView
@@ -59,10 +59,13 @@ static NSInteger const kCellHeight = 270;
 
 - (void)configureTableViewForBlogName:(NSString *)blogName
 {
+    if ([blogName isEqualToString:self.dataSource.blogMeta.name])
+    {
+        return;
+    }
     self.dataSource = [[TBLTableViewDataSource alloc] initWithBlogName:blogName];
     self.tableView.dataSource = self.dataSource;
-    [self.tableView reloadData];
-    [self updateBlogTitle];
+    [self loadPosts];
 }
 
 #pragma mark - Table View Delegate Methods
@@ -77,7 +80,9 @@ static NSInteger const kCellHeight = 270;
 - (void)tableView:(nonnull UITableView *)tableView willDisplayCell:(nonnull UITableViewCell *)cell forRowAtIndexPath:(nonnull NSIndexPath *)indexPath
 {
     if ([self.dataSource shouldFetchNewPostsForIndexPath:indexPath])
+    {
         [self loadPosts];
+    }
 }
 
 - (CGFloat)tableView:(nonnull UITableView *)tableView heightForRowAtIndexPath:(nonnull NSIndexPath *)indexPath
@@ -126,18 +131,18 @@ static NSInteger const kCellHeight = 270;
 
 - (void)loadPosts
 {
-    [self.dataSource loadPostsIntoTableView:self.tableView success:^(NSString *_Nullable errorMessage) {
-      if (self.refreshControl && self.refreshControl.refreshing)
-          [self.refreshControl endRefreshing];
-      if (errorMessage)
-      {
-          [self presentMessage:errorMessage title:@"Błąd"];
-          return;
-      }
-      [self updateBlogTitle];
-      [self updateLastTimeRefreshed];
-    }
+    [self.dataSource loadPostsIntoTableView:self.tableView
+        success:^() {
+          if (self.refreshControl && self.refreshControl.refreshing)
+          {
+              [self.refreshControl endRefreshing];
+          }
+          [self updateBlogTitle];
+          [self updateLastTimeRefreshed];
+        }
         failure:^(NSString *_Nullable errorMessage) {
+          self.dataSource = nil;
+          [self updateBlogTitle];
           [self presentMessage:errorMessage title:@"Błąd"];
         }];
 }
@@ -163,15 +168,12 @@ static NSInteger const kCellHeight = 270;
           return;
       }
       [self configureTableViewForBlogName:searchTextField.text];
-      [self loadPosts];
     }];
     UIAlertAction *epicbeta = [UIAlertAction actionWithTitle:@"Użyj: epicbeta" style:UIAlertActionStyleDefault handler:^(UIAlertAction *_Nonnull action) {
       [self configureTableViewForBlogName:@"epicbeta"];
-      [self loadPosts];
     }];
     UIAlertAction *travelgurus = [UIAlertAction actionWithTitle:@"Użyj: travelgurus" style:UIAlertActionStyleDefault handler:^(UIAlertAction *_Nonnull action) {
       [self configureTableViewForBlogName:@"travelgurus"];
-      [self loadPosts];
     }];
     UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Anuluj" style:UIAlertActionStyleDefault handler:^(UIAlertAction *_Nonnull action){
     }];

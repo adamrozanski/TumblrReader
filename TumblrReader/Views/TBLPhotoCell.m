@@ -38,7 +38,10 @@
         NSLayoutConstraint *spacerTrailing = [spacer.trailingAnchor constraintEqualToAnchor:[self.contentView trailingAnchor]];
         NSLayoutConstraint *spacerTop = [spacer.topAnchor constraintEqualToAnchor:[self.titleBox bottomAnchor]];
         NSLayoutConstraint *spacerHeight = [spacer.heightAnchor constraintEqualToConstant:1];
-        NSArray *spacer1LabelConstraints = @[ spacerLeading, spacerTrailing, spacerTop, spacerHeight ];
+        NSArray *spacer1LabelConstraints = @[ spacerLeading,
+                                              spacerTrailing,
+                                              spacerTop,
+                                              spacerHeight ];
         [NSLayoutConstraint activateConstraints:spacer1LabelConstraints];
 
         //photoView
@@ -46,7 +49,10 @@
         NSLayoutConstraint *photoViewTrailing = [self.photoView.trailingAnchor constraintEqualToAnchor:[self.contentView trailingAnchor]];
         NSLayoutConstraint *photoViewTop = [self.photoView.topAnchor constraintEqualToAnchor:[spacer bottomAnchor]];
         NSLayoutConstraint *photoViewHeight = [self.photoView.heightAnchor constraintEqualToConstant:180];
-        NSArray *photoViewConstraints = @[ photoViewLeading, photoViewTrailing, photoViewTop, photoViewHeight ];
+        NSArray *photoViewConstraints = @[ photoViewLeading,
+                                           photoViewTrailing,
+                                           photoViewTop,
+                                           photoViewHeight ];
         [NSLayoutConstraint activateConstraints:photoViewConstraints];
 
         //captionView
@@ -54,7 +60,10 @@
         NSLayoutConstraint *captionViewTrailing = [self.captionView.trailingAnchor constraintEqualToAnchor:[self.contentView trailingAnchor]];
         NSLayoutConstraint *captionViewTop = [self.captionView.topAnchor constraintEqualToAnchor:[self.photoView bottomAnchor]];
         NSLayoutConstraint *captionViewHeight = [self.captionView.heightAnchor constraintEqualToConstant:18];
-        NSArray *captionViewConstraints = @[ captionViewLeading, captionViewTrailing, captionViewTop, captionViewHeight ];
+        NSArray *captionViewConstraints = @[ captionViewLeading,
+                                             captionViewTrailing,
+                                             captionViewTop,
+                                             captionViewHeight ];
         [NSLayoutConstraint activateConstraints:captionViewConstraints];
 
         [self attachFooterToBottomAnchor:self.captionView.bottomAnchor];

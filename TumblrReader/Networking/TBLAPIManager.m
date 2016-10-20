@@ -52,10 +52,6 @@ static NSUInteger const kTumblrResponseSemicolonLength = 2;
         success:^(NSURLSessionTask *operation, id responseObject) {
           NSError *error = nil;
           NSData *JSONData = [self extractJSONDataFromTumblrAPIV1Response:responseObject];
-
-            NSString *dataString = [[NSString alloc] initWithData:JSONData encoding:NSUTF8StringEncoding];
-            NSLog(@"--->%@",dataString);
-
           NSDictionary *JSON = [NSJSONSerialization JSONObjectWithData:JSONData
                                                                options:NSJSONReadingAllowFragments
                                                                  error:&error];

@@ -9,8 +9,8 @@
 #import "AFNetworking.h"
 #import "TBLAPIManager.h"
 
-static NSUInteger const kTumblrResponseVarDeclarationLength = 21;
-static NSUInteger const kTumblrResponseSemicolonLength = 1;
+static NSUInteger const kTumblrResponseVarDeclarationLength = 22;
+static NSUInteger const kTumblrResponseSemicolonLength = 2;
 
 @interface TBLAPIManager ()
 
@@ -52,6 +52,10 @@ static NSUInteger const kTumblrResponseSemicolonLength = 1;
         success:^(NSURLSessionTask *operation, id responseObject) {
           NSError *error = nil;
           NSData *JSONData = [self extractJSONDataFromTumblrAPIV1Response:responseObject];
+
+            NSString *dataString = [[NSString alloc] initWithData:JSONData encoding:NSUTF8StringEncoding];
+            NSLog(@"--->%@",dataString);
+
           NSDictionary *JSON = [NSJSONSerialization JSONObjectWithData:JSONData
                                                                options:NSJSONReadingAllowFragments
                                                                  error:&error];

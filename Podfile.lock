@@ -16,7 +16,7 @@ PODS:
     - AFNetworking/NSURLSession
   - FLAnimatedImage (1.0.12)
   - OCMock (3.3.1)
-  - PINCache (2.2.2)
+  - PINCache (2.3)
   - PINRemoteImage (2.1.4):
     - PINRemoteImage/FLAnimatedImage (= 2.1.4)
   - PINRemoteImage/Core (2.1.4):
@@ -34,7 +34,7 @@ SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   OCMock: f3f61e6eaa16038c30caa5798c5e49d3307b6f22
-  PINCache: 078426d356ab95ef875e9e62e5c35a2ea3333c28
+  PINCache: ce36ed282031b92fc7733ffe831f474ff80fddc2
   PINRemoteImage: 4ac4011c5caefd6befd99758e09becede05d3226
 
 PODFILE CHECKSUM: 3a2d8a182b5b65e55246486a06b284965d782c6c

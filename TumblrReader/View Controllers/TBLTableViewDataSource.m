@@ -69,7 +69,6 @@ static NSUInteger const kPostsCountPerRequest = 20;
 
 #pragma mark - Load Content
 
-// TODO: use "insertCell" instead of "reloadData"
 - (void)loadPostsIntoTableView:(nonnull UITableView *)tableView
                        success:(void (^_Nonnull)())success
                        failure:(void (^_Nonnull)(NSString *_Nonnull errorMessage))failure
@@ -102,12 +101,11 @@ static NSUInteger const kPostsCountPerRequest = 20;
               failure(@"Nie ma takiego bloga w Tumblr");
               return;
           }
-          self.isFetchingPosts = NO;
-          [self activityIndicatorEnabled:NO];
-          self.blogMeta.startPostIndex = blogMeta.startPostIndex;
-          self.blogMeta.totalPostsCount = blogMeta.totalPostsCount;
-          [self.posts addObjectsFromArray:posts];
-          [tableView reloadData];
+            self.isFetchingPosts = NO;
+            [self activityIndicatorEnabled:NO];
+            self.blogMeta.startPostIndex = blogMeta.startPostIndex;
+            self.blogMeta.totalPostsCount = blogMeta.totalPostsCount;
+            [self addPosts:posts toTableView:tableView withStartPostIndex:startPostIndex];
           success();
         }
         failure:^(NSURLSessionTask *_Nullable task, NSError *_Nonnull error) {
@@ -116,6 +114,23 @@ static NSUInteger const kPostsCountPerRequest = 20;
           failure(@"Brak połączenia z internetem");
           return;
         }];
+}
+
+- (void)addPosts:(NSArray<TBLPost *> *)posts toTableView:(UITableView *)tableView withStartPostIndex:(NSUInteger)startPostIndex {
+    if (startPostIndex < kPostsCountPerRequest) {
+        [self.posts addObjectsFromArray:posts];
+        [tableView reloadData];
+    } else {
+        NSMutableArray *indexPaths = [NSMutableArray array];
+        NSInteger currentCount = self.posts.count;
+        for (int i = 0; i < posts.count; i++) {
+            [indexPaths addObject:[NSIndexPath indexPathForRow:currentCount+i inSection:0]];
+        }
+        [self.posts addObjectsFromArray:posts];
+        [tableView beginUpdates];
+        [tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationNone];
+        [tableView endUpdates];
+    }
 }
 
 - (NSUInteger)nextPostIndex
